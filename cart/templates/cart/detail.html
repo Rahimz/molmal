@@ -31,6 +31,7 @@ Your shopping cart
                 </td>
                 <td>{{ product.name }}</td>
                 <td>
+                    {# this form render the update form in cart detail#}
                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ item.update_quantity_form.quantity }}
                         {{ item.update_quantity_form.override }}

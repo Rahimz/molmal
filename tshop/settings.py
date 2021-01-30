@@ -54,6 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tshop.urls'
+# A context processor is a Python function that takes the request object as an
+# argument and returns a dictionary that gets added to the request context. Context
+# processors come in handy when you need to make something available globally
+# to all templates.
+# n our context processor, we instantiate the cart using the request object and make
+# it available for the templates as a variable named cart .
 
 TEMPLATES = [
     {
@@ -65,7 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages',                
+                # 'cart.context_processors.cart',
             ],
         },
     },
