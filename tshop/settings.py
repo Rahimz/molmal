@@ -136,3 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # settings for session to make cart system
 CART_SESSION_ID = 'cart'
+
+# These settings is for devlopment and should be change to send email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
