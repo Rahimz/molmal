@@ -1,18 +1,27 @@
 from django.http import HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from zeep import Client
+from orders.models import Order
 
 
 MERCHANT = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
-amount = 1000  # Toman / Required
-description = "توضیحات مربوط به تراکنش را در این قسمت وارد کنید"  # Required
-email = 'email@example.com'  # Optional
-mobile = '09123456789'  # Optional
-CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit for realy server.
+
 
 
 def send_request(request):
+    # we get the order detail from session 
+    order_id = request.session.get('order_id')
+    order = get_object_or_404(Order, id=order_id)
+    amount = order.get_total_cost()  # Toman / Required
+    print(amount)
+
+    description = "توضیحات مربوط به تراکنش را در این قسمت وارد کنید"  # Required
+    email = 'email@example.com'  # Optional
+    mobile = '09123456789'  # Optional
+    CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit for realy server.
+
+
     result = client.service.PaymentRequest(MERCHANT, amount, description, email, mobile, CallbackURL)
     if result.Status == 100:
         return redirect('https://www.zarinpal.com/pg/StartPay/' + str(result.Authority))
