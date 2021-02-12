@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'coupons.apps.CouponsConfig',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', _('English')),
-    ('fa-IR', _('Farsi'))
+    ('fa', _('Farsi'))
 )
 LOCALE_PATH = (
     os.path.join(BASE_DIR, 'locale/'),
