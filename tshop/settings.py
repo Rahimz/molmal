@@ -124,6 +124,7 @@ LANGUAGES = (
     ('en', _('English')),
     ('fa', _('Farsi'))
 )
+# https://docs.djangoproject.com/en/3.0/ref/settings/#globalization-i18n-l10n
 LOCALE_PATH = (
     os.path.join(BASE_DIR, 'locale/'),
 )
