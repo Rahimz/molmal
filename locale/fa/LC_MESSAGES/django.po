@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-12 15:07+0330\n"
-"PO-Revision-Date: 2021-02-12 11:36+0000\n"
+"POT-Creation-Date: 2021-02-13 11:24+0330\n"
+"PO-Revision-Date: 2021-02-13 07:55+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -47,6 +47,10 @@ msgstr "قیمت واحد"
 msgid "Price"
 msgstr "قیمت"
 
+#: cart/templates/cart/detail.html:37
+msgid "Update"
+msgstr "به روز رسانی"
+
 #: cart/templates/cart/detail.html:54
 msgid "Subtotal"
 msgstr "مجموع"
@@ -58,6 +62,8 @@ msgid ""
 "            <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
 "          "
 msgstr ""
+"\n"
+" <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
 #: cart/templates/cart/detail.html:69
 #: orders/templates/orders/order/create.html:28
@@ -72,11 +78,15 @@ msgstr "کسانی که این کالا را خریده اند این‌ها ر�
 msgid "Apply a coupon"
 msgstr "اعمال کد تخفیف"
 
+#: cart/templates/cart/detail.html:96
+msgid "Apply"
+msgstr "ثبت"
+
 #: cart/templates/cart/detail.html:101
 msgid "Continue shopping"
 msgstr "ادامه خرید"
 
-#: cart/templates/cart/detail.html:103
+#: cart/templates/cart/detail.html:102
 #: orders/templates/orders/order/create.html:5
 #: orders/templates/orders/order/create.html:9
 msgid "Checkout"
@@ -121,6 +131,8 @@ msgid ""
 "                    \"%(code)s\" (%(discount)s%% off)\n"
 "                "
 msgstr ""
+"\n"
+"\"%(code)s\" (%(discount)s%% تخفیف)"
 
 #: orders/templates/orders/order/create.html:32
 msgid "Place order"
@@ -135,10 +147,11 @@ msgstr "‍سپاس از شما"
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
+"\n"
+"<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
 #: shop/templates/shop/base.html:7 shop/templates/shop/base.html:12
 msgid "MolMal"
@@ -146,7 +159,7 @@ msgstr "مول مال"
 
 #: shop/templates/shop/base.html:17
 msgid "Language"
-msgstr ""
+msgstr "زبان"
 
 #: shop/templates/shop/base.html:34
 msgid "Your cart"
@@ -156,15 +169,18 @@ msgstr "سبد خرید "
 #, python-format
 msgid ""
 "\n"
-"                    %(total_items)s item%(total_items|pluralize)s, R"
-"%(cart.get_total_price)s\n"
+"                    %(total_items)s item%(total_items|pluralize)s, R%(cart.get_total_price)s\n"
 "                    "
 msgid_plural ""
 "\n"
 "                        %(items)s items, R%(total)s\n"
 "                "
 msgstr[0] ""
+"\n"
+"%(total_items)s موارد%(total_items|pluralize)s, R%(cart.get_total_price)s"
 msgstr[1] ""
+"\n"
+"%(items)s موارد, R%(total)s"
 
 #: shop/templates/shop/base.html:43
 msgid "Your cart is empty."

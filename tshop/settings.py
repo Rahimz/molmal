@@ -119,13 +119,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'fa'
 LANGUAGES = (
-    ('en', _('English')),
-    ('fa', _('Farsi'))
+    ('fa', _('Farsi')),
+    # ('en', _('English')),
+
 )
 # https://docs.djangoproject.com/en/3.0/ref/settings/#globalization-i18n-l10n
-LOCALE_PATH = (
+LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale/'),
 )
 
