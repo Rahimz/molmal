@@ -29,6 +29,9 @@ class Recommender(object):
     def suggest_products_for(self, products, max_results=6):
         product_ids = [p.id for p in products]
 
+        if len(products) == 0:
+            return []
+
         if len(products) == 1:
             # only 1 product
             suggestions = r.zrange(self.get_product_key(product_ids[0]),
@@ -52,8 +55,7 @@ class Recommender(object):
         suggested_products_ids = [int(id) for id in suggestions]
         # get suggested products and sort by order of appearance
         suggested_products = list(Product.objects.filter(id__in=suggested_products_ids))
-        suggested_products.sort(key=lambda x: suggested_products_ids.
-                                index(x.id))
+        suggested_products.sort(key=lambda x: suggested_products_ids.index(x.id))
         return suggested_products
 
     def clear_purchases(self):
