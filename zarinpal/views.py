@@ -3,9 +3,10 @@ from django.shortcuts import redirect, get_object_or_404
 from zeep import Client
 from orders.models import Order
 from .tasks import payment_completed
+from tshop.secret import *
 
 
-MERCHANT = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+MERCHANT = merchant
 client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 # we use this variable to edit order after the successful payment
 paid_order = None
