@@ -3,7 +3,7 @@ from django.shortcuts import redirect, get_object_or_404
 from zeep import Client
 from orders.models import Order
 from .tasks import payment_completed
-from tshop.secret import *
+from tshop.secrets import *
 
 
 MERCHANT = merchant
