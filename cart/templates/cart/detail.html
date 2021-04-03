@@ -97,7 +97,7 @@
     {% csrf_token %}
   </form>
 
-  <p class="text-right">
+  <p class="text-right mt-3">
     <a href="{% url 'shop:product_list' %}" class="button light">{% trans "Continue shopping" %}</a>
     <a href="{% url 'orders:order_create' %}" class="button">{% trans "Checkout" %}</a>
   </p>
