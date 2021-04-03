@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-13 11:24+0330\n"
-"PO-Revision-Date: 2021-02-13 07:55+0000\n"
+"POT-Creation-Date: 2021-04-03 13:08+0430\n"
+"PO-Revision-Date: 2021-04-03 08:39+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -66,11 +66,12 @@ msgstr ""
 " <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
 #: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:28
+#: orders/templates/orders/order/create.html:39
 msgid "Total"
 msgstr "جمع"
 
 #: cart/templates/cart/detail.html:80
+#: shop/templates/shop/product/detail.html:33
 msgid "People who bought this also bought"
 msgstr "کسانی که این کالا را خریده اند این‌ها را نیز خریداری کرده اند "
 
@@ -88,7 +89,7 @@ msgstr "ادامه خرید"
 
 #: cart/templates/cart/detail.html:102
 #: orders/templates/orders/order/create.html:5
-#: orders/templates/orders/order/create.html:9
+#: orders/templates/orders/order/create.html:10
 msgid "Checkout"
 msgstr "پرداخت"
 
@@ -120,23 +121,27 @@ msgstr "کدپستی"
 msgid "city"
 msgstr "شهر"
 
-#: orders/templates/orders/order/create.html:11
+#: orders/templates/orders/order/create.html:15
+msgid "Place order"
+msgstr "ثبت سفارش"
+
+#: orders/templates/orders/order/create.html:22
 msgid "Your order"
 msgstr "سفارش شما"
 
-#: orders/templates/orders/order/create.html:21
+#: orders/templates/orders/order/create.html:32
 #, python-format
+#| msgid ""
+#| "\n"
+#| "                    \"%(code)s\" (%(discount)s%% off)\n"
+#| "                "
 msgid ""
 "\n"
-"                    \"%(code)s\" (%(discount)s%% off)\n"
-"                "
+"                                \"%(code)s\" (%(discount)s%% off)\n"
+"                            "
 msgstr ""
 "\n"
 "\"%(code)s\" (%(discount)s%% تخفیف)"
-
-#: orders/templates/orders/order/create.html:32
-msgid "Place order"
-msgstr "ثبت سفارش"
 
 #: orders/templates/orders/order/created.html:5
 #: orders/templates/orders/order/created.html:9
@@ -153,19 +158,19 @@ msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
-#: shop/templates/shop/base.html:7 shop/templates/shop/base.html:12
+#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:17
 msgid "MolMal"
 msgstr "مول مال"
 
-#: shop/templates/shop/base.html:17
+#: shop/templates/shop/base.html:22
 msgid "Language"
 msgstr "زبان"
 
-#: shop/templates/shop/base.html:34
+#: shop/templates/shop/base.html:39
 msgid "Your cart"
 msgstr "سبد خرید "
 
-#: shop/templates/shop/base.html:36
+#: shop/templates/shop/base.html:41
 #, python-format
 msgid ""
 "\n"
@@ -182,31 +187,30 @@ msgstr[1] ""
 "\n"
 "%(items)s موارد, R%(total)s"
 
-#: shop/templates/shop/base.html:43
+#: shop/templates/shop/base.html:48
 msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
 
-#: shop/templates/shop/product/detail.html:22
+#: shop/templates/shop/product/detail.html:26
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید"
 
 #: shop/templates/shop/product/list.html:6
-#: shop/templates/shop/product/list.html:24
+#: shop/templates/shop/product/list.html:27
 msgid "Products"
 msgstr "محصولات"
 
-#: shop/templates/shop/product/list.html:11
+#: shop/templates/shop/product/list.html:13
 msgid "Categories"
 msgstr "دسته‌بندی‌ها"
 
-#: shop/templates/shop/product/list.html:14
+#: shop/templates/shop/product/list.html:16
 msgid "All"
 msgstr "همه"
 
 #: tshop/settings.py:124
-msgid "English"
-msgstr "انگلیسی"
-
-#: tshop/settings.py:125
 msgid "Farsi"
 msgstr "فارسی"
+
+#~ msgid "English"
+#~ msgstr "انگلیسی"
