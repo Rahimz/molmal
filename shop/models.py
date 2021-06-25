@@ -46,3 +46,12 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Slider(models.Model):
+    title = models.CharField(max_length=250)
+    description = models.CharField(max_length=500,
+                                   null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
+    image = models.ImageField(upload_to='sliders/')
+    active = models.BooleanField(default=True)

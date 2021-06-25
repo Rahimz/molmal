@@ -1,7 +1,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
-body {
+body {    
     margin:0;
     padding:0;
     font-family:helvetica, sans-serif;
@@ -151,7 +151,7 @@ ul.errorlist {
 #sidebar {
     width:220px;
     padding:30px 20px 0 0;
-    float:left;
+    float: right;
 }
 
 #sidebar ul{
@@ -179,9 +179,9 @@ ul.errorlist {
 }
 
 #main {
-    float:left;
+    float: right;
     width: 96%;
-    margin-right:-220px;
+    margin-right: 220px;
     overflow:hidden;
 }
 
@@ -193,7 +193,7 @@ ul.errorlist {
     line-height:1.2;
 }
 
-.product-list .item img {
+.product-list img {
     width:100%;
     margin-bottom:8px;
 }
@@ -223,7 +223,7 @@ ul.errorlist {
 }
 
 .order-form {
-    float:left;
+    float:right;
 }
 
 .order-info {
@@ -287,7 +287,7 @@ ul.errorlist {
 }
 
 .recommendations div {
-    float:left;
+    float:right;
 }
 
 .recommendations img {

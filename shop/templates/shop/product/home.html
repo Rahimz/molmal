@@ -1,0 +1,34 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      {% for slider in sliders %}
+      <div class="item">
+        <img class="owl-image" src="{{ slider.image.url }}" alt="The Last of us">
+
+        <a href="{% if slider.url %}{{ slider.url }}{% endif %}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ slider.title }}</h5>
+            <p>{%if slider.description %}{{ slider.description }}{% endif %}</p>
+          </div>
+        </a>
+
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block  tem_script %}
+{% endblock %}

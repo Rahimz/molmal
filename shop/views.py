@@ -1,7 +1,13 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category, Product
+from .models import Category, Product, Slider
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
+
+def home(request):
+    sliders = Slider.objects.filter(active=True)
+    return render(request,
+                  'shop/product/home.html',
+                  {'sliders': sliders})
 
 
 def product_list(requset, category_slug=None):
