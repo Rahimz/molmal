@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-03 13:08+0430\n"
-"PO-Revision-Date: 2021-04-03 08:39+0000\n"
+"POT-Creation-Date: 2021-06-29 15:04+0430\n"
+"PO-Revision-Date: 2021-06-29 10:36+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -131,10 +131,6 @@ msgstr "سفارش شما"
 
 #: orders/templates/orders/order/create.html:32
 #, python-format
-#| msgid ""
-#| "\n"
-#| "                    \"%(code)s\" (%(discount)s%% off)\n"
-#| "                "
 msgid ""
 "\n"
 "                                \"%(code)s\" (%(discount)s%% off)\n"
@@ -158,42 +154,82 @@ msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
-#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:17
+#: shop/templates/shop/base.html:10 shop/templates/shop/base.html:23
 msgid "MolMal"
 msgstr "مول مال"
 
-#: shop/templates/shop/base.html:22
-msgid "Language"
-msgstr "زبان"
-
-#: shop/templates/shop/base.html:39
-msgid "Your cart"
-msgstr "سبد خرید "
-
-#: shop/templates/shop/base.html:41
+#: shop/templates/shop/base.html:49
 #, python-format
 msgid ""
 "\n"
-"                    %(total_items)s item%(total_items|pluralize)s, R%(cart.get_total_price)s\n"
-"                    "
+"          %(total_items)s item%(total_items|pluralize)s, R%(cart.get_total_price)s\n"
+"          "
 msgid_plural ""
 "\n"
-"                        %(items)s items, R%(total)s\n"
-"                "
+"          %(items)s items, R%(total)s\n"
+"          "
 msgstr[0] ""
-"\n"
-"%(total_items)s موارد%(total_items|pluralize)s, R%(cart.get_total_price)s"
 msgstr[1] ""
 "\n"
 "%(items)s موارد, R%(total)s"
 
-#: shop/templates/shop/base.html:48
+#: shop/templates/shop/base.html:56
 msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
+
+#: shop/templates/shop/base.html:76
+msgid "Online shop footer"
+msgstr "فروشگاه رحیم آقا"
+
+#: shop/templates/shop/base.html:79
+msgid "This Rahim agha shop present every retail item that we said Baghali"
+msgstr ""
+"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
+" جالب دارند بخرید از دمنوش های حمید و سبا گرفته تا گردوی فشم و مربای خونگی"
+
+#: shop/templates/shop/base.html:86
+msgid "Baghali Rahim Agha"
+msgstr "بقالی رحیم آقا"
+
+#: shop/templates/shop/base.html:90
+msgid "About us"
+msgstr "درباره ما"
+
+#: shop/templates/shop/base.html:93
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: shop/templates/shop/base.html:102
+msgid "Shopping process"
+msgstr "روش خرید"
+
+#: shop/templates/shop/base.html:106
+msgid "FAQ"
+msgstr "سوالات رایج"
+
+#: shop/templates/shop/base.html:109
+msgid "Sign up process"
+msgstr "نحوه ثبت نام"
+
+#: shop/templates/shop/base.html:121
+msgid "Copyright"
+msgstr "حقوق مولف"
+
+#: shop/templates/shop/base.html:122
+msgid "Rahim Agha and Khanevadeh"
+msgstr "رحیم آقا و خانواده"
 
 #: shop/templates/shop/product/detail.html:26
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید"
+
+#: shop/templates/shop/product/home.html:30
+msgid "Special offers"
+msgstr "پیشنهادهای ویژه"
+
+#: shop/templates/shop/product/home.html:66
+msgid "What do you have?"
+msgstr "چی دارید؟"
 
 #: shop/templates/shop/product/list.html:6
 #: shop/templates/shop/product/list.html:27
@@ -211,6 +247,12 @@ msgstr "همه"
 #: tshop/settings.py:124
 msgid "Farsi"
 msgstr "فارسی"
+
+#~ msgid "Language"
+#~ msgstr "زبان"
+
+#~ msgid "Your cart"
+#~ msgstr "سبد خرید "
 
 #~ msgid "English"
 #~ msgstr "انگلیسی"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-03 13:08+0430\n"
+"POT-Creation-Date: 2021-06-29 15:04+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,38 +149,78 @@ msgid ""
 "  "
 msgstr ""
 
-#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:17
+#: shop/templates/shop/base.html:10 shop/templates/shop/base.html:23
 msgid "MolMal"
 msgstr ""
 
-#: shop/templates/shop/base.html:22
-msgid "Language"
-msgstr ""
-
-#: shop/templates/shop/base.html:39
-msgid "Your cart"
-msgstr ""
-
-#: shop/templates/shop/base.html:41
+#: shop/templates/shop/base.html:49
 #, python-format
 msgid ""
 "\n"
-"                    %(total_items)s item%(total_items|pluralize)s, R"
+"          %(total_items)s item%(total_items|pluralize)s, R"
 "%(cart.get_total_price)s\n"
-"                    "
+"          "
 msgid_plural ""
 "\n"
-"                        %(items)s items, R%(total)s\n"
-"                "
+"          %(items)s items, R%(total)s\n"
+"          "
 msgstr[0] ""
 msgstr[1] ""
 
-#: shop/templates/shop/base.html:48
+#: shop/templates/shop/base.html:56
 msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/base.html:76
+msgid "Online shop footer"
+msgstr ""
+
+#: shop/templates/shop/base.html:79
+msgid "This Rahim agha shop present every retail item that we said Baghali"
+msgstr ""
+
+#: shop/templates/shop/base.html:86
+msgid "Baghali Rahim Agha"
+msgstr ""
+
+#: shop/templates/shop/base.html:90
+msgid "About us"
+msgstr ""
+
+#: shop/templates/shop/base.html:93
+msgid "Contact us"
+msgstr ""
+
+#: shop/templates/shop/base.html:102
+msgid "Shopping process"
+msgstr ""
+
+#: shop/templates/shop/base.html:106
+msgid "FAQ"
+msgstr ""
+
+#: shop/templates/shop/base.html:109
+msgid "Sign up process"
+msgstr ""
+
+#: shop/templates/shop/base.html:121
+msgid "Copyright"
+msgstr ""
+
+#: shop/templates/shop/base.html:122
+msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
 #: shop/templates/shop/product/detail.html:26
 msgid "Add to cart"
+msgstr ""
+
+#: shop/templates/shop/product/home.html:30
+msgid "Special offers"
+msgstr ""
+
+#: shop/templates/shop/product/home.html:66
+msgid "What do you have?"
 msgstr ""
 
 #: shop/templates/shop/product/list.html:6
