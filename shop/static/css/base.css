@@ -119,6 +119,14 @@ ul.errorlist {
   padding: 0;
 }
 
+/* surprize bar in home */
+.surprise-red {
+  background-color: #ff6b6b;
+}
+
+.surprise-yellow {
+  background-color: #ffe66d;
+}
 #header {
   padding: 10px 100px;
   font-size: 18px;
