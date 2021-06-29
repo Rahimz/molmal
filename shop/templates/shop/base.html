@@ -43,7 +43,7 @@
       <div class="cart">
         {% with total_items=cart|length %}
         {% if total_items > 0 %}
-        {% trans "Your cart" %}:
+        <img src="{% static 'img/cart25.png'%}" />
         <a href="{% url 'cart:cart_detail'%}">
           {% blocktrans with total=cart.get_total_price count items=total_items %}
           {{ total_items }} item{{ total_items|pluralize }}, R{{ cart.get_total_price }}
