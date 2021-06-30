@@ -9,7 +9,7 @@
 
     <div id="owl-demo" class="owl-carousel owl-theme">
       {% for slider in sliders %}
-      <div class="item">
+      <div class="item activate">
         <img class="owl-image" src="{{ slider.image.url }}" alt="The Last of us">
 
         <a href="{% if slider.url %}{{ slider.url }}{% endif %}">
@@ -27,7 +27,7 @@
   </div>
 
   <div class="row">
-    <h2>{% trans 'Special offers' %}</h2>
+    <h2 class="text-center">{% trans 'Special offers' %}</h2>
     <div class="col-md-3 p-2 ">
       <div class="surprise-red p-2 rounded text-center">
         <p>...</p>
