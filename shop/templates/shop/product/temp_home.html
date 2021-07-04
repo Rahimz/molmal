@@ -1,0 +1,76 @@
+{% extends "shop/_temp_base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row m-3">
+
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      {% for slider in sliders %}
+      <div class="item activate">
+        <img class="owl-image" src="{{ slider.image.url }}" alt="The Last of us">
+
+        <a href="{% if slider.url %}{{ slider.url }}{% endif %}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ slider.title }}</h5>
+            <p>{%if slider.description %}{{ slider.description }}{% endif %}</p>
+          </div>
+        </a>
+
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <h2 class="text-center">{% trans 'Special offers' %}</h2>
+    <div class="col-md-3 p-2 ">
+      <div class="surprise-red p-2 rounded text-center">
+        <p>...</p>
+        <p>test</p>
+        <p>...</p>
+      </div>
+    </div>
+
+    <div class="col-md-9 p-2">
+      <div class="surprise-yellow p-2 rounded text-center">
+        <p>...</p>
+        <p>test</p>
+        <p>...</p>
+      </div>
+    </div>
+
+    <div class="col-md-9 p-2">
+      <div class="surprise-yellow p-2 rounded text-center">
+        <p>...</p>
+        <p>test</p>
+        <p>...</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 p-2 ">
+      <div class="surprise-red p-2 rounded text-center">
+        <p>...</p>
+        <p>test</p>
+        <p>...</p>
+      </div>
+    </div>
+
+  </div>
+  <a href="{% url 'shop:product_list' %}">
+  <div class="row p-5 m-5 border rounded bg-light">
+    <h2 class="text-center">{% trans 'What do you have?' %}</h2>
+  </div>
+  </a>
+</div>
+
+
+
+{% endblock %}
+
+{% block  tem_script %}
+{% endblock %}

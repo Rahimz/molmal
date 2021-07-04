@@ -1,0 +1,158 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% trans "MolMal" %}{% endblock %}</title>
+  <!-- Bootsrap rtl link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+  <!-- Owl caroucel css files -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <a href="/" class="logo">{% trans "MolMal" %}</a>
+      {% get_current_language as LANGUAGE_CODE %}
+      {% get_available_languages as LANGUAGES %}
+      {% get_language_info_list for LANGUAGES as languages %}
+      {% comment %}
+      <div class="languages">
+        <p>{% trans "Language" %}:</p>
+        <ul class="languages">
+          {% for language in languages %}
+          <li>
+            <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected" {% endif %}>
+              {{ language.name_local }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endcomment %}
+    </div>
+    {% comment %}
+    <div id="subheader">
+      <div class="cart">
+        {% with total_items=cart|length %}
+        {% if total_items > 0 %}
+        <img src="{% static 'img/cart25.png'%}" />
+        <a href="{% url 'cart:cart_detail'%}">
+          {% blocktrans with total=cart.get_total_price count items=total_items %}
+          {{ total_items }} item{{ total_items|pluralize }}, R{{ cart.get_total_price }}
+          {% plural %}
+          {{ items }} items, R{{ total }}
+          {% endblocktrans %}
+        </a>
+        {% else %}
+        {% trans "Your cart is empty." %}
+        {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+    {% endcomment %}
+  </header>
+
+  <main>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </main>
+  <footer id="footer" class=" text-white text-center">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">{% trans 'Online shop footer' %}</h5>
+
+          <p>
+            {% trans 'This Rahim agha shop present every retail item that we said Baghali' %}
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">{% trans 'Baghali Rahim Agha'%}</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">{% trans 'About us' %}</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">{% trans 'Contact us' %}</a>
+            </li>
+
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">{% trans 'Shopping process'%}</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-white">{% trans 'FAQ' %}</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">{% trans 'Sign up process' %}</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 {% trans 'Copyright' %}:
+      <a class="text-white" href="https://mdbootstrap.com/">{% trans 'Rahim Agha and Khanevadeh' %}</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  <!-- Owl Caroucel js -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+  {% block tem_script %}
+  {% endblock %}
+  <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        navigation: true, // Show next and prev buttons
+        items: 1,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+
+      });
+
+    });
+  </script>
+</body>
+
+</html>

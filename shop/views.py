@@ -5,9 +5,11 @@ from .recommender import Recommender
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
+    temp_products = Product.objects.filter(temp_product=True)
     return render(request,
-                  'shop/product/home.html',
-                  {'sliders': sliders})
+                  'shop/product/temp_home.html',
+                  {'sliders': sliders,
+                   'products': temp_products})
 
 
 def product_list(requset, category_slug=None):
