@@ -6,16 +6,16 @@
 
 <div class="container">
 
-  <div class="row">
+  <div class="row m-4">
     <h2 class="text-center">{% trans 'Available Products' %}</h2>
   </div>
 
 
   <div class="row">
     {% for product in products %}
-    <div class="card m-3 p-2" style="width: 18rem;">
+    <div class="card p-4 col-md-6 mb-4">
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="">
-      <div class="card-body">
+      <div class="card-body m-3">
         <h5 class="card-title">{{ product.name }}</h5>
         <h6 class="cart-subtitle text-muted">R{{ product.price }}</h6>
         <p class="card-text">

@@ -6,14 +6,18 @@
   font-family: lalezar;
   src: url(../fonts/Lalezar-Regular.otf);
 }
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/IRANSansWeb.woff2);
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: helvetica, sans-serif;
+  font-family: iransans, helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: iransans, 'Ubuntu', sans-serif;
   font-weight: normal;
 }
 
@@ -147,7 +151,7 @@ ul.errorlist {
   font-family: lalezar, sans-serif;
   color: #ff6b6b;
   font-size: 40px;
-  
+
 }
 
 #subheader .cart {
