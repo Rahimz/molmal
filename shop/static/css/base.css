@@ -2,7 +2,10 @@
 
 /* Colors */
 /* ["1a535c","4ecdc4","f7fff7","ff6b6b","ffe66d"] */
-
+@font-face {
+  font-family: lalezar;
+  src: url(../fonts/Lalezar-Regular.otf);
+}
 body {
   margin: 0;
   padding: 0;
@@ -141,10 +144,9 @@ ul.errorlist {
 }
 
 #header .logo {
-  font-family: 'Ubuntu', sans-serif;
-  float: left;
-  color: #333;
-  font-size: 22px;
+  font-family: lalezar, sans-serif;
+  color: #ff6b6b;
+  font-size: 40px;
   margin-right: 10%;
 }
 

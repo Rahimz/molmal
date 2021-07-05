@@ -5,6 +5,7 @@ from .recommender import Recommender
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
+    # this Queryset is used in temporary home page
     temp_products = Product.objects.filter(temp_product=True)
     return render(request,
                   'shop/product/temp_home.html',
