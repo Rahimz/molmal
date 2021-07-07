@@ -29,6 +29,7 @@ Pillow==8.1.0
 polib==1.1.0
 prometheus-client==0.8.0
 prompt-toolkit==3.0.14
+psycopg2-binary==2.8.4
 pycparser==2.20
 Pyphen==0.10.0
 pytz==2020.5
