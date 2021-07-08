@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-29 15:04+0430\n"
-"PO-Revision-Date: 2021-06-29 10:36+0000\n"
-"Last-Translator: b'  <>'\n"
+"POT-Creation-Date: 2021-07-08 22:15+0430\n"
+"PO-Revision-Date: 2021-07-08 17:47+0000\n"
+"Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,7 @@ msgid "Total"
 msgstr "جمع"
 
 #: cart/templates/cart/detail.html:80
-#: shop/templates/shop/product/detail.html:33
+#: shop/templates/shop/product/detail.html:37
 msgid "People who bought this also bought"
 msgstr "کسانی که این کالا را خریده اند این‌ها را نیز خریداری کرده اند "
 
@@ -154,6 +154,57 @@ msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
+#: shop/templates/shop/_temp_base.html:10
+#: shop/templates/shop/_temp_base.html:24
+msgid "Rahim Agha Store"
+msgstr "دکان رحیم آقا"
+
+#: shop/templates/shop/_temp_base.html:74
+msgid "For order contact in social medias"
+msgstr "برای سفارش تماس بگیرید"
+
+#: shop/templates/shop/_temp_base.html:83 shop/templates/shop/base.html:76
+msgid "Online shop footer"
+msgstr "فروشگاه رحیم آقا"
+
+#: shop/templates/shop/_temp_base.html:86 shop/templates/shop/base.html:79
+msgid "This Rahim agha shop present every retail item that we said Baghali"
+msgstr ""
+"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
+" جالب دارند بخرید از دمنوش های حمید و سبا گرفته تا گردوی فشم و مربای خونگی"
+
+#: shop/templates/shop/_temp_base.html:93 shop/templates/shop/base.html:86
+msgid "Baghali Rahim Agha"
+msgstr "بقالی رحیم آقا"
+
+#: shop/templates/shop/_temp_base.html:97 shop/templates/shop/base.html:90
+msgid "About us"
+msgstr "درباره ما"
+
+#: shop/templates/shop/_temp_base.html:100 shop/templates/shop/base.html:93
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: shop/templates/shop/_temp_base.html:109 shop/templates/shop/base.html:102
+msgid "Shopping process"
+msgstr "روش خرید"
+
+#: shop/templates/shop/_temp_base.html:113 shop/templates/shop/base.html:106
+msgid "FAQ"
+msgstr "سوالات رایج"
+
+#: shop/templates/shop/_temp_base.html:116 shop/templates/shop/base.html:109
+msgid "Sign up process"
+msgstr "نحوه ثبت نام"
+
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:121
+msgid "Copyright"
+msgstr "حقوق مولف"
+
+#: shop/templates/shop/_temp_base.html:129 shop/templates/shop/base.html:122
+msgid "Rahim Agha and Khanevadeh"
+msgstr "رحیم آقا و خانواده"
+
 #: shop/templates/shop/base.html:10 shop/templates/shop/base.html:23
 msgid "MolMal"
 msgstr "مول مال"
@@ -177,49 +228,7 @@ msgstr[1] ""
 msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
 
-#: shop/templates/shop/base.html:76
-msgid "Online shop footer"
-msgstr "فروشگاه رحیم آقا"
-
-#: shop/templates/shop/base.html:79
-msgid "This Rahim agha shop present every retail item that we said Baghali"
-msgstr ""
-"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
-" جالب دارند بخرید از دمنوش های حمید و سبا گرفته تا گردوی فشم و مربای خونگی"
-
-#: shop/templates/shop/base.html:86
-msgid "Baghali Rahim Agha"
-msgstr "بقالی رحیم آقا"
-
-#: shop/templates/shop/base.html:90
-msgid "About us"
-msgstr "درباره ما"
-
-#: shop/templates/shop/base.html:93
-msgid "Contact us"
-msgstr "تماس با ما"
-
-#: shop/templates/shop/base.html:102
-msgid "Shopping process"
-msgstr "روش خرید"
-
-#: shop/templates/shop/base.html:106
-msgid "FAQ"
-msgstr "سوالات رایج"
-
-#: shop/templates/shop/base.html:109
-msgid "Sign up process"
-msgstr "نحوه ثبت نام"
-
-#: shop/templates/shop/base.html:121
-msgid "Copyright"
-msgstr "حقوق مولف"
-
-#: shop/templates/shop/base.html:122
-msgid "Rahim Agha and Khanevadeh"
-msgstr "رحیم آقا و خانواده"
-
-#: shop/templates/shop/product/detail.html:26
+#: shop/templates/shop/product/detail.html:29
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید"
 
@@ -244,7 +253,12 @@ msgstr "دسته‌بندی‌ها"
 msgid "All"
 msgstr "همه"
 
-#: tshop/settings.py:124
+#: shop/templates/shop/product/temp_home.html:10
+#| msgid "Products"
+msgid "Available Products"
+msgstr "محصولات موجود"
+
+#: tshop/settings.py:131 tshop/settings/base.py:132
 msgid "Farsi"
 msgstr "فارسی"
 
