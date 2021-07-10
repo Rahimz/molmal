@@ -4,4 +4,4 @@ from .secrets import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['rahimagha.ir']
+ALLOWED_HOSTS = ['rahimagha.ir', 'www.rahimagha.ir']
