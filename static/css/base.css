@@ -16,6 +16,11 @@ body {
   font-family: iransans, helvetica, sans-serif;
 }
 
+logo-img {
+  border-radius: 50%;
+
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: iransans, 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -29,7 +34,9 @@ a {
 a:hover {
   color: #ff6b6b;
 }
-
+.telephone:hover {
+  color: #4ecdc4;
+}
 a.button, input[type="submit"] {
   color: #fff;
   background: #1a535c;
