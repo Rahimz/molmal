@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-10 10:07+0000\n"
-"PO-Revision-Date: 2021-07-08 17:47+0000\n"
+"POT-Creation-Date: 2021-07-11 15:14+0430\n"
+"PO-Revision-Date: 2021-07-11 10:46+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -148,74 +148,52 @@ msgstr "‍سپاس از شما"
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
-#: shop/templates/shop/_temp_base.html:10
 #: shop/templates/shop/_temp_base.html:24
+#: shop/templates/shop/_temp_base.html:38
 msgid "Rahim Agha Store"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:74
+#: shop/templates/shop/_temp_base.html:88
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:83 shop/templates/shop/base.html:76
+#: shop/templates/shop/_temp_base.html:97 shop/templates/shop/base.html:90
 msgid "Online shop footer"
 msgstr "فروشگاه رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:86 shop/templates/shop/base.html:79
+#: shop/templates/shop/_temp_base.html:100 shop/templates/shop/base.html:93
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
-"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه "
-"جالب دارند بخرید از دمنوش های حمید و سبا گرفته تا گردوی فشم و مربای خونگی"
+"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
+" جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:93 shop/templates/shop/base.html:86
-msgid "Baghali Rahim Agha"
-msgstr "بقالی رحیم آقا"
+#: shop/templates/shop/_temp_base.html:107
+msgid "Important links"
+msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:97 shop/templates/shop/base.html:90
-msgid "About us"
-msgstr "درباره ما"
-
-#: shop/templates/shop/_temp_base.html:100 shop/templates/shop/base.html:93
-msgid "Contact us"
-msgstr "تماس با ما"
-
-#: shop/templates/shop/_temp_base.html:109 shop/templates/shop/base.html:102
-msgid "Shopping process"
-msgstr "روش خرید"
-
-#: shop/templates/shop/_temp_base.html:113 shop/templates/shop/base.html:106
-msgid "FAQ"
-msgstr "سوالات رایج"
-
-#: shop/templates/shop/_temp_base.html:116 shop/templates/shop/base.html:109
-msgid "Sign up process"
-msgstr "نحوه ثبت نام"
-
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:121
+#: shop/templates/shop/_temp_base.html:119 shop/templates/shop/base.html:135
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:129 shop/templates/shop/base.html:122
+#: shop/templates/shop/_temp_base.html:120 shop/templates/shop/base.html:136
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
-#: shop/templates/shop/base.html:10 shop/templates/shop/base.html:23
+#: shop/templates/shop/base.html:24 shop/templates/shop/base.html:37
 msgid "MolMal"
 msgstr "مول مال"
 
-#: shop/templates/shop/base.html:49
+#: shop/templates/shop/base.html:63
 #, python-format
 msgid ""
 "\n"
-"          %(total_items)s item%(total_items|pluralize)s, R"
-"%(cart.get_total_price)s\n"
+"          %(total_items)s item%(total_items|pluralize)s, R%(cart.get_total_price)s\n"
 "          "
 msgid_plural ""
 "\n"
@@ -226,9 +204,33 @@ msgstr[1] ""
 "\n"
 "%(items)s موارد, R%(total)s"
 
-#: shop/templates/shop/base.html:56
+#: shop/templates/shop/base.html:70
 msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
+
+#: shop/templates/shop/base.html:100
+msgid "Baghali Rahim Agha"
+msgstr "بقالی رحیم آقا"
+
+#: shop/templates/shop/base.html:104
+msgid "About us"
+msgstr "درباره ما"
+
+#: shop/templates/shop/base.html:107
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: shop/templates/shop/base.html:116
+msgid "Shopping process"
+msgstr "روش خرید"
+
+#: shop/templates/shop/base.html:120
+msgid "FAQ"
+msgstr "سوالات رایج"
+
+#: shop/templates/shop/base.html:123
+msgid "Sign up process"
+msgstr "نحوه ثبت نام"
 
 #: shop/templates/shop/product/detail.html:29
 msgid "Add to cart"
@@ -255,7 +257,7 @@ msgstr "دسته‌بندی‌ها"
 msgid "All"
 msgstr "همه"
 
-#: shop/templates/shop/product/temp_home.html:10
+#: shop/templates/shop/product/temp_home.html:15
 msgid "Available Products"
 msgstr "محصولات موجود"
 

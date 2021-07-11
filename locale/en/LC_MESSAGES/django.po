@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-10 10:07+0000\n"
+"POT-Creation-Date: 2021-07-11 15:14+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,60 +149,40 @@ msgid ""
 "  "
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:10
 #: shop/templates/shop/_temp_base.html:24
+#: shop/templates/shop/_temp_base.html:38
 msgid "Rahim Agha Store"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:74
+#: shop/templates/shop/_temp_base.html:88
 msgid "For order contact in social medias"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:83 shop/templates/shop/base.html:76
+#: shop/templates/shop/_temp_base.html:97 shop/templates/shop/base.html:90
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:86 shop/templates/shop/base.html:79
+#: shop/templates/shop/_temp_base.html:100 shop/templates/shop/base.html:93
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:93 shop/templates/shop/base.html:86
-msgid "Baghali Rahim Agha"
+#: shop/templates/shop/_temp_base.html:107
+msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:97 shop/templates/shop/base.html:90
-msgid "About us"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:100 shop/templates/shop/base.html:93
-msgid "Contact us"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:109 shop/templates/shop/base.html:102
-msgid "Shopping process"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:113 shop/templates/shop/base.html:106
-msgid "FAQ"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:116 shop/templates/shop/base.html:109
-msgid "Sign up process"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:121
+#: shop/templates/shop/_temp_base.html:119 shop/templates/shop/base.html:135
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:129 shop/templates/shop/base.html:122
+#: shop/templates/shop/_temp_base.html:120 shop/templates/shop/base.html:136
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
-#: shop/templates/shop/base.html:10 shop/templates/shop/base.html:23
+#: shop/templates/shop/base.html:24 shop/templates/shop/base.html:37
 msgid "MolMal"
 msgstr ""
 
-#: shop/templates/shop/base.html:49
+#: shop/templates/shop/base.html:63
 #, python-format
 msgid ""
 "\n"
@@ -216,8 +196,32 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: shop/templates/shop/base.html:56
+#: shop/templates/shop/base.html:70
 msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/base.html:100
+msgid "Baghali Rahim Agha"
+msgstr ""
+
+#: shop/templates/shop/base.html:104
+msgid "About us"
+msgstr ""
+
+#: shop/templates/shop/base.html:107
+msgid "Contact us"
+msgstr ""
+
+#: shop/templates/shop/base.html:116
+msgid "Shopping process"
+msgstr ""
+
+#: shop/templates/shop/base.html:120
+msgid "FAQ"
+msgstr ""
+
+#: shop/templates/shop/base.html:123
+msgid "Sign up process"
 msgstr ""
 
 #: shop/templates/shop/product/detail.html:29
@@ -245,7 +249,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: shop/templates/shop/product/temp_home.html:10
+#: shop/templates/shop/product/temp_home.html:15
 msgid "Available Products"
 msgstr ""
 
