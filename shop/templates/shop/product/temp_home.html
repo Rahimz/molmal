@@ -5,12 +5,7 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="text-center ">
-        <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}"/>
-    </div>
 
-  </div>
   <div class="row m-4">
     <h2 class="text-center">{% trans 'Available Products' %}</h2>
   </div>
@@ -18,7 +13,7 @@
 
   <div class="row">
     {% for product in products %}
-    <div class="card p-4 col-md-6 mb-4 text-center">
+    <div class="card p-md-2 col-md-6 mb-4 text-center">
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="">
       <div class="card-body m-3">
         <h5 class="card-title">{{ product.name }}</h5>

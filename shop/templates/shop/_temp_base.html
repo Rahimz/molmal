@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <script defer data-domain="rahimagha.ir" src="https://plausible.io/js/plausible.js"></script>
 
   {% comment %}
@@ -40,7 +40,12 @@
       <div class="text-center">
         <a href="/" class="logo">{% trans "Rahim Agha Store" %}</a>
       </div>
+      <div class="row">
+        <div class="text-center ">
+            <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}"/>
+        </div>
 
+      </div>
       {% get_current_language as LANGUAGE_CODE %}
       {% get_available_languages as LANGUAGES %}
       {% get_language_info_list for LANGUAGES as languages %}
