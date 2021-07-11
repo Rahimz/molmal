@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product, Slider
+from pages.models import Page
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
 
@@ -7,10 +8,13 @@ def home(request):
     sliders = Slider.objects.filter(active=True)
     # this Queryset is used in temporary home page
     temp_products = Product.objects.filter(temp_product=True)
+    # Queryset for Pages
+    pages = Page.objects.all()
     return render(request,
                   'shop/product/temp_home.html',
                   {'sliders': sliders,
-                   'products': temp_products})
+                   'products': temp_products,
+                   'pages': pages})
 
 
 def product_list(requset, category_slug=None):

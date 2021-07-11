@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Page(models.Model):
@@ -7,3 +8,7 @@ class Page(models.Model):
                             unique=True,
                             allow_unicode=True)
     text = models.TextField()
+
+    def get_absolute_url(self):
+        return reverse('pages:page_view',
+                        args=[self.slug])
