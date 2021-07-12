@@ -1,6 +1,7 @@
 {% extends "shop/_temp_base.html" %}
 {% load i18n %}
 {% load static %}
+{% load humanize %}
 
 {% block content %}
 
@@ -17,7 +18,7 @@
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="">
       <div class="card-body m-3">
         <h5 class="card-title">{{ product.name }}</h5>
-        <h6 class="cart-subtitle text-muted">R{{ product.price }}</h6>
+        <h6 class="cart-subtitle text-muted">R {{ product.price|intcomma }}</h6>
         <p class="card-text">
           {{ product.description }}
         </p>
