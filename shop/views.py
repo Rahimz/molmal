@@ -9,7 +9,7 @@ def home(request):
     # this Queryset is used in temporary home page
     temp_products = Product.objects.filter(temp_product=True)
     # Queryset for Pages
-    pages = Page.objects.all()
+    pages = Page.objects.all().filter(active=True)
     return render(request,
                   'shop/product/temp_home.html',
                   {'sliders': sliders,

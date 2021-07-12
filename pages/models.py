@@ -8,6 +8,7 @@ class Page(models.Model):
                             unique=True,
                             allow_unicode=True)
     text = models.TextField()
+    active = models.BooleanField(default=True)
 
     def get_absolute_url(self):
         return reverse('pages:page_view',
