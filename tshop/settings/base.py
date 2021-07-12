@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # Third-party apps
     'rosetta',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'tshop.urls'
@@ -167,3 +169,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
+
+# IP's for django debug toolbar
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
