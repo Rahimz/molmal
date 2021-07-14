@@ -30,8 +30,12 @@ class Product(models.Model):
     slug = models.SlugField(max_length=1000, db_index=True, allow_unicode=True)
     image = models.ImageField(upload_to='products/images/',
                               blank=True)
+    image_alt = models.CharField(max_length=300,
+                                 blank=True,
+                                 null=True)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=0)
+    stock = models.IntegerField(default=0)
     available = models.BooleanField(default=True)
     # For Temporary home page
     temp_product = models.BooleanField(default=False,
