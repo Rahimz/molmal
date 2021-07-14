@@ -1,11 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+/* @import url(http://fonts.googleapis.com/css?family=Ubuntu); */
 
 /* Colors */
 /* ["1a535c","4ecdc4","f7fff7","ff6b6b","ffe66d"] */
-@font-face {
+
+/* @font-face {
   font-family: lalezar;
   src: url(../fonts/Lalezar-Regular.otf);
-}
+} */
+
 @font-face {
   font-family: iransans;
   src: url(../fonts/IRANSansWeb.woff2);

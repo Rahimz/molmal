@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/rahimagha_logo.ico' %}">
-
-  <script defer data-domain="rahimagha.ir" src="https://plausible.io/js/plausible.js"></script>
-
   {% comment %}
+  <script defer data-domain="rahimagha.ir" src="https://plausible.io/js/plausible.js"></script>
+  {% endcomment %}
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y98JBDYN4X"></script>
   <script>
@@ -25,14 +25,15 @@
 
     gtag('config', 'G-Y98JBDYN4X');
   </script>
-  {% endcomment %}
+
   <title>{% block title %}{% trans "Rahim Agha Store" %}{% endblock %}</title>
   <!-- Bootsrap rtl link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
   <!-- Owl caroucel css files -->
+  {% comment %}
   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-
+  {% endcomment %}
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 
@@ -40,11 +41,12 @@
   <header>
     <div id="header">
       <div class="text-center">
-        <a href="/" class="logo">{% trans "Rahim Agha Store" %}</a>
+        <a href="/" class="">
+          <img class="logo-img" width="180px" height="auto" src="{% static 'img/logotype.png' %}" alt="rahim agha logotye" /></a>
       </div>
       <div class="row">
         <div class="text-center ">
-          <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}" />
+          <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}"  alt="rahim agha images" />
         </div>
 
       </div>
@@ -138,6 +140,8 @@
 
   {% block tem_script %}
   {% endblock %}
+
+  {% comment %}
   <script>
     $(document).ready(function() {
       $("#owl-demo").owlCarousel({
@@ -158,6 +162,7 @@
 
     });
   </script>
+  {% endcomment %}
 </body>
 
 </html>
