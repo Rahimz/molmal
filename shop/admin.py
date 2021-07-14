@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
                     'available', 'temp_product','stock']
     list_filter = ['available', ]
     list_editable = ['price', 'available', 'temp_product', 'stock']
-    prepopulated_fields = {'slug': ('name',)}
+    prepopulated_fields = {'slug': ('name',), 'image_alt': ('name',)}
 
 @admin.register(Slider)
 class SliderAdmin(admin.ModelAdmin):
