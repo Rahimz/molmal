@@ -48,7 +48,6 @@
         <div class="text-center ">
           <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}"  alt="rahim agha images" />
         </div>
-
       </div>
       {% get_current_language as LANGUAGE_CODE %}
       {% get_available_languages as LANGUAGES %}
@@ -68,6 +67,13 @@
       </div>
       {% endcomment %}
     </div>
+
+    {% if request.user.is_superuser %}
+    <div class="bg-dark text-center">
+      <a href="{% url 'admin:index' %}" class="nav-link">{% trans 'Admin' %}</a>
+    </div>
+    {%endif %}
+
     {% comment %}
     <div id="subheader">
       <div class="cart">
