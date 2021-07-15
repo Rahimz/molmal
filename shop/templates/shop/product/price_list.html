@@ -1,0 +1,38 @@
+{% extends "shop/_temp_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load humanize %}
+
+
+{% block title %}{% trans "Price list" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+
+  <div class="row m-4">
+    <h2 class="text-center">{% trans 'Available Products' %}</h2>
+  </div>
+  <div class="row m-4">
+    <table class="">
+      <thead>
+        <tr>
+          <td>{% trans 'Product' %}</td>
+          <td>{% trans 'Price' %}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+        <tr>
+          <td class="">{{ product.name }}</td>
+          <td class="">{{ product.price|intcomma }}</td>
+        </tr>
+
+        {% endfor %}
+
+      </tbody>
+
+    </table>
+  </div>
+</div>
+{% endblock %}

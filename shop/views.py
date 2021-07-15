@@ -1,4 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
+from django.db.models import Q
+
 from .models import Category, Product, Slider
 from pages.models import Page
 from cart.forms import CartAddProductForm
@@ -15,6 +19,14 @@ def home(request):
                   {'sliders': sliders,
                    'products': temp_products,
                    'pages': pages})
+
+
+@staff_member_required
+def price_view(request):
+    products = Product.objects.filter(Q(available=True) & Q(stock__gte=1) & Q(temp_product=True))
+    return render(request,
+                  'shop/product/price_list.html',
+                  {'products': products })
 
 
 def product_list(requset, category_slug=None):
