@@ -19,3 +19,7 @@ class SliderAdmin(admin.ModelAdmin):
     list_display = ['title', 'active']
     # list_editable = ['title', 'active']
     list_filter = ['title', 'active']
+
+
+# use memcache admin index site
+admin.site.index_template = 'memcache_status/admin_index.html'
