@@ -23,6 +23,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    MEASURES =(('gram', 'گرم'),
+               ('kilogram', 'کیلوگرم'),
+               ('litre', 'لیتر'),)
+
     category = models.ForeignKey(Category,
                                  related_name='products',
                                  on_delete=models.CASCADE,)
@@ -36,6 +40,11 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=0)
     stock = models.IntegerField(default=0)
+    weight = models.FloatField(default=0,
+                                 null=True, blank=True)
+    weight_measure = models.CharField(max_length=50,
+                                      choices=MEASURES,
+                                      null=True, blank=True)
     available = models.BooleanField(default=True)
     # For Temporary home page
     temp_product = models.BooleanField(default=False,
