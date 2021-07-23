@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.postgres.search import SearchVector
 from django.db.models import Q
 
 from .models import Category, Product, Slider
 from pages.models import Page
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
+from .forms import SearchForm
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
@@ -14,11 +16,14 @@ def home(request):
     temp_products = Product.objects.filter(temp_product=True)
     # Queryset for Pages
     pages = Page.objects.all().filter(active=True)
+
+    form = SearchForm()
     return render(request,
                   'shop/product/temp_home.html',
                   {'sliders': sliders,
                    'products': temp_products,
-                   'pages': pages})
+                   'pages': pages,
+                   'form': form})
 
 
 @staff_member_required
@@ -57,3 +62,21 @@ def product_detail(request, id, slug):
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'recommended_products': recommended_products})
+
+
+def product_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Product.objects.all().annotate(
+                search=SearchVector('name', 'short_description'),
+            ).filter(search=query)
+    return render(request,
+                  'shop/product/search.html',
+                  {'form': form,
+                   'query': query,
+                   'results': results})

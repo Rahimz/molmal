@@ -2,30 +2,25 @@
 {% load i18n %}
 {% load static %}
 {% load humanize %}
-{% load cache %}
-
 
 {% block title %}{% trans "Rahim Agha Store" %}{% endblock %}
 
-{% block content %}
 
+{% block content %}
 <div class="container">
 
-  <div class="row m-4">
-    <form action="{% url 'shop:product_search'%}" method="get">
-      {{ form.query }}
-      <input type="submit" value="{% trans 'Search' %}">
-    </form>
-
-  </div>
-  <div class="row m-4">
-    <h2 class="text-center">{% trans 'Available Products' %}</h2>
-  </div>
 
 
-  <div class="row">
-    {# {% cache 600 products_list products %} #}
-    {% for product in products %}
+
+  <div class="row text-center">
+    {% if query %}
+    <h1>{% trans 'Products containing' %} <b><i>{{ query }}</i></b></h1>
+    <h3>
+      {% with results.count as total_results %}
+      Found {{ total_results }} result{{ total_results|pluralize }}
+      {% endwith %}
+    </h3>
+    {% for product in results %}
     <div class="card p-md-2 col-md-6 mb-4 text-center">
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="{{ product.image_alt }}">
       <div class="card-body m-3">
@@ -36,19 +31,31 @@
           {{ product.description }}
         </p>
       </div>
-
     </div>
+    {% empty %}
+    <p>{% trans 'There are no results for your query.' %}</p>
     {% endfor %}
-    {# {% endcache %} #}
   </div>
 
+  <div class="row text-center">
+    <p><a class="btn btn-outline-secondary" href="{% url 'shop:product_search' %}">{% trans 'Search again' %}</a></p>
+    </div>
+    {% else %}
+
+    <h2 class="text-center mt-3">{% trans 'Search for products' %}</h2>
+
+    <form class="form mb-4" method="get">
+      <div class="input-group">
+
+        {{ form.query }}
+
+        <input class="input-group-append" type="submit" value="{% trans 'Search' %}" placeholder="دنبال چی میگردی؟">
+      </div>
+    </form>
+
+    {% endif %}
+
 </div>
-
-
-
-</div>
-
-
 
 {% endblock %}
 
@@ -61,6 +68,3 @@
   {% endfor %}
 </ul>
 {% endblock%}
-
-{% block  tem_script %}
-{% endblock %}
