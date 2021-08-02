@@ -11,7 +11,7 @@
 
 <div class="container">
 
-  <div class="row m-4">
+  <div class="row m-4 text-center">
     <form action="{% url 'shop:product_search'%}" method="get">
       {{ form.query }}
       <input type="submit" value="{% trans 'Search' %}">

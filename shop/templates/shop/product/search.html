@@ -9,9 +9,6 @@
 {% block content %}
 <div class="container">
 
-
-
-
   <div class="row text-center">
     {% if query %}
     <h1>{% trans 'Products containing' %} <b><i>{{ query }}</i></b></h1>
@@ -39,21 +36,26 @@
 
   <div class="row text-center">
     <p><a class="btn btn-outline-secondary" href="{% url 'shop:product_search' %}">{% trans 'Search again' %}</a></p>
-    </div>
-    {% else %}
-
+  </div>
+  {% else %}
+  <div class="row">
     <h2 class="text-center mt-3">{% trans 'Search for products' %}</h2>
-
-    <form class="form mb-4" method="get">
-      <div class="input-group">
-
-        {{ form.query }}
-
-        <input class="input-group-append" type="submit" value="{% trans 'Search' %}" placeholder="دنبال چی میگردی؟">
-      </div>
+  </div>
+  <div class="row m-4 text-center">
+    <form action="{% url 'shop:product_search'%}" method="get">
+      {{ form.query }}
+      <input type="submit" value="{% trans 'Search' %}">
     </form>
+  </div>
 
-    {% endif %}
+
+  <!-- <label for="basic-url" class="form-label">Your vanity URL</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div> -->
+
+  {% endif %}
 
 </div>
 
