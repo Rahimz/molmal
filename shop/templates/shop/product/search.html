@@ -14,7 +14,8 @@
     <h1>{% trans 'Products containing' %} <b><i>{{ query }}</i></b></h1>
     <h3>
       {% with results.count as total_results %}
-      Found {{ total_results }} result{{ total_results|pluralize }}
+      {% blocktranslate %}
+      Found {{ total_results }} {% endblocktranslate %}
       {% endwith %}
     </h3>
     {% for product in results %}

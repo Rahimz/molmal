@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 14:09+0430\n"
-"PO-Revision-Date: 2021-07-14 09:40+0000\n"
+"POT-Creation-Date: 2021-08-02 17:34+0430\n"
+"PO-Revision-Date: 2021-08-02 13:06+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -32,6 +32,7 @@ msgid "Image"
 msgstr "تصویر"
 
 #: cart/templates/cart/detail.html:15
+#: shop/templates/shop/product/price_list.html:20
 msgid "Product"
 msgstr "محصول"
 
@@ -44,6 +45,7 @@ msgid "Unit price"
 msgstr "قیمت واحد"
 
 #: cart/templates/cart/detail.html:19
+#: shop/templates/shop/product/price_list.html:21
 msgid "Price"
 msgstr "قیمت"
 
@@ -154,39 +156,44 @@ msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
-#: shop/templates/shop/_temp_base.html:30 shop/templates/shop/base.html:42
-msgid "Rahim Agha Store"
-msgstr "دکان رحیم آقا"
+#: shop/templates/shop/_temp_base.html:76
+msgid "Admin"
+msgstr "مدیر"
 
-#: shop/templates/shop/_temp_base.html:102
+#: shop/templates/shop/_temp_base.html:109
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:111 shop/templates/shop/base.html:100
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:100
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:114 shop/templates/shop/base.html:103
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:103
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
 " جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:110
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:110
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:133 shop/templates/shop/base.html:122
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:122
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:134 shop/templates/shop/base.html:123
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:123
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
 #: shop/templates/shop/base.html:28
 msgid "MolMal"
 msgstr "مول مال"
+
+#: shop/templates/shop/base.html:42 shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+msgid "Rahim Agha Store"
+msgstr "دکان رحیم آقا"
 
 #: shop/templates/shop/base.html:73
 #, python-format
@@ -232,15 +239,53 @@ msgstr "دسته‌بندی‌ها"
 msgid "All"
 msgstr "همه"
 
-#: shop/templates/shop/product/temp_home.html:11
+#: shop/templates/shop/product/price_list.html:7
+#, fuzzy
+#| msgid "Price"
+msgid "Price list"
+msgstr "قیمت"
+
+#: shop/templates/shop/product/price_list.html:14
+#: shop/templates/shop/product/temp_home.html:22
 msgid "Available Products"
 msgstr "محصولات موجود"
 
-#: shop/templates/shop/product/temp_home.html:21
+#: shop/templates/shop/product/search.html:14
+msgid "Products containing"
+msgstr "محصولات شامل"
+
+#: shop/templates/shop/product/search.html:17
+#, python-format
+msgid ""
+"\n"
+"      Found %(total_results)s "
+msgstr ""
+"\n"
+" %(total_results)s مورد پیدا شد"
+
+#: shop/templates/shop/product/search.html:26
+#: shop/templates/shop/product/temp_home.html:33
 msgid "unavailable"
 msgstr "ناموجود"
 
-#: tshop/settings.py:131 tshop/settings/base.py:135
+#: shop/templates/shop/product/search.html:34
+msgid "There are no results for your query."
+msgstr "برای این عبارت هیچ محصولی پیدا نشد."
+
+#: shop/templates/shop/product/search.html:39
+msgid "Search again"
+msgstr "جستجوی دوباره"
+
+#: shop/templates/shop/product/search.html:43
+msgid "Search for products"
+msgstr "جستجو برای محصول"
+
+#: shop/templates/shop/product/search.html:48
+#: shop/templates/shop/product/temp_home.html:17
+msgid "Search"
+msgstr "جستجو"
+
+#: tshop/settings.py:131 tshop/settings/base.py:136
 msgid "Farsi"
 msgstr "فارسی"
 
