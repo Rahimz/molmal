@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 15:19+0430\n"
-"PO-Revision-Date: 2021-08-04 10:50+0000\n"
+"POT-Creation-Date: 2021-08-04 15:34+0430\n"
+"PO-Revision-Date: 2021-08-04 11:07+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -204,14 +204,13 @@ msgid "Search"
 msgstr "جستجو"
 
 #: shop/templates/shop/product/home.html:22
-#| msgid "What do you have?"
-msgid "Let\\'s see what do you have"
+#| msgid "Let\\'s see what do you have"
+msgid "Lets see what do you have"
 msgstr "ببینیم چی دارید؟"
 
 #: shop/templates/shop/product/home.html:25
-#| msgid "Products"
 msgid "What is the newest products?"
-msgstr "جدید چی آوردید؟"
+msgstr "چیزمیزهای جدید"
 
 #: shop/templates/shop/product/home.html:37
 #: shop/templates/shop/product/search.html:26
@@ -233,7 +232,6 @@ msgid "All"
 msgstr "همه"
 
 #: shop/templates/shop/product/price_list.html:7
-#| msgid "Price"
 msgid "Price list"
 msgstr "لیست قیمت"
 
