@@ -45,7 +45,9 @@
       </div>
       <div class="row">
         <div class="text-center ">
+          <a href="/" class="">
           <img class="logo-img" width="180px" height="auto" src="{% static 'img/rahimagha_logo.png' %}" alt="rahim agha images" />
+        </a>
         </div>
       </div>
       {% get_current_language as LANGUAGE_CODE %}
@@ -71,7 +73,7 @@
       <a href="{% url 'admin:index' %}" class="nav-link">{% trans 'Admin' %}</a>
     </div>
     {%endif %}
-
+{% comment %}
     <div class="row">
       <div id="subheader">
         <div class="cart">
@@ -91,6 +93,8 @@
           {% endwith %}
         </div>
       </div>
+    </div>
+    {% endcomment %}
   </header>
 
   <main>

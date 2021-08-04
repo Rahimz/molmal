@@ -13,15 +13,17 @@ from .forms import SearchForm
 def home(request):
     sliders = Slider.objects.filter(active=True)
     # this Queryset is used in temporary home page
-    temp_products = Product.objects.filter(temp_product=True)
+    # temp_products = Product.objects.filter(temp_product=True)
+
+    products = Product.objects.filter(available=True)[:4]
     # Queryset for Pages
     pages = Page.objects.all().filter(active=True)
 
     form = SearchForm()
     return render(request,
-                  'shop/product/temp_home.html',
+                  'shop/product/home.html',
                   {'sliders': sliders,
-                   'products': temp_products,
+                   'products': products,
                    'pages': pages,
                    'form': form})
 
@@ -41,11 +43,14 @@ def product_list(requset, category_slug=None):
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
+
+    form = SearchForm()
     return render(requset,
                   'shop/product/list.html',
                   {'category': category,
                    'categories': categories,
-                   'products': products})
+                   'products': products,
+                   'form':form})
 
 def product_detail(request, id, slug):
     product = get_object_or_404(Product,

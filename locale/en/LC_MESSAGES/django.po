@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-02 17:34+0430\n"
+"POT-Creation-Date: 2021-08-04 15:11+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,7 +151,7 @@ msgid ""
 "  "
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:76
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:73
 msgid "Admin"
 msgstr ""
 
@@ -159,75 +159,67 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:100
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:114
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:103
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:117
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:110
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:124
 msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:122
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:136
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:123
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:137
 msgid "Rahim Agha and Khanevadeh"
-msgstr ""
-
-#: shop/templates/shop/base.html:28
-msgid "MolMal"
-msgstr ""
-
-#: shop/templates/shop/base.html:42 shop/templates/shop/product/search.html:6
-#: shop/templates/shop/product/temp_home.html:8
-msgid "Rahim Agha Store"
-msgstr ""
-
-#: shop/templates/shop/base.html:73
-#, python-format
-msgid ""
-"\n"
-"          %(total_items)s item%(total_items|pluralize)s, R"
-"%(cart.get_total_price)s\n"
-"          "
-msgid_plural ""
-"\n"
-"          %(items)s items, R%(total)s\n"
-"          "
-msgstr[0] ""
-msgstr[1] ""
-
-#: shop/templates/shop/base.html:80
-msgid "Your cart is empty."
 msgstr ""
 
 #: shop/templates/shop/product/detail.html:29
 msgid "Add to cart"
 msgstr ""
 
-#: shop/templates/shop/product/home.html:30
-msgid "Special offers"
+#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+msgid "Rahim Agha Store"
 msgstr ""
 
-#: shop/templates/shop/product/home.html:66
-msgid "What do you have?"
+#: shop/templates/shop/product/home.html:17
+#: shop/templates/shop/product/list.html:13
+#: shop/templates/shop/product/search.html:48
+#: shop/templates/shop/product/temp_home.html:17
+msgid "Search"
+msgstr ""
+
+#: shop/templates/shop/product/home.html:22
+msgid "Newest Products"
+msgstr ""
+
+#: shop/templates/shop/product/home.html:25
+msgid "All products"
+msgstr ""
+
+#: shop/templates/shop/product/home.html:36
+#: shop/templates/shop/product/search.html:26
+#: shop/templates/shop/product/temp_home.html:33
+msgid "unavailable"
 msgstr ""
 
 #: shop/templates/shop/product/list.html:6
-#: shop/templates/shop/product/list.html:27
+#: shop/templates/shop/product/list.html:34
 msgid "Products"
 msgstr ""
 
-#: shop/templates/shop/product/list.html:13
+#: shop/templates/shop/product/list.html:20
 msgid "Categories"
 msgstr ""
 
-#: shop/templates/shop/product/list.html:16
+#: shop/templates/shop/product/list.html:23
 msgid "All"
 msgstr ""
 
@@ -251,11 +243,6 @@ msgid ""
 "      Found %(total_results)s "
 msgstr ""
 
-#: shop/templates/shop/product/search.html:26
-#: shop/templates/shop/product/temp_home.html:33
-msgid "unavailable"
-msgstr ""
-
 #: shop/templates/shop/product/search.html:34
 msgid "There are no results for your query."
 msgstr ""
@@ -266,11 +253,6 @@ msgstr ""
 
 #: shop/templates/shop/product/search.html:43
 msgid "Search for products"
-msgstr ""
-
-#: shop/templates/shop/product/search.html:48
-#: shop/templates/shop/product/temp_home.html:17
-msgid "Search"
 msgstr ""
 
 #: tshop/settings.py:131 tshop/settings/base.py:136
