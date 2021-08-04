@@ -1,0 +1,70 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load humanize %}
+{% load cache %}
+
+
+{% block title %}{% trans "Rahim Agha Store" %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="row m-4 text-center">
+    <form action="{% url 'shop:product_search'%}" method="get">
+      {{ form.query }}
+      <input type="submit" value="{% trans 'Search' %}">
+    </form>
+
+  </div>
+  <div class="row m-3">
+    <a class="btn btn-outline-success p-3" href="{% url 'shop:product_list' %}" name="button">{% trans "Let\'s see what do you have" %}</a>
+  </div>
+  <div class="row m-4">
+    <h2 class="text-center">{% trans 'What is the newest products?' %}</h2>
+  </div>
+
+
+
+  <div class="row">
+    {# {% cache 600 products_list products %} #}
+    {% for product in products %}
+    <div class="card p-md-2 col-md-6 mb-4 text-center">
+      <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="{{ product.image_alt }}">
+      <div class="card-body m-3">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}T {{ product.price|intcomma }}{% endif %}</h6>
+        {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
+        <p class="card-text">
+          {{ product.description }}
+        </p>
+      </div>
+
+    </div>
+    {% endfor %}
+    {# {% endcache %} #}
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block footer-pages %}
+<ul class="list-unstyled">
+  {% for page in pages %}
+  <li>
+    <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock%}
+
+{% block  tem_script %}
+{% endblock %}
