@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 15:11+0430\n"
+"POT-Creation-Date: 2021-08-04 15:19+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,7 +151,7 @@ msgid ""
 "  "
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:73
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
 msgid "Admin"
 msgstr ""
 
@@ -159,23 +159,23 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:114
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:116
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:117
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:119
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:124
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:126
 msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:136
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:138
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:137
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:139
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
@@ -197,14 +197,14 @@ msgid "Search"
 msgstr ""
 
 #: shop/templates/shop/product/home.html:22
-msgid "Newest Products"
+msgid "Let\\'s see what do you have"
 msgstr ""
 
 #: shop/templates/shop/product/home.html:25
-msgid "All products"
+msgid "What is the newest products?"
 msgstr ""
 
-#: shop/templates/shop/product/home.html:36
+#: shop/templates/shop/product/home.html:37
 #: shop/templates/shop/product/search.html:26
 #: shop/templates/shop/product/temp_home.html:33
 msgid "unavailable"

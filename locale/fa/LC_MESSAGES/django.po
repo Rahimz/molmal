@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 15:11+0430\n"
-"PO-Revision-Date: 2021-08-02 13:06+0000\n"
+"POT-Creation-Date: 2021-08-04 15:19+0430\n"
+"PO-Revision-Date: 2021-08-04 10:50+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -150,14 +150,13 @@ msgstr "‍سپاس از شما"
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:73
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
 msgid "Admin"
 msgstr "مدیر"
 
@@ -165,25 +164,25 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:114
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:116
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:117
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:119
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
-"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه "
-"جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
+"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
+" جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:124
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:126
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:136
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:138
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:137
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:139
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
@@ -205,18 +204,16 @@ msgid "Search"
 msgstr "جستجو"
 
 #: shop/templates/shop/product/home.html:22
-#, fuzzy
-#| msgid "Products"
-msgid "Newest Products"
-msgstr "محصولات"
+#| msgid "What do you have?"
+msgid "Let\\'s see what do you have"
+msgstr "ببینیم چی دارید؟"
 
 #: shop/templates/shop/product/home.html:25
-#, fuzzy
-#| msgid "Available Products"
-msgid "All products"
-msgstr "محصولات موجود"
+#| msgid "Products"
+msgid "What is the newest products?"
+msgstr "جدید چی آوردید؟"
 
-#: shop/templates/shop/product/home.html:36
+#: shop/templates/shop/product/home.html:37
 #: shop/templates/shop/product/search.html:26
 #: shop/templates/shop/product/temp_home.html:33
 msgid "unavailable"
@@ -236,10 +233,9 @@ msgid "All"
 msgstr "همه"
 
 #: shop/templates/shop/product/price_list.html:7
-#, fuzzy
 #| msgid "Price"
 msgid "Price list"
-msgstr "قیمت"
+msgstr "لیست قیمت"
 
 #: shop/templates/shop/product/price_list.html:14
 #: shop/templates/shop/product/temp_home.html:22
@@ -275,6 +271,10 @@ msgstr "جستجو برای محصول"
 msgid "Farsi"
 msgstr "فارسی"
 
+#, fuzzy
+#~ msgid "All products"
+#~ msgstr "محصولات موجود"
+
 #~ msgid "MolMal"
 #~ msgstr "مول مال"
 
@@ -283,9 +283,6 @@ msgstr "فارسی"
 
 #~ msgid "Special offers"
 #~ msgstr "پیشنهادهای ویژه"
-
-#~ msgid "What do you have?"
-#~ msgstr "چی دارید؟"
 
 #~ msgid "Baghali Rahim Agha"
 #~ msgstr "بقالی رحیم آقا"
