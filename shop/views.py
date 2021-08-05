@@ -15,7 +15,7 @@ def home(request):
     # this Queryset is used in temporary home page
     # temp_products = Product.objects.filter(temp_product=True)
 
-    products = Product.objects.filter(available=True)[:4]
+    products = Product.objects.filter(available=True)[:10]
     # Queryset for Pages
     pages = Page.objects.all().filter(active=True)
 
