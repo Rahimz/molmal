@@ -20,10 +20,10 @@ if settings.DEBUG:
     ]
 else:
     urlpatterns = [
-        path('products/', views.product_list, name='product_list'),
+        path('products/', cache_page(60 * 10)(views.product_list), name='product_list'),
         path('prices/', views.price_view, name='price_list'),
         path('search/', views.product_search, name='product_search'),
         path('<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
         path('<slug:category_slug>/', views.product_list, name='product_list_by_category'),
-        path('', cache_page(60 * 15)(views.home), name='home'),
+        path('', cache_page(60 * 10)(views.home), name='home'),
     ]
