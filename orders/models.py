@@ -8,16 +8,18 @@ from django.utils.translation import gettext_lazy as _
 
 class Order(models.Model):
     first_name = models.CharField(_('first name'),
-                                  max_length=50)
+                                  max_length=50, blank=True, null=True)
     last_name = models.CharField(_('last name'),
                                  max_length=50)
-    email = models.EmailField(_('e-mail'),)
-    address = models.CharField(_('address'), max_length=250)
-    postal_code = models.CharField(_('postal code'), max_length=20)
+    phone = models.CharField(max_length=12, blank=True, null=True)
+    email = models.EmailField(_('e-mail'), blank=True, null=True)
+    address = models.CharField(_('address'), max_length=250, blank=True, null=True)
+    postal_code = models.CharField(_('postal code'), max_length=20, blank=True, null=True)
     city = models.CharField(_('city'), max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
+    delivered = models.BooleanField(default=False)
 
     coupon = models.ForeignKey(Coupon,
                                related_name='orders', 
