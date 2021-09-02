@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}500 | {% trans "Rahim Agha Store" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4 text-center">
+        <h1 class="">{% trans '500 Error' %}</h1>
+    </div> <!-- / end of row-->
+
+    <div class="row mt-5 pt-5 text-center">
+        <div class="col-md-12 ">
+            <h2 class="text-muted center">{% trans '500 Error: There is an error in our server!' %}</h2>
+            <a href="{% url 'shop:home' %}" class="btn btn-danger my-5 ">{% trans 'HOME' %}</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
