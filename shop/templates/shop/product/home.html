@@ -29,6 +29,7 @@
     {# {% cache 600 products_list products %} #}
     {% for product in products %}
     <div class="col-md-4 p-2">
+      <a href="{{ product.get_absolute_url }}">
       <div class="card col-md-12 text-center">
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top p-4" alt="{{ product.image_alt }}">
       <div class="card-body m-3 p-3">
@@ -41,6 +42,7 @@
       </div>
 
     </div>
+      </a>
     </div>
     {% endfor %}
     {# {% endcache %} #}
