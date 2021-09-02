@@ -4,6 +4,7 @@ from decimal import Decimal
 from django.core.validators import MinValueValidator, MaxValueValidator
 from coupons.models import Coupon
 from django.utils.translation import gettext_lazy as _
+from django_jalali.db import models as jmodels
 
 
 class Order(models.Model):
@@ -12,6 +13,7 @@ class Order(models.Model):
     last_name = models.CharField(_('last name'),
                                  max_length=50)
     phone = models.CharField(max_length=12, blank=True, null=True)
+    fa_date = jmodels.jDateField()
     email = models.EmailField(_('e-mail'), blank=True, null=True)
     address = models.CharField(_('address'), max_length=250, blank=True, null=True)
     postal_code = models.CharField(_('postal code'), max_length=20, blank=True, null=True)

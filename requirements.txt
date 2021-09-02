@@ -18,12 +18,15 @@ cssselect2==0.4.1
 defusedxml==0.6.0
 Django==3.1.5
 django-debug-toolbar==3.2.1
+django-jalali==4.3.0
+django-memcache-status==2.2
 django-rosetta==0.9.5
 flower==0.9.7
 html5lib==1.1
 humanize==3.2.0
 idna==2.10
 isodate==0.6.0
+jdatetime==3.6.2
 kombu==4.6.11
 lxml==4.6.2
 Pillow==8.1.0
