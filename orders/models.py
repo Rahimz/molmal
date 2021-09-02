@@ -4,7 +4,7 @@ from decimal import Decimal
 from django.core.validators import MinValueValidator, MaxValueValidator
 from coupons.models import Coupon
 from django.utils.translation import gettext_lazy as _
-from django_jalali.db import models as jmodels
+from django_jalali.db import models as jmodels # https://github.com/slashmili/django-jalali
 
 
 class Order(models.Model):
