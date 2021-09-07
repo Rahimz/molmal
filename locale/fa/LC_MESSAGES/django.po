@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 15:34+0430\n"
-"PO-Revision-Date: 2021-08-04 11:07+0000\n"
+"POT-Creation-Date: 2021-09-07 13:48+0430\n"
+"PO-Revision-Date: 2021-09-07 09:19+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -73,7 +73,7 @@ msgid "Total"
 msgstr "جمع"
 
 #: cart/templates/cart/detail.html:80
-#: shop/templates/shop/product/detail.html:37
+#: shop/templates/shop/product/detail.html:36
 msgid "People who bought this also bought"
 msgstr "کسانی که این کالا را خریده اند این‌ها را نیز خریداری کرده اند "
 
@@ -99,27 +99,27 @@ msgstr "پرداخت"
 msgid "Coupon"
 msgstr "کوپن"
 
-#: orders/models.py:10
+#: orders/models.py:11
 msgid "first name"
 msgstr "نام"
 
-#: orders/models.py:12
+#: orders/models.py:13
 msgid "last name"
 msgstr "نام خانوادگی"
 
-#: orders/models.py:14
+#: orders/models.py:17
 msgid "e-mail"
 msgstr "ایمیل"
 
-#: orders/models.py:15
+#: orders/models.py:18
 msgid "address"
 msgstr "آدرس"
 
-#: orders/models.py:16
+#: orders/models.py:19
 msgid "postal code"
 msgstr "کدپستی"
 
-#: orders/models.py:17
+#: orders/models.py:20
 msgid "city"
 msgstr "شهر"
 
@@ -156,6 +156,33 @@ msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
 
+#: shop/templates/404.html:5 shop/templates/500.html:5
+#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+msgid "Rahim Agha Store"
+msgstr "دکان رحیم آقا"
+
+#: shop/templates/404.html:10
+msgid "404 Error"
+msgstr "خطای ۴۰۴"
+
+#: shop/templates/404.html:15
+msgid "404 Error: There is nothing here!"
+msgstr "خطای ۴۰۴: اینجا چیزی نداریم!"
+
+#: shop/templates/404.html:16 shop/templates/500.html:16
+msgid "HOME"
+msgstr "خانه"
+
+#: shop/templates/500.html:10
+msgid "500 Error"
+msgstr "خطای ۵۰۰"
+
+#: shop/templates/500.html:15
+msgid "500 Error: There is an error in our server!"
+msgstr "خطای ۵۰۰: مشکلی در سرور وجود دارد!"
+
 #: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
 msgid "Admin"
 msgstr "مدیر"
@@ -186,25 +213,14 @@ msgstr "حقوق مولف"
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
-#: shop/templates/shop/product/detail.html:29
-msgid "Add to cart"
-msgstr "اضافه کردن به سبد خرید"
-
-#: shop/templates/shop/product/home.html:8
-#: shop/templates/shop/product/search.html:6
-#: shop/templates/shop/product/temp_home.html:8
-msgid "Rahim Agha Store"
-msgstr "دکان رحیم آقا"
-
 #: shop/templates/shop/product/home.html:17
-#: shop/templates/shop/product/list.html:13
+#: shop/templates/shop/product/list.html:15
 #: shop/templates/shop/product/search.html:48
 #: shop/templates/shop/product/temp_home.html:17
 msgid "Search"
 msgstr "جستجو"
 
 #: shop/templates/shop/product/home.html:22
-#| msgid "Let\\'s see what do you have"
 msgid "Lets see what do you have"
 msgstr "ببینیم چی دارید؟"
 
@@ -213,21 +229,22 @@ msgid "What is the newest products?"
 msgstr "چیزمیزهای جدید"
 
 #: shop/templates/shop/product/home.html:37
+#: shop/templates/shop/product/list.html:47
 #: shop/templates/shop/product/search.html:26
 #: shop/templates/shop/product/temp_home.html:33
 msgid "unavailable"
 msgstr "ناموجود"
 
-#: shop/templates/shop/product/list.html:6
-#: shop/templates/shop/product/list.html:34
+#: shop/templates/shop/product/list.html:8
+#: shop/templates/shop/product/list.html:36
 msgid "Products"
 msgstr "محصولات"
 
-#: shop/templates/shop/product/list.html:20
+#: shop/templates/shop/product/list.html:22
 msgid "Categories"
 msgstr "دسته‌بندی‌ها"
 
-#: shop/templates/shop/product/list.html:23
+#: shop/templates/shop/product/list.html:25
 msgid "All"
 msgstr "همه"
 
@@ -268,6 +285,9 @@ msgstr "جستجو برای محصول"
 #: tshop/settings.py:131 tshop/settings/base.py:136
 msgid "Farsi"
 msgstr "فارسی"
+
+#~ msgid "Add to cart"
+#~ msgstr "اضافه کردن به سبد خرید"
 
 #, fuzzy
 #~ msgid "All products"

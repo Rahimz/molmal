@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-04 15:34+0430\n"
+"POT-Creation-Date: 2021-09-07 13:48+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgid "Total"
 msgstr ""
 
 #: cart/templates/cart/detail.html:80
-#: shop/templates/shop/product/detail.html:37
+#: shop/templates/shop/product/detail.html:36
 msgid "People who bought this also bought"
 msgstr ""
 
@@ -97,27 +97,27 @@ msgstr ""
 msgid "Coupon"
 msgstr ""
 
-#: orders/models.py:10
+#: orders/models.py:11
 msgid "first name"
 msgstr ""
 
-#: orders/models.py:12
+#: orders/models.py:13
 msgid "last name"
 msgstr ""
 
-#: orders/models.py:14
+#: orders/models.py:17
 msgid "e-mail"
 msgstr ""
 
-#: orders/models.py:15
+#: orders/models.py:18
 msgid "address"
 msgstr ""
 
-#: orders/models.py:16
+#: orders/models.py:19
 msgid "postal code"
 msgstr ""
 
-#: orders/models.py:17
+#: orders/models.py:20
 msgid "city"
 msgstr ""
 
@@ -151,6 +151,33 @@ msgid ""
 "  "
 msgstr ""
 
+#: shop/templates/404.html:5 shop/templates/500.html:5
+#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+msgid "Rahim Agha Store"
+msgstr ""
+
+#: shop/templates/404.html:10
+msgid "404 Error"
+msgstr ""
+
+#: shop/templates/404.html:15
+msgid "404 Error: There is nothing here!"
+msgstr ""
+
+#: shop/templates/404.html:16 shop/templates/500.html:16
+msgid "HOME"
+msgstr ""
+
+#: shop/templates/500.html:10
+msgid "500 Error"
+msgstr ""
+
+#: shop/templates/500.html:15
+msgid "500 Error: There is an error in our server!"
+msgstr ""
+
 #: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
 msgid "Admin"
 msgstr ""
@@ -179,18 +206,8 @@ msgstr ""
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
-#: shop/templates/shop/product/detail.html:29
-msgid "Add to cart"
-msgstr ""
-
-#: shop/templates/shop/product/home.html:8
-#: shop/templates/shop/product/search.html:6
-#: shop/templates/shop/product/temp_home.html:8
-msgid "Rahim Agha Store"
-msgstr ""
-
 #: shop/templates/shop/product/home.html:17
-#: shop/templates/shop/product/list.html:13
+#: shop/templates/shop/product/list.html:15
 #: shop/templates/shop/product/search.html:48
 #: shop/templates/shop/product/temp_home.html:17
 msgid "Search"
@@ -205,21 +222,22 @@ msgid "What is the newest products?"
 msgstr ""
 
 #: shop/templates/shop/product/home.html:37
+#: shop/templates/shop/product/list.html:47
 #: shop/templates/shop/product/search.html:26
 #: shop/templates/shop/product/temp_home.html:33
 msgid "unavailable"
 msgstr ""
 
-#: shop/templates/shop/product/list.html:6
-#: shop/templates/shop/product/list.html:34
+#: shop/templates/shop/product/list.html:8
+#: shop/templates/shop/product/list.html:36
 msgid "Products"
 msgstr ""
 
-#: shop/templates/shop/product/list.html:20
+#: shop/templates/shop/product/list.html:22
 msgid "Categories"
 msgstr ""
 
-#: shop/templates/shop/product/list.html:23
+#: shop/templates/shop/product/list.html:25
 msgid "All"
 msgstr ""
 
