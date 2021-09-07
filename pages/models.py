@@ -8,6 +8,9 @@ class Page(models.Model):
                             unique=True,
                             allow_unicode=True)
     text = models.TextField()
+    image = models.ImageField(upload_to='pages/images/',
+                              null=True, blank=True)
+    image_alt = models.CharField(max_length=250, null=True, blank=True)
     active = models.BooleanField(default=True)
 
     def get_absolute_url(self):
