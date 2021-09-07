@@ -4,6 +4,8 @@ from .models import Page
 
 def PageView(request, slug):
     page = get_object_or_404(Page, slug=slug)
+    pages = Page.objects.all()
     return render(request,
                   'pages/page.html',
-                  {'page': page})
+                  {'page': page,
+                  'pages': pages})

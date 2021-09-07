@@ -40,6 +40,8 @@ def product_list(requset, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
+    # Queryset for Pages
+    pages = Page.objects.all().filter(active=True)
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
@@ -50,7 +52,8 @@ def product_list(requset, category_slug=None):
                   {'category': category,
                    'categories': categories,
                    'products': products,
-                   'form':form})
+                   'form':form,
+                   'pages': pages})
 
 def product_detail(request, id, slug):
     product = get_object_or_404(Product,
@@ -62,17 +65,25 @@ def product_detail(request, id, slug):
     r = Recommender()
     recommended_products = r.suggest_products_for([product], 4)
 
+    # Queryset for Pages
+    pages = Page.objects.all().filter(active=True)
+
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
-                   'recommended_products': recommended_products})
+                   'recommended_products': recommended_products,
+                   'pages': pages})
 
 
 def product_search(request):
     form = SearchForm()
     query = None
     results = []
+
+    # Queryset for Pages
+    pages = Page.objects.all().filter(active=True)
+
     if 'query' in request.GET:
         form = SearchForm(request.GET)
         if form.is_valid():
@@ -84,4 +95,5 @@ def product_search(request):
                   'shop/product/search.html',
                   {'form': form,
                    'query': query,
-                   'results': results})
+                   'results': results,
+                   'pages': pages})
