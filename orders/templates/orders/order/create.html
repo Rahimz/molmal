@@ -24,7 +24,7 @@
                     {% for item in cart %}
                     <li>
                         {{ item.quantity }}x {{ item.product.name }}
-                        <span>R{{ item.total_price|floatformat:2 }}</span>
+                        <span>R{{ item.total_price|floatformat:0 }}</span>
                     </li>
                     {% endfor %}
                     {% if cart.coupon %}
@@ -32,11 +32,11 @@
                             {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
                                 "{{ code }}" ({{ discount }}% off)
                             {% endblocktrans %}
-                            <span class="neg">- R{{ cart.get_discount|floatformat:2 }}</span>
+                            <span class="neg">- R{{ cart.get_discount|floatformat:0 }}</span>
                         </li>
                     {% endif %}
                 </ul>
-                <p>{% trans "Total" %}: R{{ cart.get_total_price_after_discount|floatformat:2 }}</p>
+                <p>{% trans "Total" %}: R{{ cart.get_total_price_after_discount|floatformat:0 }}</p>
             </div>
 
         </div>
