@@ -12,7 +12,8 @@ MERCHANT = merchant
 ZP_API_REQUEST = "https://api.zarinpal.com/pg/v4/payment/request.json"
 ZP_API_VERIFY = "https://api.zarinpal.com/pg/v4/payment/verify.json"
 ZP_API_STARTPAY = "https://www.zarinpal.com/pg/StartPay/{authority}"
-client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
+CallbackURL = 'http://localhost:8000/verify/' # Important: need to edit for realy server.
+# client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 # we use this variable to edit order after the successful payment
 paid_order = None
 
@@ -21,7 +22,7 @@ def send_request(request):
     # we get the order detail from session
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
-    amount = order.get_total_cost()  # Toman / Required
+    amount = int(order.get_total_cost())  # Toman / Required
     #print(amount)
 
     paid_order = order
@@ -29,7 +30,6 @@ def send_request(request):
     description = "توضیحات مربوط به تراکنش را در این قسمت وارد کنید"  # Required
     email = 'email@example.com'  # Optional
     mobile = '09123456789'  # Optional
-    CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit for realy server.
 
     # send request to payment system
     req_data = {
@@ -41,8 +41,9 @@ def send_request(request):
     }
     req_header = {"accept": "application/json",
                   "content-type": "application/json'"}
-    req = requests.post(url=ZP_API_REQUEST, data=json.dumps(
-        req_data), headers=req_header)
+    req = requests.post(url=ZP_API_REQUEST,
+                        data=json.dumps(req_data),
+                        headers=req_header)
     authority = req.json()['data']['authority']
 
     if len(req.json()['errors']) == 0:
