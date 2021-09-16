@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}success payment | {% trans "Rahim Agha Store" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4 text-center">
+        <h1 class="">{% trans 'Successful payment' %}</h1>
+    </div> <!-- / end of row-->
+
+    <div class="row mt-5 pt-5 text-center">
+        <div class="col-md-12 ">
+            <h2 class="text-muted center">{% trans 'Your payment was successful!' %}</h2>
+            <p class="text-muted">{% trans 'We will contact you to send your order' %}</p>
+            <a href="{% url 'shop:home' %}" class="btn btn-danger my-5 ">{% trans 'Home' %}</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
