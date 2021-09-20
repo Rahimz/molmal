@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-07 13:48+0430\n"
-"PO-Revision-Date: 2021-09-07 09:19+0000\n"
+"POT-Creation-Date: 2021-09-20 13:18+0430\n"
+"PO-Revision-Date: 2021-09-20 08:49+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -20,6 +20,7 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.9.5\n"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
+#: orders/templates/orders/order/pdf.html:27
 msgid "Quantity"
 msgstr "مقدار"
 
@@ -32,6 +33,7 @@ msgid "Image"
 msgstr "تصویر"
 
 #: cart/templates/cart/detail.html:15
+#: orders/templates/orders/order/pdf.html:25
 #: shop/templates/shop/product/price_list.html:20
 msgid "Product"
 msgstr "محصول"
@@ -45,6 +47,7 @@ msgid "Unit price"
 msgstr "قیمت واحد"
 
 #: cart/templates/cart/detail.html:19
+#: orders/templates/orders/order/pdf.html:26
 #: shop/templates/shop/product/price_list.html:21
 msgid "Price"
 msgstr "قیمت"
@@ -69,6 +72,7 @@ msgstr ""
 
 #: cart/templates/cart/detail.html:69
 #: orders/templates/orders/order/create.html:39
+#: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr "جمع"
 
@@ -155,6 +159,26 @@ msgid ""
 msgstr ""
 "\n"
 "<p>سفارش شما کامل شد. شماره سفارش شما <strong>%(order_id)s</strong>.</p>"
+
+#: orders/templates/orders/order/pdf.html:7
+msgid "Invoice no."
+msgstr "شماره فاکتور"
+
+#: orders/templates/orders/order/pdf.html:13
+msgid "Bill to"
+msgstr "صادر شده برای"
+
+#: orders/templates/orders/order/pdf.html:21
+msgid "Items bought"
+msgstr "کالاهای خریداری شده"
+
+#: orders/templates/orders/order/pdf.html:28
+msgid "Cost"
+msgstr "هزینه"
+
+#: orders/templates/orders/order/pdf.html:48
+msgid "Pending payment"
+msgstr "پرداخت نشده"
 
 #: shop/templates/404.html:5 shop/templates/500.html:5
 #: shop/templates/shop/product/home.html:8

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-07 13:48+0430\n"
+"POT-Creation-Date: 2021-09-20 13:18+0430\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.9.5\n"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
+#: orders/templates/orders/order/pdf.html:27
 msgid "Quantity"
 msgstr ""
 
@@ -31,7 +32,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: cart/templates/cart/detail.html:15
+#: cart/templates/cart/detail.html:15 orders/templates/orders/order/pdf.html:25
 #: shop/templates/shop/product/price_list.html:20
 msgid "Product"
 msgstr ""
@@ -44,7 +45,7 @@ msgstr ""
 msgid "Unit price"
 msgstr ""
 
-#: cart/templates/cart/detail.html:19
+#: cart/templates/cart/detail.html:19 orders/templates/orders/order/pdf.html:26
 #: shop/templates/shop/product/price_list.html:21
 msgid "Price"
 msgstr ""
@@ -67,6 +68,7 @@ msgstr ""
 
 #: cart/templates/cart/detail.html:69
 #: orders/templates/orders/order/create.html:39
+#: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr ""
 
@@ -149,6 +151,26 @@ msgid ""
 "    <p>Your order has been successfully completed. Your order number is "
 "<strong>%(order_id)s</strong>.</p>\n"
 "  "
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:7
+msgid "Invoice no."
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:13
+msgid "Bill to"
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:21
+msgid "Items bought"
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:28
+msgid "Cost"
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:48
+msgid "Pending payment"
 msgstr ""
 
 #: shop/templates/404.html:5 shop/templates/500.html:5
