@@ -1,0 +1,25 @@
+{% extends "shop/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% endblock %}
+
+{% block dash_active%}active{% endblock %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-md  text-center">
+		<h1>{% trans 'Dashboard' %}|{% trans 'Add your profile' %} </h1>
+		<p>{% trans 'Please add your profile details' %} </p>
+		
+		
+		<form action="." method="post" enctype="multipart/form-data">
+			{{ user_form.as_p }}
+			{{ profile_form.as_p }}
+			{% csrf_token %}
+			<p><input type="submit" value="{% trans 'Add profile' %}"></p>
+		</form>
+	</div>
+</div> <!--/end of row -->	
+{% endblock %}

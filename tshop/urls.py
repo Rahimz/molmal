@@ -28,6 +28,7 @@ urlpatterns = [
     path('zarinpal/', include('zarinpal.urls', namespace='zarinpal')),
     path('coupons/', include('coupons.urls', namespace='coupons')),
     path('pages/', include('pages.urls', namespace='pages')),
+    path('account/', include('account.urls')),
     path('rosetta/', include('rosetta.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
     path('', include('shop.urls', namespace='shop')),

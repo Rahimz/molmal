@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # Local apps
+    'account.apps.AccountConfig',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
@@ -182,3 +183,8 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+# Login redirect for account
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
