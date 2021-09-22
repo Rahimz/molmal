@@ -8,7 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2021-09-25 09:38+0330\n"
+=======
+"POT-Creation-Date: 2021-09-22 09:10+0330\n"
+>>>>>>> 1ee490b (translations for cart and account added)
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +37,11 @@ msgstr ""
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/dashboard.html:14
+<<<<<<< HEAD
 #: account/templates/account/edit.html:5
+=======
+#: account/templates/account/edit.html:5 shop/templates/shop/base.html:48
+>>>>>>> 1ee490b (translations for cart and account added)
 msgid "Dashboard"
 msgstr ""
 
@@ -309,7 +317,7 @@ msgid "Total"
 msgstr ""
 
 #: cart/templates/cart/detail.html:80
-#: shop/templates/shop/product/detail.html:36
+#: shop/templates/shop/product/detail.html:35
 msgid "People who bought this also bought"
 msgstr ""
 
@@ -413,6 +421,8 @@ msgstr ""
 #: shop/templates/shop/product/home.html:8
 #: shop/templates/shop/product/search.html:6
 #: shop/templates/shop/product/temp_home.html:8
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/success.html:5
 msgid "Rahim Agha Store"
 msgstr ""
 
@@ -436,7 +446,7 @@ msgstr ""
 msgid "500 Error: There is an error in our server!"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:82
 msgid "Admin"
 msgstr ""
 
@@ -444,6 +454,7 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
+<<<<<<< HEAD
 #: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:121
 msgid "Online shop footer"
 msgstr ""
@@ -470,6 +481,46 @@ msgstr ""
 
 #: shop/templates/shop/base.html:110
 msgid "Or if you prefer phon you could call me at"
+=======
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:124
+msgid "Online shop footer"
+msgstr ""
+
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:127
+msgid "This Rahim agha shop present every retail item that we said Baghali"
+msgstr ""
+
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:134
+msgid "Important links"
+msgstr ""
+
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:146
+msgid "Copyright"
+msgstr ""
+
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:147
+msgid "Rahim Agha and Khanevadeh"
+msgstr ""
+
+#: shop/templates/shop/base.html:47
+msgid "Logout"
+msgstr ""
+
+#: shop/templates/shop/base.html:50
+msgid "Login"
+msgstr ""
+
+#: shop/templates/shop/base.html:92
+msgid "item"
+msgstr ""
+
+#: shop/templates/shop/base.html:103
+msgid "Your cart is empty."
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:27
+msgid "Add to cart"
+>>>>>>> 1ee490b (translations for cart and account added)
 msgstr ""
 
 #: shop/templates/shop/product/home.html:17
@@ -545,4 +596,33 @@ msgstr ""
 
 #: tshop/settings.py:131 tshop/settings/base.py:137
 msgid "Farsi"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:10
+msgid "Failed payment"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:15
+msgid "Your payment is failed!"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:16
+msgid "Please try again a few minutes later!"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:17
+#: zarinpal/templates/zarinpal/success.html:17
+msgid "Home"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/success.html:10
+msgid "Successful payment"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/success.html:15
+msgid "Your payment was successful!"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/success.html:16
+msgid "We will contact you to send your order"
 msgstr ""

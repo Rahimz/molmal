@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-25 09:38+0330\n"
-"PO-Revision-Date: 2021-09-25 06:11+0000\n"
+"POT-Creation-Date: 2021-09-22 09:10+0330\n"
+"PO-Revision-Date: 2021-09-22 05:59+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,250 +21,252 @@ msgstr ""
 
 #: account/forms.py:13
 msgid "Password"
-msgstr ""
+msgstr "گذرواژه"
 
 #: account/forms.py:14
 msgid "Repeat password"
-msgstr ""
+msgstr "تکرار گذرواژه"
 
 #: account/forms.py:26
 msgid "Passwords don't match."
-msgstr ""
+msgstr "گذرواژه ها مطابقت ندارند"
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5
+#: account/templates/account/edit.html:5 shop/templates/shop/base.html:48
 msgid "Dashboard"
-msgstr ""
+msgstr "داشبورد"
 
 #: account/templates/account/create_profile.html:13
 msgid "Add your profile"
-msgstr ""
+msgstr "حساب کاربری خود را اضافه کنید"
 
 #: account/templates/account/create_profile.html:14
 msgid "Please add your profile details"
-msgstr ""
+msgstr "جزییات حساب کاربری خود را کامل کنید"
 
 #: account/templates/account/create_profile.html:21
 #: account/templates/account/dashboard.html:66
 msgid "Add profile"
-msgstr ""
+msgstr "اضافه کردن حساب کاربری"
 
 #: account/templates/account/dashboard.html:16
 #: account/templates/account/register_done.html:10
 msgid "Welcome"
-msgstr ""
+msgstr "خوش آمدید"
 
 #: account/templates/account/dashboard.html:28
 msgid "Your profile details:"
-msgstr ""
+msgstr "جزییات حساب کاربری شما"
 
 #: account/templates/account/dashboard.html:32
-#, fuzzy
 #| msgid "first name"
 msgid "First name:"
 msgstr "نام"
 
 #: account/templates/account/dashboard.html:36
-#, fuzzy
 #| msgid "last name"
 msgid "Last name:"
 msgstr "نام خانوادگی"
 
 #: account/templates/account/dashboard.html:40
-#, fuzzy
 #| msgid "e-mail"
 msgid "Email:"
 msgstr "ایمیل"
 
 #: account/templates/account/dashboard.html:44
 msgid "Gender:"
-msgstr ""
+msgstr "جنسیت"
 
 #: account/templates/account/dashboard.html:48
 msgid "Date of birth:"
-msgstr ""
+msgstr "تاریح تولد"
 
 #: account/templates/account/dashboard.html:55
-#, fuzzy
 #| msgid "Unit price"
 msgid "Edit profile"
-msgstr "قیمت واحد"
+msgstr "اصلاح حساب کاربری"
 
 #: account/templates/account/dashboard.html:56
 msgid "Change  password"
-msgstr ""
+msgstr "تغییر گذرواژه"
 
 #: account/templates/account/dashboard.html:59
 msgid "Warning:"
-msgstr ""
+msgstr "اخطار"
 
 #: account/templates/account/dashboard.html:59
 msgid ""
 "If you remove your profile user, every action and data you have entered will"
 " be deleted permanently."
 msgstr ""
+"اگر حساب کاربری خود را پاک کنید، هر اطلاعات و سابقه‌ای که داشته اید به طور "
+"دائم از این وبسایت حذف خواهد شد."
 
 #: account/templates/account/dashboard.html:60
 msgid "THIS ACCTION IS NOT UNDOABLE!"
-msgstr ""
+msgstr "این عملیات غیر قابل بازگشت است"
 
 #: account/templates/account/dashboard.html:61
 msgid "Romove Account Completely!"
-msgstr ""
+msgstr "حذف کردن حساب کاربری به طور کامل!"
 
 #: account/templates/account/dashboard.html:65
 msgid "You have to complete your profile first:"
-msgstr ""
+msgstr "شما باید در ابتدا حساب کاربری خود را کامل کنید:"
 
 #: account/templates/account/edit.html:5
 #: account/templates/account/edit.html:13
 msgid "Edit your account"
-msgstr ""
+msgstr "اصلاح حساب کاربری"
 
 #: account/templates/account/edit.html:14
 msgid "You can edit your account using the following form:"
-msgstr ""
+msgstr "به کمک فرم زیر حساب کاربری خود را اصلاح کنید:"
 
 #: account/templates/account/edit.html:21
 msgid "Save changes"
-msgstr ""
+msgstr "ذخیره تغییرات"
 
 #: account/templates/account/register.html:10
 msgid "Create an account"
-msgstr ""
+msgstr "ساخت یک حساب کاربری جدید"
 
 #: account/templates/account/register.html:11
 msgid "Please, sign up using the following form:"
-msgstr ""
+msgstr "لطفاً به کمک فرم زیر ثبت نام کنید:"
 
 #: account/templates/account/register.html:15
 msgid "Create my account"
-msgstr ""
+msgstr "ساخت حساب کاربری"
 
 #: account/templates/account/register_done.html:11
 msgid "Your account has been successfully created. Now you can"
-msgstr ""
+msgstr "حساب شما با موفقیت ساخته شد. "
 
 #: account/templates/account/register_done.html:11
 msgid "log in"
-msgstr ""
+msgstr "ورود"
 
 #: account/templates/registration/logged_out.html:12
 msgid "Logged out"
-msgstr ""
+msgstr "خروج"
 
 #: account/templates/registration/logged_out.html:13
 msgid "You have been successfully logged out. You can"
-msgstr ""
+msgstr "شما با موفقیت از حساب کاربری خود خارج شدید."
 
 #: account/templates/registration/logged_out.html:14
 msgid "log-in again"
-msgstr ""
+msgstr "ورود دوباره"
 
 #: account/templates/registration/login.html:14
 #: account/templates/registration/login.html:34
 msgid "Log-in"
-msgstr ""
+msgstr "ورود"
 
 #: account/templates/registration/login.html:17
 msgid "Your username and password didn't match.Please try again."
 msgstr ""
+"نام کاربری و گذرواژه شما با هم مطابقت ندارد. لطفاً دوباره امتحان کنید."
 
 #: account/templates/registration/login.html:22
 msgid "Please, use the following form to log-in."
-msgstr ""
+msgstr "لطفاً از فرم زیر برای ورود به حساب کاربری استفاده کنید:"
 
 #: account/templates/registration/login.html:25
 msgid "If you don't have an account"
-msgstr ""
+msgstr "اگر حساب کاربری ندارید"
 
 #: account/templates/registration/login.html:25
 msgid "register here"
-msgstr ""
+msgstr "اینجا ثبت نام کنید"
 
 #: account/templates/registration/password_change_done.html:12
 msgid "Password changed"
-msgstr ""
+msgstr "تغییر گذرواژه"
 
 #: account/templates/registration/password_change_done.html:13
 msgid "Your password has been successfully changed."
-msgstr ""
+msgstr "گذرواژه شما با موفقیت تغییر کرد."
 
 #: account/templates/registration/password_change_form.html:12
 msgid "Change you password"
-msgstr ""
+msgstr "گذرواژه خود را تغییر دهید"
 
 #: account/templates/registration/password_change_form.html:13
 msgid "Use the form below to change your password."
-msgstr ""
+msgstr "از فرم زیر برای تغییر گذرواژه خود استفاده کنید."
 
 #: account/templates/registration/password_change_form.html:17
 msgid "Change"
-msgstr ""
+msgstr "تغییر بده"
 
 #: account/templates/registration/password_reset_complete.html:12
 msgid "Password set"
-msgstr ""
+msgstr "گذرواژه تغییر کرد"
 
 #: account/templates/registration/password_reset_complete.html:13
 msgid "Your password has been set. You can "
-msgstr ""
+msgstr "گذرواژه شما تغییر کرد. حالا می‌توانید"
 
 #: account/templates/registration/password_reset_complete.html:13
 msgid "log in now"
-msgstr ""
+msgstr "دوباره وارد شوید"
 
 #: account/templates/registration/password_reset_confirm.html:12
 #: account/templates/registration/password_reset_done.html:12
 msgid "Reset your password"
-msgstr ""
+msgstr "تغییر گذرواژه"
 
 #: account/templates/registration/password_reset_confirm.html:14
 msgid "Please enter your new password twice"
-msgstr ""
+msgstr "لطفاً گذرواژه جدید را دوبار وارد کنید"
 
 #: account/templates/registration/password_reset_confirm.html:18
 msgid "Change my password"
-msgstr ""
+msgstr "گذرواژه من را تغییر بده"
 
 #: account/templates/registration/password_reset_confirm.html:20
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
+"لینک تغییر گذرواژه نامعتبر است. شاید به خاطر اینکه یکبار از آن استفاده شده "
+"است. لطفاً درخواست یک لینک جدید بدهید."
 
 #: account/templates/registration/password_reset_done.html:13
 msgid "We've emailed you instructions for setting your password."
-msgstr ""
+msgstr "برای شما نحوه تغییر گذرواژه را ایمیل کرده‌ایم."
 
 #: account/templates/registration/password_reset_done.html:14
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with."
 msgstr ""
+"اگر ایمیلی دریافت نکرده‌اید، لطفاً مطمئن شوید که آدرس ایمیل را درست تایپ "
+"کرده اید و پوشه اسپم را نیز چک کنید."
 
 #: account/templates/registration/password_reset_email.html:3
 msgid "Someone asked for password reset for email"
-msgstr ""
+msgstr "درخواست تغییر گذرواژه برای ایمیل"
 
 #: account/templates/registration/password_reset_email.html:7
 msgid "Your username, in case you've forgotten"
-msgstr ""
+msgstr "نام کاربری شما، شاید فراموش کرده باشید"
 
 #: account/templates/registration/password_reset_form.html:12
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "گذرواژه خود را فراموش کرده‌اید؟"
 
 #: account/templates/registration/password_reset_form.html:13
 msgid "Enter your e-mail address to obtain a new password."
-msgstr ""
+msgstr "ایمیل خود را وارد کنید تا گذرواژه جدیدی بگیرید."
 
 #: account/templates/registration/password_reset_form.html:16
-#, fuzzy
 #| msgid "e-mail"
 msgid "Send e-mail"
-msgstr "ایمیل"
+msgstr "ارسال ایمیل"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
@@ -324,7 +326,7 @@ msgid "Total"
 msgstr "جمع"
 
 #: cart/templates/cart/detail.html:80
-#: shop/templates/shop/product/detail.html:36
+#: shop/templates/shop/product/detail.html:35
 msgid "People who bought this also bought"
 msgstr "کسانی که این کالا را خریده اند این‌ها را نیز خریداری کرده اند "
 
@@ -431,6 +433,8 @@ msgstr "پرداخت نشده"
 #: shop/templates/shop/product/home.html:8
 #: shop/templates/shop/product/search.html:6
 #: shop/templates/shop/product/temp_home.html:8
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/success.html:5
 msgid "Rahim Agha Store"
 msgstr "دکان رحیم آقا"
 
@@ -454,7 +458,7 @@ msgstr "خطای ۵۰۰"
 msgid "500 Error: There is an error in our server!"
 msgstr "خطای ۵۰۰: مشکلی در سرور وجود دارد!"
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:75
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:82
 msgid "Admin"
 msgstr "مدیر"
 
@@ -462,11 +466,11 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:121
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:124
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:124
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:127
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
@@ -570,8 +574,35 @@ msgstr "جستجو برای محصول"
 msgid "Farsi"
 msgstr "فارسی"
 
-#~ msgid "Add to cart"
-#~ msgstr "اضافه کردن به سبد خرید"
+#: zarinpal/templates/zarinpal/fail.html:10
+#| msgid "Pending payment"
+msgid "Failed payment"
+msgstr "پرداخت ناموفق"
+
+#: zarinpal/templates/zarinpal/fail.html:15
+msgid "Your payment is failed!"
+msgstr "پرداخت شما انجام نشد!"
+
+#: zarinpal/templates/zarinpal/fail.html:16
+msgid "Please try again a few minutes later!"
+msgstr "لطفاً چند دقیقه دیگر امتحان کنید!"
+
+#: zarinpal/templates/zarinpal/fail.html:17
+#: zarinpal/templates/zarinpal/success.html:17
+msgid "Home"
+msgstr "خانه"
+
+#: zarinpal/templates/zarinpal/success.html:10
+msgid "Successful payment"
+msgstr "پرداخت موفق"
+
+#: zarinpal/templates/zarinpal/success.html:15
+msgid "Your payment was successful!"
+msgstr "پرداخت شما موفق بود!"
+
+#: zarinpal/templates/zarinpal/success.html:16
+msgid "We will contact you to send your order"
+msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
 
 #, fuzzy
 #~ msgid "All products"
@@ -579,9 +610,6 @@ msgstr "فارسی"
 
 #~ msgid "MolMal"
 #~ msgstr "مول مال"
-
-#~ msgid "Your cart is empty."
-#~ msgstr "سبد خرید شما خالی است"
 
 #~ msgid "Special offers"
 #~ msgstr "پیشنهادهای ویژه"
