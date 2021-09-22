@@ -12,7 +12,9 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 import weasyprint
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def order_create(request):
     cart = Cart(request)
     if request.method == 'POST':
@@ -44,7 +46,7 @@ def order_create(request):
     return render(request,
                   'orders/order/create.html',
                   {'cart': cart, 'form': form})
-                                         
+
 
 @staff_member_required # it checks both is_active and is_staff field of user request
 def admin_order_detail(request, order_id):
@@ -60,13 +62,13 @@ def admin_order_pdf(request, order_id):
     This is the view to generate a PDF invoice for an order. You use the staff_member_
     required decorator to make sure only staff users can access this view.
     """
-    
+
     order = get_object_or_404(Order, id=order_id)
-    
+
     html = render_to_string('orders/order/pdf.html', {'order': order})
-    
+
     response = HttpResponse(content_type='application/pdf')
-    
+
     response['Content-Disposition'] = f'filename=order_{order.id}.pdf'
     weasyprint.HTML(string=html).write_pdf(response,
                                            stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + 'css/pdf.css')])
