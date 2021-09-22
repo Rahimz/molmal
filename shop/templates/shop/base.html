@@ -80,7 +80,6 @@
       <a href="{% url 'admin:index' %}" class="nav-link">{% trans 'Admin' %}</a>
     </div>
     {%endif %}
-    {% comment %}
     <div class="row">
       <div id="subheader">
         <div class="cart">
@@ -88,11 +87,14 @@
           {% if total_items > 0 %}
           <img src="{% static 'img/cart25.png'%}" />
           <a href="{% url 'cart:cart_detail'%}">
-            {% blocktrans with total=cart.get_total_price count items=total_items %}
-            {{ total_items }} item{{ total_items|pluralize }}, R{{ cart.get_total_price }}
-            {% plural %}
-            {{ items }} items, R{{ total }}
-            {% endblocktrans %}
+            {{ total_items }} {% trans 'item' %}, T {{ cart.get_total_price }}
+            {% comment %}
+              {% blocktrans with total=cart.get_total_price count items=total_items %}
+              {{ total_items }} item, T {{ cart.get_total_price }}
+              {% plural %}
+              {{ items }} items, T {{ total }}
+              {% endblocktrans %}
+            {% endcomment %}
           </a>
           {% else %}
           {% trans "Your cart is empty." %}
@@ -101,7 +103,6 @@
         </div>
       </div>
     </div>
-    {% endcomment %}
   </header>
 
   <main>
