@@ -17,6 +17,7 @@
     <table class="">
       <thead>
         <tr>
+          <td>{% trans 'Category' %}</td>
           <td>{% trans 'Product' %}</td>
           <td>{% trans 'Price' %}</td>
         </tr>
@@ -24,6 +25,7 @@
       <tbody>
         {% for product in products %}
         <tr>
+          <td class="">{{ product.category }}</td>
           <td class="">{{ product.name }}</td>
           <td class="">{{ product.price|intcomma }}</td>
         </tr>

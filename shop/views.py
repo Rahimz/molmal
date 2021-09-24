@@ -29,11 +29,13 @@ def home(request):
 
 
 @staff_member_required
-def price_view(request):
-    products = Product.objects.filter(Q(available=True) & Q(stock__gte=1) & Q(temp_product=True))
+def price_view(request,):
+    categories = Category.objects.all()
+    products = Product.objects.filter(Q(available=True) & Q(stock__gte=1)).order_by('category').order_by('name')
     return render(request,
                   'shop/product/price_list.html',
-                  {'products': products })
+                  {'products': products,
+                   'categories': categories, })
 
 
 def product_list(requset, category_slug=None):
