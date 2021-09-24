@@ -13,6 +13,9 @@
     <div class="row mt-5 pt-5 text-center">
         <div class="col-md-12 ">
             <h2 class="text-muted center">{% trans 'Your payment was successful!' %}</h2>
+            {% if message %}
+            <p class="text-warning h3 p-3">{{ message }}</p>
+            {% endif %}
             <p class="text-muted">{% trans 'We will contact you to send your order' %}</p>
             <a href="{% url 'shop:home' %}" class="btn btn-danger my-5 ">{% trans 'Home' %}</a>
         </div>

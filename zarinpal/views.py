@@ -75,13 +75,17 @@ def verify(request):
         if len(req.json()['errors']) == 0:
             t_status = req.json()['data']['code']
             if t_status == 100:
-                return HttpResponse('Transaction success.\nRefID: ' + str(
-                    req.json()['data']['ref_id']
-                ))
+                return render(request, 'zarinpal/success.html',
+                              {'message': 'Transaction success.\nRefID: ' +
+                                           str(req.json()['data']['ref_id'])})
+                # return HttpResponse('Transaction success.\nRefID: ' + str(
+                #     req.json()['data']['ref_id']))
             elif t_status == 101:
-                return HttpResponse('Transaction submitted : ' + str(
-                    req.json()['data']['message']
-                ))
+                return render(request, 'zarinpal/success.html',
+                              {'message': 'Transaction submitted : ' +
+                                          str(req.json()['data']['message'])})
+                # return HttpResponse('Transaction submitted : ' + str(
+                #     req.json()['data']['message']))                
             else:
                 return render(request,
                               'zarinpal/fail.html',
@@ -107,4 +111,6 @@ def verify(request):
         # return render(request,
         #               'zarinpal/fail.html',
         #               {'message': ''})
-        return HttpResponse('Transaction failed or canceled by user')
+        # return HttpResponse()
+        return render(request, 'zarinpal/fail.html',
+                      {'message': 'Transaction failed or canceled by user'})

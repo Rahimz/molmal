@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'rosetta',
     'debug_toolbar',
     'memcache_status',
+    'zarinpal',
 ]
 
 MIDDLEWARE = [
