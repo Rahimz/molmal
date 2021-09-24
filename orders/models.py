@@ -4,7 +4,10 @@ from decimal import Decimal
 from django.core.validators import MinValueValidator, MaxValueValidator
 from coupons.models import Coupon
 from django.utils.translation import gettext_lazy as _
-from django_jalali.db import models as jmodels # https://github.com/slashmili/django-jalali
+# https://github.com/slashmili/django-jalali
+from django_jalali.db import models as jmodels
+from django.conf import settings
+from cart.cart import Cart
 
 
 class Order(models.Model):
@@ -15,8 +18,10 @@ class Order(models.Model):
     phone = models.CharField(max_length=12, blank=True, null=True)
     fa_date = jmodels.jDateField(null=True, blank=True)
     email = models.EmailField(_('e-mail'), blank=True, null=True)
-    address = models.CharField(_('address'), max_length=250, blank=True, null=True)
-    postal_code = models.CharField(_('postal code'), max_length=20, blank=True, null=True)
+    address = models.CharField(
+        _('address'), max_length=250, blank=True, null=True)
+    postal_code = models.CharField(
+        _('postal code'), max_length=20, blank=True, null=True)
     city = models.CharField(_('city'), max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -28,9 +33,9 @@ class Order(models.Model):
                                null=True,
                                blank=True,
                                on_delete=models.SET_NULL)
-                               # if the coupon gets deleted,
-                               # the coupon field is set to Null,
-                               # but the discount is preserved
+    # if the coupon gets deleted,
+    # the coupon field is set to Null,
+    # but the discount is preserved
     discount = models.IntegerField(default=0,
                                    validators=[MinValueValidator(0),
                                                MaxValueValidator(100)])
@@ -61,3 +66,16 @@ class OrderItem(models.Model):
 
     def get_cost(self):
         return self.price * self.quantity
+
+
+class OrderHistory(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE,
+                             related_name='orderhistory')
+    order = models.ForeignKey(Order,
+                              on_delete=models.CASCADE)
+    order_item = models.ForeignKey(OrderItem,
+                                   on_delete=models.CASCADE)
+
+    def __str__(self):
+        return order.last_name
