@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-20 13:18+0430\n"
-"PO-Revision-Date: 2021-09-20 08:49+0000\n"
+"POT-Creation-Date: 2021-09-25 09:38+0330\n"
+"PO-Revision-Date: 2021-09-25 06:11+0000\n"
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,253 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.5\n"
+
+#: account/forms.py:13
+msgid "Password"
+msgstr ""
+
+#: account/forms.py:14
+msgid "Repeat password"
+msgstr ""
+
+#: account/forms.py:26
+msgid "Passwords don't match."
+msgstr ""
+
+#: account/templates/account/create_profile.html:13
+#: account/templates/account/dashboard.html:14
+#: account/templates/account/edit.html:5
+msgid "Dashboard"
+msgstr ""
+
+#: account/templates/account/create_profile.html:13
+msgid "Add your profile"
+msgstr ""
+
+#: account/templates/account/create_profile.html:14
+msgid "Please add your profile details"
+msgstr ""
+
+#: account/templates/account/create_profile.html:21
+#: account/templates/account/dashboard.html:66
+msgid "Add profile"
+msgstr ""
+
+#: account/templates/account/dashboard.html:16
+#: account/templates/account/register_done.html:10
+msgid "Welcome"
+msgstr ""
+
+#: account/templates/account/dashboard.html:28
+msgid "Your profile details:"
+msgstr ""
+
+#: account/templates/account/dashboard.html:32
+#, fuzzy
+#| msgid "first name"
+msgid "First name:"
+msgstr "نام"
+
+#: account/templates/account/dashboard.html:36
+#, fuzzy
+#| msgid "last name"
+msgid "Last name:"
+msgstr "نام خانوادگی"
+
+#: account/templates/account/dashboard.html:40
+#, fuzzy
+#| msgid "e-mail"
+msgid "Email:"
+msgstr "ایمیل"
+
+#: account/templates/account/dashboard.html:44
+msgid "Gender:"
+msgstr ""
+
+#: account/templates/account/dashboard.html:48
+msgid "Date of birth:"
+msgstr ""
+
+#: account/templates/account/dashboard.html:55
+#, fuzzy
+#| msgid "Unit price"
+msgid "Edit profile"
+msgstr "قیمت واحد"
+
+#: account/templates/account/dashboard.html:56
+msgid "Change  password"
+msgstr ""
+
+#: account/templates/account/dashboard.html:59
+msgid "Warning:"
+msgstr ""
+
+#: account/templates/account/dashboard.html:59
+msgid ""
+"If you remove your profile user, every action and data you have entered will"
+" be deleted permanently."
+msgstr ""
+
+#: account/templates/account/dashboard.html:60
+msgid "THIS ACCTION IS NOT UNDOABLE!"
+msgstr ""
+
+#: account/templates/account/dashboard.html:61
+msgid "Romove Account Completely!"
+msgstr ""
+
+#: account/templates/account/dashboard.html:65
+msgid "You have to complete your profile first:"
+msgstr ""
+
+#: account/templates/account/edit.html:5
+#: account/templates/account/edit.html:13
+msgid "Edit your account"
+msgstr ""
+
+#: account/templates/account/edit.html:14
+msgid "You can edit your account using the following form:"
+msgstr ""
+
+#: account/templates/account/edit.html:21
+msgid "Save changes"
+msgstr ""
+
+#: account/templates/account/register.html:10
+msgid "Create an account"
+msgstr ""
+
+#: account/templates/account/register.html:11
+msgid "Please, sign up using the following form:"
+msgstr ""
+
+#: account/templates/account/register.html:15
+msgid "Create my account"
+msgstr ""
+
+#: account/templates/account/register_done.html:11
+msgid "Your account has been successfully created. Now you can"
+msgstr ""
+
+#: account/templates/account/register_done.html:11
+msgid "log in"
+msgstr ""
+
+#: account/templates/registration/logged_out.html:12
+msgid "Logged out"
+msgstr ""
+
+#: account/templates/registration/logged_out.html:13
+msgid "You have been successfully logged out. You can"
+msgstr ""
+
+#: account/templates/registration/logged_out.html:14
+msgid "log-in again"
+msgstr ""
+
+#: account/templates/registration/login.html:14
+#: account/templates/registration/login.html:34
+msgid "Log-in"
+msgstr ""
+
+#: account/templates/registration/login.html:17
+msgid "Your username and password didn't match.Please try again."
+msgstr ""
+
+#: account/templates/registration/login.html:22
+msgid "Please, use the following form to log-in."
+msgstr ""
+
+#: account/templates/registration/login.html:25
+msgid "If you don't have an account"
+msgstr ""
+
+#: account/templates/registration/login.html:25
+msgid "register here"
+msgstr ""
+
+#: account/templates/registration/password_change_done.html:12
+msgid "Password changed"
+msgstr ""
+
+#: account/templates/registration/password_change_done.html:13
+msgid "Your password has been successfully changed."
+msgstr ""
+
+#: account/templates/registration/password_change_form.html:12
+msgid "Change you password"
+msgstr ""
+
+#: account/templates/registration/password_change_form.html:13
+msgid "Use the form below to change your password."
+msgstr ""
+
+#: account/templates/registration/password_change_form.html:17
+msgid "Change"
+msgstr ""
+
+#: account/templates/registration/password_reset_complete.html:12
+msgid "Password set"
+msgstr ""
+
+#: account/templates/registration/password_reset_complete.html:13
+msgid "Your password has been set. You can "
+msgstr ""
+
+#: account/templates/registration/password_reset_complete.html:13
+msgid "log in now"
+msgstr ""
+
+#: account/templates/registration/password_reset_confirm.html:12
+#: account/templates/registration/password_reset_done.html:12
+msgid "Reset your password"
+msgstr ""
+
+#: account/templates/registration/password_reset_confirm.html:14
+msgid "Please enter your new password twice"
+msgstr ""
+
+#: account/templates/registration/password_reset_confirm.html:18
+msgid "Change my password"
+msgstr ""
+
+#: account/templates/registration/password_reset_confirm.html:20
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: account/templates/registration/password_reset_done.html:13
+msgid "We've emailed you instructions for setting your password."
+msgstr ""
+
+#: account/templates/registration/password_reset_done.html:14
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with."
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:3
+msgid "Someone asked for password reset for email"
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:7
+msgid "Your username, in case you've forgotten"
+msgstr ""
+
+#: account/templates/registration/password_reset_form.html:12
+msgid "Forgotten your password?"
+msgstr ""
+
+#: account/templates/registration/password_reset_form.html:13
+msgid "Enter your e-mail address to obtain a new password."
+msgstr ""
+
+#: account/templates/registration/password_reset_form.html:16
+#, fuzzy
+#| msgid "e-mail"
+msgid "Send e-mail"
+msgstr "ایمیل"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
@@ -34,7 +281,7 @@ msgstr "تصویر"
 
 #: cart/templates/cart/detail.html:15
 #: orders/templates/orders/order/pdf.html:25
-#: shop/templates/shop/product/price_list.html:20
+#: shop/templates/shop/product/price_list.html:21
 msgid "Product"
 msgstr "محصول"
 
@@ -48,7 +295,7 @@ msgstr "قیمت واحد"
 
 #: cart/templates/cart/detail.html:19
 #: orders/templates/orders/order/pdf.html:26
-#: shop/templates/shop/product/price_list.html:21
+#: shop/templates/shop/product/price_list.html:22
 msgid "Price"
 msgstr "قیمت"
 
@@ -215,27 +462,35 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:116
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:121
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:119
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:124
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
 " جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:126
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:131
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:138
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:143
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:139
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:144
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
+
+#: shop/templates/shop/base.html:109
+msgid "For a new order you could go to"
+msgstr "برای سفارش فعلاً باید از طریق اینستاگرام به من پیغام بدهید"
+
+#: shop/templates/shop/base.html:110
+msgid "Or if you prefer phon you could call me at"
+msgstr "یا اگر حالش رو ندارید میتونید به من زنگ بزنید "
 
 #: shop/templates/shop/product/home.html:17
 #: shop/templates/shop/product/list.html:15
@@ -281,6 +536,11 @@ msgstr "لیست قیمت"
 msgid "Available Products"
 msgstr "محصولات موجود"
 
+#: shop/templates/shop/product/price_list.html:20
+#| msgid "Categories"
+msgid "Category"
+msgstr "دسته‌بندی"
+
 #: shop/templates/shop/product/search.html:14
 msgid "Products containing"
 msgstr "محصولات شامل"
@@ -306,7 +566,7 @@ msgstr "جستجوی دوباره"
 msgid "Search for products"
 msgstr "جستجو برای محصول"
 
-#: tshop/settings.py:131 tshop/settings/base.py:136
+#: tshop/settings.py:131 tshop/settings/base.py:137
 msgid "Farsi"
 msgstr "فارسی"
 
