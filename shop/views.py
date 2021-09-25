@@ -31,7 +31,7 @@ def home(request):
 @staff_member_required
 def price_view(request,):
     categories = Category.objects.all()
-    products = Product.objects.filter(Q(available=True) & Q(stock__gte=1)).order_by('category').order_by('name')
+    products = Product.objects.filter(Q(available=True) & Q(stock__gte=1)).order_by('category')
     return render(request,
                   'shop/product/price_list.html',
                   {'products': products,
