@@ -14,20 +14,20 @@
     <h2 class="text-center">{% trans 'Available Products' %}</h2>
   </div>
   <div class="row m-4">
-    <table class="">
+    <table class="" style="width:50%;">
       <thead>
         <tr>
-          <td>{% trans 'Category' %}</td>
-          <td>{% trans 'Product' %}</td>
-          <td>{% trans 'Price' %}</td>
+          <td class="td-center"><b>{% trans 'Category' %}</b></td>
+          <td class="td-center"><b>{% trans 'Product' %}</b></td>
+          <td class="td-center"><b>{% trans 'Price' %}</b></td>
         </tr>
       </thead>
       <tbody>
         {% for product in products %}
         <tr>
-          <td class="">{{ product.category }}</td>
-          <td class="">{{ product.name }}</td>
-          <td class="">{{ product.price|intcomma }}</td>
+          <td class="td-center">{{ product.category }}</td>
+          <td class="td-center">{{ product.name }}</td>
+          <td class="td-center">{{ product.price|intcomma }}</td>
         </tr>
 
         {% endfor %}
