@@ -8,11 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2021-09-25 09:38+0330\n"
-=======
-"POT-Creation-Date: 2021-09-22 09:10+0330\n"
->>>>>>> 1ee490b (translations for cart and account added)
+"POT-Creation-Date: 2021-09-26 09:43+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,11 +33,7 @@ msgstr ""
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/dashboard.html:14
-<<<<<<< HEAD
-#: account/templates/account/edit.html:5
-=======
 #: account/templates/account/edit.html:5 shop/templates/shop/base.html:48
->>>>>>> 1ee490b (translations for cart and account added)
 msgid "Dashboard"
 msgstr ""
 
@@ -269,6 +261,7 @@ msgid "Quantity"
 msgstr ""
 
 #: cart/templates/cart/detail.html:6 cart/templates/cart/detail.html:10
+#: zarinpal/templates/zarinpal/fail.html:21
 msgid "Your shopping cart"
 msgstr ""
 
@@ -343,27 +336,27 @@ msgstr ""
 msgid "Coupon"
 msgstr ""
 
-#: orders/models.py:11
+#: orders/models.py:14
 msgid "first name"
 msgstr ""
 
-#: orders/models.py:13
+#: orders/models.py:16
 msgid "last name"
 msgstr ""
 
-#: orders/models.py:17
+#: orders/models.py:20
 msgid "e-mail"
 msgstr ""
 
-#: orders/models.py:18
+#: orders/models.py:22
 msgid "address"
 msgstr ""
 
-#: orders/models.py:19
+#: orders/models.py:24
 msgid "postal code"
 msgstr ""
 
-#: orders/models.py:20
+#: orders/models.py:25
 msgid "city"
 msgstr ""
 
@@ -454,51 +447,23 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
-<<<<<<< HEAD
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:121
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:129
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:124
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:132
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:131
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:139
 msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:143
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:151
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:144
-msgid "Rahim Agha and Khanevadeh"
-msgstr ""
-
-#: shop/templates/shop/base.html:109
-msgid "For a new order you could go to"
-msgstr ""
-
-#: shop/templates/shop/base.html:110
-msgid "Or if you prefer phon you could call me at"
-=======
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:124
-msgid "Online shop footer"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:127
-msgid "This Rahim agha shop present every retail item that we said Baghali"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:134
-msgid "Important links"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:146
-msgid "Copyright"
-msgstr ""
-
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:147
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:152
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
@@ -518,9 +483,16 @@ msgstr ""
 msgid "Your cart is empty."
 msgstr ""
 
+#: shop/templates/shop/base.html:117
+msgid "For a new order you could go to"
+msgstr ""
+
+#: shop/templates/shop/base.html:118
+msgid "Or if you prefer phon you could call me at"
+msgstr ""
+
 #: shop/templates/shop/product/detail.html:27
 msgid "Add to cart"
->>>>>>> 1ee490b (translations for cart and account added)
 msgstr ""
 
 #: shop/templates/shop/product/home.html:17
@@ -594,7 +566,7 @@ msgstr ""
 msgid "Search for products"
 msgstr ""
 
-#: tshop/settings.py:131 tshop/settings/base.py:137
+#: tshop/settings.py:131 tshop/settings/base.py:138
 msgid "Farsi"
 msgstr ""
 
@@ -606,12 +578,12 @@ msgstr ""
 msgid "Your payment is failed!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:16
+#: zarinpal/templates/zarinpal/fail.html:19
 msgid "Please try again a few minutes later!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:17
-#: zarinpal/templates/zarinpal/success.html:17
+#: zarinpal/templates/zarinpal/fail.html:20
+#: zarinpal/templates/zarinpal/success.html:20
 msgid "Home"
 msgstr ""
 
@@ -623,6 +595,6 @@ msgstr ""
 msgid "Your payment was successful!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/success.html:16
+#: zarinpal/templates/zarinpal/success.html:19
 msgid "We will contact you to send your order"
 msgstr ""
