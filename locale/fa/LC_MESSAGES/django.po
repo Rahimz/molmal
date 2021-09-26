@@ -8,13 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2021-09-22 09:10+0330\n"
-"PO-Revision-Date: 2021-09-22 05:59+0000\n"
-=======
 "POT-Creation-Date: 2021-09-26 09:43+0330\n"
 "PO-Revision-Date: 2021-09-26 06:15+0000\n"
->>>>>>> 5d6c1f3 ([Translation] bug in en translation edited)
 "Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -493,9 +488,6 @@ msgstr "حقوق مولف"
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
-<<<<<<< HEAD
-#: shop/templates/shop/base.html:109
-=======
 #: shop/templates/shop/base.html:47
 msgid "Logout"
 msgstr "خروج"
@@ -514,7 +506,6 @@ msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
 
 #: shop/templates/shop/base.html:117
->>>>>>> 5d6c1f3 ([Translation] bug in en translation edited)
 msgid "For a new order you could go to"
 msgstr "برای سفارش فعلاً باید از طریق اینستاگرام به من پیغام بدهید"
 
@@ -522,14 +513,11 @@ msgstr "برای سفارش فعلاً باید از طریق اینستاگرا
 msgid "Or if you prefer phon you could call me at"
 msgstr "یا اگر حالش رو ندارید میتونید به من زنگ بزنید "
 
-<<<<<<< HEAD
-=======
 #: shop/templates/shop/product/detail.html:27
 #| msgid "Your cart"
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید "
 
->>>>>>> 5d6c1f3 ([Translation] bug in en translation edited)
 #: shop/templates/shop/product/home.html:17
 #: shop/templates/shop/product/list.html:15
 #: shop/templates/shop/product/search.html:48
