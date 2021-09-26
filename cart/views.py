@@ -5,6 +5,8 @@ from .cart import Cart
 from .forms import CartAddProductForm
 from coupons.forms import CouponApplyForm
 from shop.recommender import Recommender
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 
 
 @require_POST
@@ -14,9 +16,17 @@ def cart_add(request, product_id):
     form = CartAddProductForm(request.POST)
     if form.is_valid():
         cd = form.cleaned_data
-        cart.add(product=product,
-                 quantity=cd['quantity'],
-                 override_quantity=cd['override'])
+        quantity=cd['quantity']
+        if product.stock >= quantity:
+            cart.add(product=product,
+                     quantity=cd['quantity'],
+                     override_quantity=cd['override'])
+            product.stock -= quantity
+            product.save()
+            messages.success(request, _('Product added to cart!'))
+        else:
+            messages.warning(request, _('There are not enough products in stock!'))
+            return redirect('shop:product_detail', id=product_id, slug=product.slug)
     return redirect('cart:cart_detail')
 
 
@@ -47,4 +57,3 @@ def cart_detail(request):
                   {'cart': cart,
                   'coupon_apply_form': coupon_apply_form,
                    'recommended_products': recommended_products})
-

@@ -13,6 +13,9 @@
     <div class="row mt-5 pt-5 text-center">
         <div class="col-md-12 ">
             <h2 class="text-muted center">{% trans 'Your payment is failed!' %}</h2>
+
+            <p> {{ request.session.order_id }}</p>
+
             {% if message %}
             <p class="text-warning h3 p-3">{{ message }}</p>
             {% endif %}

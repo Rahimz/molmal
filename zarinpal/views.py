@@ -27,7 +27,11 @@ def send_request(request):
 
     paid_order = order
 
-    description = "توضیحات مربوط به تراکنش را در این قسمت وارد کنید"  # Required
+    # set the order in the session
+    request.session['order_id'] = order.id
+    request.session['order_paid'] = None
+
+    description = "سفارش شماره {}".format(order.id)  # Required
     email = 'email@example.com'  # Optional
     mobile = '09123456789'  # Optional
 
@@ -75,6 +79,7 @@ def verify(request):
         if len(req.json()['errors']) == 0:
             t_status = req.json()['data']['code']
             if t_status == 100:
+                request.session['order_paid'] = True
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction success.\nRefID: ' +
                                            str(req.json()['data']['ref_id'])})
@@ -85,7 +90,7 @@ def verify(request):
                               {'message': 'Transaction submitted : ' +
                                           str(req.json()['data']['message'])})
                 # return HttpResponse('Transaction submitted : ' + str(
-                #     req.json()['data']['message']))                
+                #     req.json()['data']['message']))
             else:
                 return render(request,
                               'zarinpal/fail.html',
