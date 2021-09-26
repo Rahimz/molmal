@@ -43,10 +43,10 @@
         <a href="/" class="">
           <img class="logo-img" width="180px" height="auto" src="{% static 'img/logotype.png' %}" alt="rahim agha logotye" /></a>
         {% if request.user.is_authenticated %}
-          <a href="{% url 'logout' %}" style="position: absolute; top:20px; left:20px; ">{% trans 'Logout' %}</a>
-          <a href="{% url 'dashboard' %}" style="position: absolute; top:20px; left:90px; ">{% trans 'Dashboard' %}</a>
+        <a href="{% url 'logout' %}" style="position: absolute; top:20px; left:20px; ">{% trans 'Logout' %}</a>
+        <a href="{% url 'dashboard' %}" style="position: absolute; top:20px; left:90px; ">{% trans 'Dashboard' %}</a>
         {% else %}
-          <a href="{% url 'login' %}" style="position: absolute; top:20px; left:20px; ">{% trans 'Login' %}</a>
+        <a href="{% url 'login' %}" style="position: absolute; top:20px; left:20px; ">{% trans 'Login' %}</a>
         {% endif %}
 
       </div>
@@ -89,11 +89,11 @@
           <a href="{% url 'cart:cart_detail'%}">
             {{ total_items }} {% trans 'item' %}, T {{ cart.get_total_price }}
             {% comment %}
-              {% blocktrans with total=cart.get_total_price count items=total_items %}
-              {{ total_items }} item, T {{ cart.get_total_price }}
-              {% plural %}
-              {{ items }} items, T {{ total }}
-              {% endblocktrans %}
+            {% blocktrans with total=cart.get_total_price count items=total_items %}
+            {{ total_items }} item, T {{ cart.get_total_price }}
+            {% plural %}
+            {{ items }} items, T {{ total }}
+            {% endblocktrans %}
             {% endcomment %}
           </a>
           {% else %}
@@ -103,6 +103,16 @@
         </div>
       </div>
     </div>
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li class="{{ message.tags }}">
+        {{ message|safe }}
+        <a href="#" class="close">x</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </header>
 
   <main>
@@ -110,11 +120,11 @@
       {% block content %}
       {% endblock %}
     </div>
-        <div class="text-center surprise-red p-3">
-          <p>{% trans 'For a new order you could go to' %} <a href="https://instagram.com/rahimagha.ir" target="_blank"> <img src="{% static 'img/insta-logo.png' %}" width="40px" height="auto" alt="instagram logo" ></a> </p>
-          <p>{% trans 'Or if you prefer phon you could call me at' %} <a class="telephone" href="tel:09045714700">9045714700</a> </p>
+    <div class="text-center surprise-red p-3">
+      <p>{% trans 'For a new order you could go to' %} <a href="https://instagram.com/rahimagha.ir" target="_blank"> <img src="{% static 'img/insta-logo.png' %}" width="40px" height="auto" alt="instagram logo"></a> </p>
+      <p>{% trans 'Or if you prefer phon you could call me at' %} <a class="telephone" href="tel:09045714700">9045714700</a> </p>
 
-        </div>
+    </div>
   </main>
   <footer id="footer" class=" text-white text-center">
     <!-- Grid container -->
