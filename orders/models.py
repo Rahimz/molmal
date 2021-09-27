@@ -1,3 +1,4 @@
+from django.shortcuts import reverse
 from django.db import models
 from shop.models import Product
 from decimal import Decimal
@@ -11,6 +12,9 @@ from cart.cart import Cart
 
 
 class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE,
+                             blank=True, null=True)
     first_name = models.CharField(_('first name'),
                                   max_length=50, blank=True, null=True)
     last_name = models.CharField(_('last name'),
@@ -49,6 +53,10 @@ class Order(models.Model):
     def get_total_cost(self):
         total_cost = sum(item.get_cost() for item in self.items.all())
         return total_cost - total_cost * (self.discount / Decimal(100))
+
+    def get_absolute_url(self):
+        return reverse('orders:user_order_detail',
+                       args=[self.id])
 
 
 class OrderItem(models.Model):

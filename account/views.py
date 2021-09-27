@@ -5,6 +5,7 @@ from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditFo
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib import messages
+from orders.models import Order
 
 
 @login_required
@@ -13,9 +14,11 @@ def dashboard(request):
         profile = get_object_or_404(Profile, user=request.user)
     except:
         profile = None
+    orders = Order.objects.filter(user=request.user)
     return render(request,
                 'account/dashboard.html',
-                {'profile': profile,})
+                {'profile': profile,
+                 'orders': orders})
 
 
 
