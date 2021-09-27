@@ -6,6 +6,7 @@ from .tasks import payment_completed
 from tshop.secrets import *
 import requests
 import json
+import datetime
 
 
 MERCHANT = merchant
@@ -80,9 +81,14 @@ def verify(request):
             t_status = req.json()['data']['code']
             if t_status == 100:
                 request.session['order_paid'] = True
+                order = Orders.objects.get(order_id=request.session['order_id'])
+                order.paid = True
+                order.updated = datetime.now()
+                order.save()
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction success.\nRefID: ' +
-                                           str(req.json()['data']['ref_id'])})
+                                           str(req.json()['data']['ref_id']),
+                               'order': orders})
                 # return HttpResponse('Transaction success.\nRefID: ' + str(
                 #     req.json()['data']['ref_id']))
             elif t_status == 101:
