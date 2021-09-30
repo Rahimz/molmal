@@ -19,14 +19,14 @@
                     {{ product.category }}
                 </a>
             </h2>
-            <p class="price">R.{{ product.price }}</p>
+            <p class="price">T {{ product.price }}</p>
 
             <form action="{% url 'cart:cart_add' product.id %}" method="post">
                 {{ cart_product_form}}
                 {% csrf_token %}
                 <input type="submit" value="{% trans 'Add to cart' %}">
             </form>
-            
+
             <p class="mt-2">{% if product.description %}{{ product.description|linebreaks }}{% endif %}</p>
         </div>
     </div> <!-- / end of row-->

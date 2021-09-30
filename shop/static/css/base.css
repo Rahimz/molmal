@@ -257,7 +257,7 @@ ul.errorlist {
 
 .order-info {
   float: right;
-  width: 300px;
+  width: 400px;
   background: #efefef;
   padding: 10px 20px;
   color: #333;
@@ -280,7 +280,7 @@ ul.errorlist {
 }
 
 .order-info span {
-  float: right;
+  /* float: right; */
 }
 
 .neg {
