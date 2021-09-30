@@ -14,26 +14,29 @@
 		<h1>{% trans 'Log-in' %}</h1>
 
 		{% if form.errors %}
-			<p>{% trans "Your username and password didn't match.Please try again." %}
+		<p>{% trans "Your username and password didn't match.Please try again." %}
 
-			</p>
+		</p>
 
-			{% else %}
-			<p>{% trans 'Please, use the following form to log-in.' %}
+		{% else %}
+		<p>{% trans 'Please, use the following form to log-in.' %}
 
 			{% trans "If you don't have an account" %} <a href="{% url "register" %}">{% trans 'register here' %}</a></p>
 		{% endif %}
+	</div>
+</div><!--/end of row -->
 
-		<div class="login-form">
-			<form action="{% url 'login' %}" method="post">
+<div class="row">
+		<div class="text-center">
+			<form action="{% url 'login' %}" method="post" class="login-form">
 				{{ form.as_p }}
 				{% csrf_token %}
 				<input type="hidden" name="next" value="{{ next }}" />
 				<p><input type="submit" value="{% trans 'Log-in' %}"></p>
 			</form>
+			<p><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
 		</div>
-<p><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
 
-	</div>
-</div> <!--/end of row -->
+</div>
+<!--/end of row -->
 {% endblock %}
