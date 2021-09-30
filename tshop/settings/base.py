@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'coupons.apps.CouponsConfig',
     'pages.apps.PagesConfig',
+    'delivery.apps.DeliveryConfig',
 
     # Third-party apps
     'rosetta',
@@ -144,7 +145,7 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale/'),
 )
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 

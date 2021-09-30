@@ -9,6 +9,7 @@ from django.utils.translation import gettext_lazy as _
 from django_jalali.db import models as jmodels
 from django.conf import settings
 from cart.cart import Cart
+from delivery.models import DeliveryContainer
 
 
 class Order(models.Model):
@@ -31,6 +32,9 @@ class Order(models.Model):
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
     delivered = models.BooleanField(default=False)
+    delivery_container = models.ForeignKey(DeliveryContainer,
+                                           on_delete=models.CASCADE,
+                                           null=True, blank=True)
 
     coupon = models.ForeignKey(Coupon,
                                related_name='orders',
