@@ -167,7 +167,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID = 'cart'
 
 # These settings is for devlopment and should be change to send email
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'rahimagha.ir@gmail.com'
+EMAIL_HOST_PASSWORD = gmail_password
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Redis settings:
 REDIS_HOST = 'localhost'
