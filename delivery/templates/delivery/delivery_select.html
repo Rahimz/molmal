@@ -1,0 +1,18 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Delivery selection" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row text-center m-5">
+    <h1 class="">{% trans 'Delivery time options:' %}</h1>
+      {% for container in delivery_containers %}
+        <a class="btn btn-outline-success m-3">{{ container.start.date }}</a>
+      {% endfor %}
+</<div>
+
+</div>
+{% endblock %}

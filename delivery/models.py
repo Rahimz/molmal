@@ -7,7 +7,8 @@ class DeliveryContainer(models.Model):
     admin_check = models.BooleanField(default=False)
     done = models.BooleanField(default=False)
     # TODO: add the quantity of order accepted in this container
-    # TODO: make a logic to control the number of order in a container 
+    order_in_container = models.PositiveIntegerField(default=0)
+    # TODO: make a logic to control the number of order in a container
 
 
 

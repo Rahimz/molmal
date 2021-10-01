@@ -17,6 +17,7 @@
             {% if message %}
             <p class="text-warning h3 p-3">{{ message }}</p>
             {% endif %}
+            <a class="btn btn-outline-success" href="{% url 'delivery:delivery_selection' order.id %}">{% trans 'Choose your delivery time' %}</a>
             <p class="text-muted">{% trans 'We will contact you to send your order' %}</p>
             <a href="{% url 'shop:home' %}" class="btn btn-danger my-5 ">{% trans 'Home' %}</a>
         </div>

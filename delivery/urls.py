@@ -4,5 +4,5 @@ from . import views
 app_name = 'delivery'
 
 urlpatterns =[
-    path('', views.delivery, name="delivery_list")
+    path('<int:pk>/', views.delivery_selection, name="delivery_selection")
 ]
