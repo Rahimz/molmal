@@ -49,9 +49,7 @@ class Product(models.Model):
                                       choices=MEASURES,
                                       null=True, blank=True)
     available = models.BooleanField(default=True)
-    # For Temporary home page
-    temp_product = models.BooleanField(default=False,
-                                       null=True, blank=True)
+
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

@@ -12,8 +12,6 @@ from .forms import SearchForm
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
-    # this Queryset is used in temporary home page
-    # temp_products = Product.objects.filter(temp_product=True)
 
     products = Product.objects.filter(available=True)[:10]
     # Queryset for Pages
