@@ -11,6 +11,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 import weasyprint
+import datetime
 
 from django.contrib.auth.decorators import login_required
 

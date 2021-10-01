@@ -14,7 +14,7 @@ def dashboard(request):
         profile = get_object_or_404(Profile, user=request.user)
     except:
         profile = None
-    orders = Order.objects.filter(user=request.user)
+    orders = Order.objects.filter(user=request.user, active=True)
     return render(request,
                 'account/dashboard.html',
                 {'profile': profile,

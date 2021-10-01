@@ -22,10 +22,10 @@ def export_to_csv(modeladmin, request, queryset):
     writer = csv.writer(response)
 
     fields = [field for field in opts.get_fields() if not field.many_to_many and not field.one_to_many]
-    
+
     # Write a first row with header information
     writer.writerow([field.verbose_name for field in fields])
-    
+
     # Write data rows
     for obj in queryset:
         data_row = []
@@ -61,7 +61,7 @@ order_pdf.short_description = 'Invoice'
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', 'first_name', 'last_name', 'email',
                     'address', 'postal_code', 'city', 'paid',
-                    'created', 'updated', order_detail, order_pdf]
-    list_filter = ['paid', 'created', 'updated', ]
+                    'active', 'created', order_detail, order_pdf]
+    list_filter = ['paid', 'created',]
     inlines = [OrderItemInline]
     actions = [export_to_csv]

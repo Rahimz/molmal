@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'memcache_status',
     'zarinpal',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -196,3 +197,9 @@ CACHES = {
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# Cronjob to deactivate unpaid order after 24 hours
+CRONJOBS = [
+    ('1 * * * *', 'orders.cron.OrderCleaner')
+]
+# CRONTAB_COMMAND_SUFFIX = '2>&1'
