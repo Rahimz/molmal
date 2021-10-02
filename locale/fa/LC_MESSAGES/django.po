@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-26 09:43+0330\n"
-"PO-Revision-Date: 2021-09-26 06:15+0000\n"
-"Last-Translator: b'  <rahim.aghareb@gmail.com>'\n"
+"POT-Creation-Date: 2021-10-02 09:26+0330\n"
+"PO-Revision-Date: 2021-10-02 09:34+0326\n"
+"Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgid "Please add your profile details"
 msgstr "جزییات حساب کاربری خود را کامل کنید"
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:66
+#: account/templates/account/dashboard.html:97
 msgid "Add profile"
 msgstr "اضافه کردن حساب کاربری"
 
@@ -60,17 +60,14 @@ msgid "Your profile details:"
 msgstr "جزییات حساب کاربری شما"
 
 #: account/templates/account/dashboard.html:32
-#| msgid "first name"
 msgid "First name:"
 msgstr "نام"
 
 #: account/templates/account/dashboard.html:36
-#| msgid "last name"
 msgid "Last name:"
 msgstr "نام خانوادگی"
 
 #: account/templates/account/dashboard.html:40
-#| msgid "e-mail"
 msgid "Email:"
 msgstr "ایمیل"
 
@@ -83,7 +80,6 @@ msgid "Date of birth:"
 msgstr "تاریح تولد"
 
 #: account/templates/account/dashboard.html:55
-#| msgid "Unit price"
 msgid "Edit profile"
 msgstr "اصلاح حساب کاربری"
 
@@ -92,10 +88,31 @@ msgid "Change  password"
 msgstr "تغییر گذرواژه"
 
 #: account/templates/account/dashboard.html:59
+#| msgid "Your order"
+msgid "Your orders"
+msgstr "سفارش‌های شما"
+
+#: account/templates/account/dashboard.html:64
+msgid "order No."
+msgstr "شماره سفارش"
+
+#: account/templates/account/dashboard.html:65
+msgid "Date"
+msgstr "تاریخ"
+
+#: account/templates/account/dashboard.html:66
+msgid "Paid"
+msgstr "پرداخت شده"
+
+#: account/templates/account/dashboard.html:67
+msgid "Delivered"
+msgstr "ارسال شده"
+
+#: account/templates/account/dashboard.html:89
 msgid "Warning:"
 msgstr "اخطار"
 
-#: account/templates/account/dashboard.html:59
+#: account/templates/account/dashboard.html:89
 msgid ""
 "If you remove your profile user, every action and data you have entered will"
 " be deleted permanently."
@@ -103,15 +120,15 @@ msgstr ""
 "اگر حساب کاربری خود را پاک کنید، هر اطلاعات و سابقه‌ای که داشته اید به طور "
 "دائم از این وبسایت حذف خواهد شد."
 
-#: account/templates/account/dashboard.html:60
+#: account/templates/account/dashboard.html:90
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr "این عملیات غیر قابل بازگشت است"
 
-#: account/templates/account/dashboard.html:61
+#: account/templates/account/dashboard.html:92
 msgid "Romove Account Completely!"
 msgstr "حذف کردن حساب کاربری به طور کامل!"
 
-#: account/templates/account/dashboard.html:65
+#: account/templates/account/dashboard.html:96
 msgid "You have to complete your profile first:"
 msgstr "شما باید در ابتدا حساب کاربری خود را کامل کنید:"
 
@@ -136,7 +153,7 @@ msgstr "ساخت یک حساب کاربری جدید"
 msgid "Please, sign up using the following form:"
 msgstr "لطفاً به کمک فرم زیر ثبت نام کنید:"
 
-#: account/templates/account/register.html:15
+#: account/templates/account/register.html:20
 msgid "Create my account"
 msgstr "ساخت حساب کاربری"
 
@@ -161,7 +178,7 @@ msgid "log-in again"
 msgstr "ورود دوباره"
 
 #: account/templates/registration/login.html:14
-#: account/templates/registration/login.html:34
+#: account/templates/registration/login.html:35
 msgid "Log-in"
 msgstr "ورود"
 
@@ -174,11 +191,11 @@ msgstr ""
 msgid "Please, use the following form to log-in."
 msgstr "لطفاً از فرم زیر برای ورود به حساب کاربری استفاده کنید:"
 
-#: account/templates/registration/login.html:25
+#: account/templates/registration/login.html:24
 msgid "If you don't have an account"
 msgstr "اگر حساب کاربری ندارید"
 
-#: account/templates/registration/login.html:25
+#: account/templates/registration/login.html:24
 msgid "register here"
 msgstr "اینجا ثبت نام کنید"
 
@@ -191,7 +208,8 @@ msgid "Your password has been successfully changed."
 msgstr "گذرواژه شما با موفقیت تغییر کرد."
 
 #: account/templates/registration/password_change_form.html:12
-msgid "Change you password"
+#| msgid "Change you password"
+msgid "Change your password"
 msgstr "گذرواژه خود را تغییر دهید"
 
 #: account/templates/registration/password_change_form.html:13
@@ -248,12 +266,37 @@ msgstr ""
 "کرده اید و پوشه اسپم را نیز چک کنید."
 
 #: account/templates/registration/password_reset_email.html:3
+msgid "Pasword reset request in Rahimagha store"
+msgstr "درخواست بازیابی گذرواژه در دکان رحیم آقا"
+
+#: account/templates/registration/password_reset_email.html:5
 msgid "Someone asked for password reset for email"
-msgstr "درخواست تغییر گذرواژه برای ایمیل"
+msgstr "درخواست تغییر گذرواژه برای کاربر با این ایمیل درخواست شده است: "
 
 #: account/templates/registration/password_reset_email.html:7
+msgid "Follow the link below"
+msgstr "لینک زیر را دنبال کنید"
+
+#: account/templates/registration/password_reset_email.html:10
 msgid "Your username, in case you've forgotten"
-msgstr "نام کاربری شما، شاید فراموش کرده باشید"
+msgstr "نام کاربری شما، شاید فراموش کرده باشید: "
+
+#: account/templates/registration/password_reset_email.html:13
+#| msgid "Someone asked for password reset for email"
+msgid ""
+"If you do not ask for password reset, do nothing and ignore this email."
+msgstr "اگر برای تغییر گذرواژه درخواست نداده‌اید، نیاز نیست کاری انجام دهید."
+
+#: account/templates/registration/password_reset_email.html:15
+#: orders/templates/orders/order/user_order_detail.html:5
+#: shop/templates/404.html:5 shop/templates/500.html:5
+#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/success.html:5
+msgid "Rahim Agha Store"
+msgstr "دکان رحیم آقا"
 
 #: account/templates/registration/password_reset_form.html:12
 msgid "Forgotten your password?"
@@ -264,7 +307,6 @@ msgid "Enter your e-mail address to obtain a new password."
 msgstr "ایمیل خود را وارد کنید تا گذرواژه جدیدی بگیرید."
 
 #: account/templates/registration/password_reset_form.html:16
-#| msgid "e-mail"
 msgid "Send e-mail"
 msgstr "ارسال ایمیل"
 
@@ -320,7 +362,7 @@ msgstr ""
 " <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
 #: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:39
+#: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr "جمع"
@@ -348,31 +390,48 @@ msgstr "ادامه خرید"
 msgid "Checkout"
 msgstr "پرداخت"
 
+#: cart/views.py:26
+#| msgid "Add to cart"
+msgid "Product added to cart!"
+msgstr "محصول به سبد خرید اضافه شد!"
+
+#: cart/views.py:28
+msgid "There are not enough products in stock!"
+msgstr "محصول به تعداد مورد نظر شما در انبار موجود نیست!"
+
 #: coupons/forms.py:6
 msgid "Coupon"
 msgstr "کوپن"
 
-#: orders/models.py:11
+#: delivery/templates/delivery/delivery_select.html:5
+msgid "Delivery selection"
+msgstr "انتخاب زمان ارسال"
+
+#: delivery/templates/delivery/delivery_select.html:11
+msgid "Delivery time options:"
+msgstr "گزینه‌های زمان ارسال:"
+
+#: orders/models.py:19
 msgid "first name"
 msgstr "نام"
 
-#: orders/models.py:13
+#: orders/models.py:21
 msgid "last name"
 msgstr "نام خانوادگی"
 
-#: orders/models.py:17
+#: orders/models.py:25
 msgid "e-mail"
 msgstr "ایمیل"
 
-#: orders/models.py:18
+#: orders/models.py:27
 msgid "address"
 msgstr "آدرس"
 
-#: orders/models.py:19
+#: orders/models.py:29
 msgid "postal code"
 msgstr "کدپستی"
 
-#: orders/models.py:20
+#: orders/models.py:30
 msgid "city"
 msgstr "شهر"
 
@@ -384,7 +443,7 @@ msgstr "ثبت سفارش"
 msgid "Your order"
 msgstr "سفارش شما"
 
-#: orders/templates/orders/order/create.html:32
+#: orders/templates/orders/order/create.html:31
 #, python-format
 msgid ""
 "\n"
@@ -429,14 +488,11 @@ msgstr "هزینه"
 msgid "Pending payment"
 msgstr "پرداخت نشده"
 
-#: shop/templates/404.html:5 shop/templates/500.html:5
-#: shop/templates/shop/product/home.html:8
-#: shop/templates/shop/product/search.html:6
-#: shop/templates/shop/product/temp_home.html:8
+#: orders/templates/orders/order/user_order_detail.html:5
 #: zarinpal/templates/zarinpal/fail.html:5
-#: zarinpal/templates/zarinpal/success.html:5
-msgid "Rahim Agha Store"
-msgstr "دکان رحیم آقا"
+#: zarinpal/templates/zarinpal/fail.html:10
+msgid "Failed payment"
+msgstr "پرداخت ناموفق"
 
 #: shop/templates/404.html:10
 msgid "404 Error"
@@ -466,25 +522,25 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:124
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:139
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:127
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:142
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
 " جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:131
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:149
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:143
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:161
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:144
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:162
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
@@ -501,20 +557,18 @@ msgid "item"
 msgstr "مورد"
 
 #: shop/templates/shop/base.html:103
-#| msgid "Your cart"
 msgid "Your cart is empty."
 msgstr "سبد خرید شما خالی است"
 
-#: shop/templates/shop/base.html:117
+#: shop/templates/shop/base.html:127
 msgid "For a new order you could go to"
 msgstr "برای سفارش فعلاً باید از طریق اینستاگرام به من پیغام بدهید"
 
-#: shop/templates/shop/base.html:110
+#: shop/templates/shop/base.html:128
 msgid "Or if you prefer phon you could call me at"
 msgstr "یا اگر حالش رو ندارید میتونید به من زنگ بزنید "
 
 #: shop/templates/shop/product/detail.html:27
-#| msgid "Your cart"
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید "
 
@@ -563,7 +617,6 @@ msgid "Available Products"
 msgstr "محصولات موجود"
 
 #: shop/templates/shop/product/price_list.html:20
-#| msgid "Categories"
 msgid "Category"
 msgstr "دسته‌بندی"
 
@@ -592,27 +645,35 @@ msgstr "جستجوی دوباره"
 msgid "Search for products"
 msgstr "جستجو برای محصول"
 
-#: tshop/settings.py:131 tshop/settings/base.py:137
+#: tshop/settings.py:131 tshop/settings/base.py:140
 msgid "Farsi"
 msgstr "فارسی"
-
-#: zarinpal/templates/zarinpal/fail.html:10
-#| msgid "Pending payment"
-msgid "Failed payment"
-msgstr "پرداخت ناموفق"
 
 #: zarinpal/templates/zarinpal/fail.html:15
 msgid "Your payment is failed!"
 msgstr "پرداخت شما انجام نشد!"
 
-#: zarinpal/templates/zarinpal/fail.html:16
-msgid "Please try again a few minutes later!"
-msgstr "لطفاً چند دقیقه دیگر امتحان کنید!"
-
 #: zarinpal/templates/zarinpal/fail.html:17
-#: zarinpal/templates/zarinpal/success.html:17
+msgid "Order No"
+msgstr "شماره سفارش"
+
+#: zarinpal/templates/zarinpal/fail.html:22
+msgid ""
+"Yor order is registerd and available in your dashboard. Please try to re-pay"
+" this order from your dashboard"
+msgstr ""
+"سفارش شما ثبت شده و در داشبورد قابل مشاهده است. لطفا برای پرداخت مجدد از "
+"طریق داشبورد اقدام کنید."
+
+#: zarinpal/templates/zarinpal/fail.html:23
+#: zarinpal/templates/zarinpal/success.html:22
 msgid "Home"
 msgstr "خانه"
+
+#: zarinpal/templates/zarinpal/fail.html:24
+#| msgid "Your order"
+msgid "My orders"
+msgstr "سفارش‌های من"
 
 #: zarinpal/templates/zarinpal/success.html:10
 msgid "Successful payment"
@@ -623,8 +684,19 @@ msgid "Your payment was successful!"
 msgstr "پرداخت شما موفق بود!"
 
 #: zarinpal/templates/zarinpal/success.html:16
+msgid "Order No."
+msgstr "شماره سفارش"
+
+#: zarinpal/templates/zarinpal/success.html:20
+msgid "Choose your delivery time"
+msgstr "لطفاً زمان ارسال سفارش را انتخاب کنید"
+
+#: zarinpal/templates/zarinpal/success.html:21
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#~ msgid "Please try again a few minutes later!"
+#~ msgstr "لطفاً چند دقیقه دیگر امتحان کنید!"
 
 #, fuzzy
 #~ msgid "All products"

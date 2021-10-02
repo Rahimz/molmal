@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-26 09:43+0330\n"
+"POT-Creation-Date: 2021-10-02 09:26+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid "Please add your profile details"
 msgstr ""
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:66
+#: account/templates/account/dashboard.html:97
 msgid "Add profile"
 msgstr ""
 
@@ -88,24 +88,44 @@ msgid "Change  password"
 msgstr ""
 
 #: account/templates/account/dashboard.html:59
+msgid "Your orders"
+msgstr ""
+
+#: account/templates/account/dashboard.html:64
+msgid "order No."
+msgstr ""
+
+#: account/templates/account/dashboard.html:65
+msgid "Date"
+msgstr ""
+
+#: account/templates/account/dashboard.html:66
+msgid "Paid"
+msgstr ""
+
+#: account/templates/account/dashboard.html:67
+msgid "Delivered"
+msgstr ""
+
+#: account/templates/account/dashboard.html:89
 msgid "Warning:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:59
+#: account/templates/account/dashboard.html:89
 msgid ""
 "If you remove your profile user, every action and data you have entered will "
 "be deleted permanently."
 msgstr ""
 
-#: account/templates/account/dashboard.html:60
+#: account/templates/account/dashboard.html:90
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:61
+#: account/templates/account/dashboard.html:92
 msgid "Romove Account Completely!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:65
+#: account/templates/account/dashboard.html:96
 msgid "You have to complete your profile first:"
 msgstr ""
 
@@ -129,7 +149,7 @@ msgstr ""
 msgid "Please, sign up using the following form:"
 msgstr ""
 
-#: account/templates/account/register.html:15
+#: account/templates/account/register.html:20
 msgid "Create my account"
 msgstr ""
 
@@ -154,7 +174,7 @@ msgid "log-in again"
 msgstr ""
 
 #: account/templates/registration/login.html:14
-#: account/templates/registration/login.html:34
+#: account/templates/registration/login.html:35
 msgid "Log-in"
 msgstr ""
 
@@ -166,11 +186,11 @@ msgstr ""
 msgid "Please, use the following form to log-in."
 msgstr ""
 
-#: account/templates/registration/login.html:25
+#: account/templates/registration/login.html:24
 msgid "If you don't have an account"
 msgstr ""
 
-#: account/templates/registration/login.html:25
+#: account/templates/registration/login.html:24
 msgid "register here"
 msgstr ""
 
@@ -183,7 +203,7 @@ msgid "Your password has been successfully changed."
 msgstr ""
 
 #: account/templates/registration/password_change_form.html:12
-msgid "Change you password"
+msgid "Change your password"
 msgstr ""
 
 #: account/templates/registration/password_change_form.html:13
@@ -236,11 +256,34 @@ msgid ""
 msgstr ""
 
 #: account/templates/registration/password_reset_email.html:3
+msgid "Pasword reset request in Rahimagha store"
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:5
 msgid "Someone asked for password reset for email"
 msgstr ""
 
 #: account/templates/registration/password_reset_email.html:7
+msgid "Follow the link below"
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:10
 msgid "Your username, in case you've forgotten"
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:13
+msgid "If you do not ask for password reset, do nothing and ignore this email."
+msgstr ""
+
+#: account/templates/registration/password_reset_email.html:15
+#: orders/templates/orders/order/user_order_detail.html:5
+#: shop/templates/404.html:5 shop/templates/500.html:5
+#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/product/search.html:6
+#: shop/templates/shop/product/temp_home.html:8
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/success.html:5
+msgid "Rahim Agha Store"
 msgstr ""
 
 #: account/templates/registration/password_reset_form.html:12
@@ -261,7 +304,6 @@ msgid "Quantity"
 msgstr ""
 
 #: cart/templates/cart/detail.html:6 cart/templates/cart/detail.html:10
-#: zarinpal/templates/zarinpal/fail.html:21
 msgid "Your shopping cart"
 msgstr ""
 
@@ -304,7 +346,7 @@ msgid ""
 msgstr ""
 
 #: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:39
+#: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr ""
@@ -332,31 +374,47 @@ msgstr ""
 msgid "Checkout"
 msgstr ""
 
+#: cart/views.py:26
+msgid "Product added to cart!"
+msgstr ""
+
+#: cart/views.py:28
+msgid "There are not enough products in stock!"
+msgstr ""
+
 #: coupons/forms.py:6
 msgid "Coupon"
 msgstr ""
 
-#: orders/models.py:14
+#: delivery/templates/delivery/delivery_select.html:5
+msgid "Delivery selection"
+msgstr ""
+
+#: delivery/templates/delivery/delivery_select.html:11
+msgid "Delivery time options:"
+msgstr ""
+
+#: orders/models.py:19
 msgid "first name"
 msgstr ""
 
-#: orders/models.py:16
+#: orders/models.py:21
 msgid "last name"
 msgstr ""
 
-#: orders/models.py:20
+#: orders/models.py:25
 msgid "e-mail"
 msgstr ""
 
-#: orders/models.py:22
+#: orders/models.py:27
 msgid "address"
 msgstr ""
 
-#: orders/models.py:24
+#: orders/models.py:29
 msgid "postal code"
 msgstr ""
 
-#: orders/models.py:25
+#: orders/models.py:30
 msgid "city"
 msgstr ""
 
@@ -368,7 +426,7 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:32
+#: orders/templates/orders/order/create.html:31
 #, python-format
 msgid ""
 "\n"
@@ -410,13 +468,10 @@ msgstr ""
 msgid "Pending payment"
 msgstr ""
 
-#: shop/templates/404.html:5 shop/templates/500.html:5
-#: shop/templates/shop/product/home.html:8
-#: shop/templates/shop/product/search.html:6
-#: shop/templates/shop/product/temp_home.html:8
+#: orders/templates/orders/order/user_order_detail.html:5
 #: zarinpal/templates/zarinpal/fail.html:5
-#: zarinpal/templates/zarinpal/success.html:5
-msgid "Rahim Agha Store"
+#: zarinpal/templates/zarinpal/fail.html:10
+msgid "Failed payment"
 msgstr ""
 
 #: shop/templates/404.html:10
@@ -447,23 +502,23 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:129
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:139
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:132
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:142
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:139
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:149
 msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:151
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:161
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:152
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:162
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
@@ -483,11 +538,11 @@ msgstr ""
 msgid "Your cart is empty."
 msgstr ""
 
-#: shop/templates/shop/base.html:117
+#: shop/templates/shop/base.html:127
 msgid "For a new order you could go to"
 msgstr ""
 
-#: shop/templates/shop/base.html:118
+#: shop/templates/shop/base.html:128
 msgid "Or if you prefer phon you could call me at"
 msgstr ""
 
@@ -566,25 +621,31 @@ msgstr ""
 msgid "Search for products"
 msgstr ""
 
-#: tshop/settings.py:131 tshop/settings/base.py:138
+#: tshop/settings.py:131 tshop/settings/base.py:140
 msgid "Farsi"
-msgstr ""
-
-#: zarinpal/templates/zarinpal/fail.html:10
-msgid "Failed payment"
 msgstr ""
 
 #: zarinpal/templates/zarinpal/fail.html:15
 msgid "Your payment is failed!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:19
-msgid "Please try again a few minutes later!"
+#: zarinpal/templates/zarinpal/fail.html:17
+msgid "Order No"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:20
-#: zarinpal/templates/zarinpal/success.html:20
+#: zarinpal/templates/zarinpal/fail.html:22
+msgid ""
+"Yor order is registerd and available in your dashboard. Please try to re-pay "
+"this order from your dashboard"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:23
+#: zarinpal/templates/zarinpal/success.html:22
 msgid "Home"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:24
+msgid "My orders"
 msgstr ""
 
 #: zarinpal/templates/zarinpal/success.html:10
@@ -595,6 +656,14 @@ msgstr ""
 msgid "Your payment was successful!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/success.html:19
+#: zarinpal/templates/zarinpal/success.html:16
+msgid "Order No."
+msgstr ""
+
+#: zarinpal/templates/zarinpal/success.html:20
+msgid "Choose your delivery time"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/success.html:21
 msgid "We will contact you to send your order"
 msgstr ""
