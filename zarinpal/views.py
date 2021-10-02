@@ -17,14 +17,15 @@ CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit
 # client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 # we use this variable to edit order after the successful payment
 paid_order = None
-
+global_amount = 0
+global_description = ''
 
 def send_request(request):
     # we get the order detail from session
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
     amount = int(order.get_total_cost())  # Toman / Required
-    #print(amount)
+    global_amount = amount
 
     paid_order = order
 
@@ -33,6 +34,7 @@ def send_request(request):
     request.session['order_paid'] = None
 
     description = "سفارش شماره {}".format(order.id)  # Required
+    global_description = description
     email = 'email@example.com'  # Optional
     mobile = '09123456789'  # Optional
 
@@ -42,7 +44,7 @@ def send_request(request):
         "amount": amount,
         "callback_url": CallbackURL,
         "description": description,
-        "metadata": {"mobile": mobile, "email": email}
+        # "metadata": {"mobile": mobile, "email": email}
     }
     req_header = {"accept": "application/json",
                   "content-type": "application/json'"}
@@ -66,6 +68,8 @@ def send_request(request):
 
 
 def verify(request):
+    amount = global_amount
+    description = global_description
     t_status = request.GET.get('Status')
     t_authority = request.GET['Authority']
     if request.GET.get('Status') == 'OK':
