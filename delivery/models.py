@@ -13,4 +13,4 @@ class DeliveryContainer(models.Model):
 
 
     def __str__(self):
-        return "Day {} Hour {} to {}".format(str(self.start.day), str(self.start.hour), str(self.end.hour) )
+        return "{}{}: Hour {} to {}".format(str(self.start.day), self.start.strftime("%B"), str(self.start.hour), str(self.end.hour) )

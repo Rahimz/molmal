@@ -105,7 +105,7 @@ td input[type="submit"] {
 }
 
 form p label, form p input {
-  float: left;
+  /* float: right; */
   clear: both;
 }
 
@@ -123,6 +123,9 @@ form p input {
   background: #efefef;
   color: #666;
   border-radius: 4px;
+}
+form p select {
+  margin-bottom: 30px;
 }
 
 ul.errorlist {
