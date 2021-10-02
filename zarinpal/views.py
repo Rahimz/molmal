@@ -15,8 +15,13 @@ ZP_API_VERIFY = "https://api.zarinpal.com/pg/v4/payment/verify.json"
 ZP_API_STARTPAY = "https://www.zarinpal.com/pg/StartPay/{authority}"
 CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit for realy server.
 # client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
+
 # we use this variable to edit order after the successful payment
 paid_order = None
+
+# we get the amount from request so we dont have it when we
+# back from payment port. So we keep amount and description
+# in the another variable
 global_amount = 0
 global_description = ''
 
@@ -25,6 +30,8 @@ def send_request(request):
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
     amount = int(order.get_total_cost())  # Toman / Required
+
+    # put the amount to global_amount for use in verify function
     global_amount = amount
 
     paid_order = order
@@ -34,6 +41,7 @@ def send_request(request):
     request.session['order_paid'] = None
 
     description = "سفارش شماره {}".format(order.id)  # Required
+    # put the description in global_description to use in verify function
     global_description = description
     email = 'email@example.com'  # Optional
     mobile = '09123456789'  # Optional
@@ -60,12 +68,6 @@ def send_request(request):
         e_message = req.json()['errors']['message']
         return HttpResponse(f"Error code: {e_code}, Error Message: {e_message}")
 
-    # result = client.service.PaymentRequest(MERCHANT, amount, description, email, mobile, CallbackURL)
-    # if result.Status == 100:
-    #     return redirect('https://www.zarinpal.com/pg/StartPay/' + str(result.Authority))
-    # else:
-    #     return HttpResponse('Error code: ' + str(result.Status))
-
 
 def verify(request):
     amount = global_amount
@@ -84,15 +86,17 @@ def verify(request):
         if len(req.json()['errors']) == 0:
             t_status = req.json()['data']['code']
             if t_status == 100:
+                # These modification should happen to paid order
                 request.session['order_paid'] = True
                 order = Orders.objects.get(order_id=request.session['order_id'])
                 order.paid = True
                 order.updated = datetime.now()
                 order.save()
+
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction success.\nRefID: ' +
                                            str(req.json()['data']['ref_id']),
-                               'order': orders})
+                               'order': order})
                 # return HttpResponse('Transaction success.\nRefID: ' + str(
                 #     req.json()['data']['ref_id']))
             elif t_status == 101:
@@ -115,17 +119,5 @@ def verify(request):
                           {'message': f"Error code: {e_code}, Error Message: {e_message}"})
             # return HttpResponse(f"Error code: {e_code}, Error Message: {e_message}")
     else:
-        # req_header = {"accept": "application/json",
-        #               "content-type": "application/json'"}
-        # req_data = {
-        #     "merchant_id": MERCHANT,
-        #     "amount": amount,
-        #     "authority": t_authority
-        # }
-        # req = requests.post(url=ZP_API_VERIFY, data=json.dumps(req_data), headers=req_header)
-        # return render(request,
-        #               'zarinpal/fail.html',
-        #               {'message': ''})
-        # return HttpResponse()
         return render(request, 'zarinpal/fail.html',
                       {'message': 'Transaction failed or canceled by user'})
