@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-02 09:26+0330\n"
-"PO-Revision-Date: 2021-10-02 09:34+0326\n"
+"POT-Creation-Date: 2021-10-02 10:12+0330\n"
+"PO-Revision-Date: 2021-10-02 10:12+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -88,7 +88,6 @@ msgid "Change  password"
 msgstr "تغییر گذرواژه"
 
 #: account/templates/account/dashboard.html:59
-#| msgid "Your order"
 msgid "Your orders"
 msgstr "سفارش‌های شما"
 
@@ -208,7 +207,6 @@ msgid "Your password has been successfully changed."
 msgstr "گذرواژه شما با موفقیت تغییر کرد."
 
 #: account/templates/registration/password_change_form.html:12
-#| msgid "Change you password"
 msgid "Change your password"
 msgstr "گذرواژه خود را تغییر دهید"
 
@@ -282,7 +280,6 @@ msgid "Your username, in case you've forgotten"
 msgstr "نام کاربری شما، شاید فراموش کرده باشید: "
 
 #: account/templates/registration/password_reset_email.html:13
-#| msgid "Someone asked for password reset for email"
 msgid ""
 "If you do not ask for password reset, do nothing and ignore this email."
 msgstr "اگر برای تغییر گذرواژه درخواست نداده‌اید، نیاز نیست کاری انجام دهید."
@@ -362,7 +359,7 @@ msgstr ""
 " <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
 #: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:38
+#: orders/templates/orders/order/create.html:39
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr "جمع"
@@ -391,7 +388,6 @@ msgid "Checkout"
 msgstr "پرداخت"
 
 #: cart/views.py:26
-#| msgid "Add to cart"
 msgid "Product added to cart!"
 msgstr "محصول به سبد خرید اضافه شد!"
 
@@ -439,11 +435,15 @@ msgstr "شهر"
 msgid "Place order"
 msgstr "ثبت سفارش"
 
-#: orders/templates/orders/order/create.html:22
+#: orders/templates/orders/order/create.html:19
+msgid "Into payment port"
+msgstr "ارجاع به درگاه پرداخت"
+
+#: orders/templates/orders/order/create.html:23
 msgid "Your order"
 msgstr "سفارش شما"
 
-#: orders/templates/orders/order/create.html:31
+#: orders/templates/orders/order/create.html:32
 #, python-format
 msgid ""
 "\n"
@@ -671,7 +671,6 @@ msgid "Home"
 msgstr "خانه"
 
 #: zarinpal/templates/zarinpal/fail.html:24
-#| msgid "Your order"
 msgid "My orders"
 msgstr "سفارش‌های من"
 
