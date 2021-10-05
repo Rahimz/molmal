@@ -5,7 +5,7 @@ from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditFo
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib import messages
-from orders.models import Order
+from orders.models import Order, OrderItem
 
 
 @login_required
@@ -14,6 +14,24 @@ def dashboard(request):
         profile = get_object_or_404(Profile, user=request.user)
     except:
         profile = None
+
+    # we grab all orders when each user request dashboard
+    # then we updated all unpaid order and make them inactive
+    orders = Order.objects.filter(active=True)
+
+    # This function clean every order that
+    # does not pay after 24 hours.
+    # It dose not work in cron job and move to here
+    for order in orders:
+        if order.created.day > 1 and order.paid == False:
+            order_items = OrderItem.objects.filter(order=order)
+            for order_item in order_items:
+                product = order_item.product
+                product.stock += order_item.quantity
+                product.save()
+            order.active = False
+            order.save()
+
     orders = Order.objects.filter(user=request.user, active=True)
     return render(request,
                 'account/dashboard.html',
