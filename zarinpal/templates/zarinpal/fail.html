@@ -25,6 +25,7 @@
       <p class="text-danger h4">{% trans 'Your order is registerd and available in your dashboard. Please try to re-pay this order from your dashboard' %}</p>
       <p class="text-danger h5">{% trans 'You have 24 hours to pay the order and after that the order will be remove.' %}</p>
       {% endif %}
+      {% endif %}
       <a href="{% url 'shop:home' %}" class="btn btn-danger my-5 ">{% trans 'Home' %}</a>
       <a href="{% url 'dashboard' %}" class="btn btn-danger my-5 ">{% trans 'My orders' %}</a>
     </div>

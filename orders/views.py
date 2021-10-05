@@ -15,6 +15,7 @@ import datetime
 
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def order_create(request):
     cart = Cart(request)
@@ -49,19 +50,33 @@ def order_create(request):
                   'orders/order/create.html',
                   {'cart': cart, 'form': form})
 
+
+@login_required
+def order_repay(request, order_id):
+    # launch asynchronous task
+    # # TODO: this task should be define in orders.task to send mail for user
+    # order_repay.delay(order_id)
+
+    # set the order in the session
+    request.session['order_id'] = order_id
+
+    return redirect(reverse('zarinpal:request'))
+
+
 @login_required
 def user_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
     return render(request,
-                 'orders/order/user_order_detail.html',
-                 {'order': order})
+                  'orders/order/user_order_detail.html',
+                  {'order': order})
 
-@staff_member_required # it checks both is_active and is_staff field of user request
+
+@staff_member_required  # it checks both is_active and is_staff field of user request
 def admin_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
     return render(request,
-                 'admin/orders/order/detail.html',
-                 {'order': order} )
+                  'admin/orders/order/detail.html',
+                  {'order': order})
 
 
 @staff_member_required

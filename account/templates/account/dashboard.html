@@ -72,7 +72,7 @@
 					<tr>
 						<td><a href="{{ order.get_absolute_url }}">{{ order.id }}</a></td>
 						<td>{{ order.created.date }}</td>
-						<td>{% if order.paid %}&#10004{%else %}&#10008{% endif %}</td>
+						<td>{% if order.paid %}&#10004{%else %}&#10008<a class="btn btn-outline-success m-3" href="{% url 'orders:order_repay' order.id %}">{% trans 'Repay' %}</a>{% endif %}</td>
 						<td>{% if order.delivered %}&#10004{%else %}&#10008{% endif %}</td>
 					</tr>
 

@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib import messages
 from orders.models import Order, OrderItem
+import datetime
 
 
 @login_required
@@ -23,7 +24,7 @@ def dashboard(request):
     # does not pay after 24 hours.
     # It dose not work in cron job and move to here
     for order in orders:
-        if order.created.day > 1 and order.paid == False:
+        if order.created.day - datetime.datetime.now().date().day > 1 and order.paid == False:
             order_items = OrderItem.objects.filter(order=order)
             for order_item in order_items:
                 product = order_item.product
