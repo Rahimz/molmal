@@ -20,7 +20,7 @@
       {% if '-9' in message %}
       <p class="text-muted h4 p-3">{{ message }}</p>
       <p class="text-danger h4">{% trans 'If your payment was successful and you see this message, do not re pay and contact us!' %}</p>
-      {% endif %}
+      {% else %}
       <p class="text-muted h4 p-3">{{ message }}</p>
       <p class="text-danger h4">{% trans 'Your order is registerd and available in your dashboard. Please try to re-pay this order from your dashboard' %}</p>
       {% endif %}
