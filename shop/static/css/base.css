@@ -126,6 +126,7 @@ form p input {
 }
 form p select {
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 ul.errorlist {
