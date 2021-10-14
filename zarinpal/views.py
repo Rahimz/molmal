@@ -25,19 +25,21 @@ paid_order = None
 # we get the amount from request so we dont have it when we
 # back from payment port. So we keep amount and description
 # in the another variable
-global_amount = []
+# global_amount = [amount, order_id, order_paid]
+global_amount = [0, 0, None]
 
 global_description = ''
 
 def send_request(request):
     # we get the order detail from session
     order_id = request.session.get('order_id')
+    global_amount[1] = order_id
     order = get_object_or_404(Order, id=order_id)
     amount = int(order.get_total_cost())  # Toman / Required
 
     # put the amount to global_amount for use in verify function
     # global_amount = amount
-    global_amount.append(amount)
+    global_amount[0] = amount
 
     paid_order = order
 
@@ -76,6 +78,7 @@ def send_request(request):
 
 def verify(request):
     amount = global_amount[0]
+    order_id = global_amount[1]
     description = global_description
     t_status = request.GET.get('Status')
     t_authority = request.GET['Authority']
@@ -94,7 +97,7 @@ def verify(request):
 
                 # These modification should happen to paid order
                 request.session['order_paid'] = True
-                order = Order.objects.get(id=request.session['order_id'])
+                order = Order.objects.get(id=order_id)
                 order.paid = True
                 order.updated = datetime.datetime.now()
                 order.save()
@@ -105,9 +108,22 @@ def verify(request):
                                'order': order})
 
             elif t_status == 101:
+
+                # These modification should happen to paid order
+                request.session['order_paid'] = True
+                order = Order.objects.get(id=order_id)
+                order.paid = True
+                order.updated = datetime.datetime.now()
+                order.save()
+
+                # return render(request, 'zarinpal/success.html',
+                #               {'message': 'Transaction success.\nRefID: ' +
+                #                            str(req.json()['data']['ref_id']),
+                #                'order': order})
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction submitted : ' +
-                                          str(req.json()['data']['message'])})
+                                          str(req.json()['data']['message']),
+                               'order': order})
 
             else:
                 return render(request,
