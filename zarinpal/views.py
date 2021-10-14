@@ -7,13 +7,17 @@ from tshop.secrets import *
 import requests
 import json
 import datetime
+from django.conf import settings
 
 
 MERCHANT = merchant
 ZP_API_REQUEST = "https://api.zarinpal.com/pg/v4/payment/request.json"
 ZP_API_VERIFY = "https://api.zarinpal.com/pg/v4/payment/verify.json"
 ZP_API_STARTPAY = "https://www.zarinpal.com/pg/StartPay/{authority}"
-CallbackURL = 'http://localhost:8000/zarinpal/verify/' # Important: need to edit for realy server.
+if settings.DEBUG:
+    CallbackURL = 'http://localhost:8000/zarinpal/verify/'
+else:
+    CallbackURL = 'https://rahimagha.ir/zarinpal/verify/' 
 # client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 
 # we use this variable to edit order after the successful payment
