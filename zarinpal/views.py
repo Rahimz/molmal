@@ -17,16 +17,16 @@ ZP_API_STARTPAY = "https://www.zarinpal.com/pg/StartPay/{authority}"
 if settings.DEBUG:
     CallbackURL = 'http://localhost:8000/zarinpal/verify/'
 else:
-    CallbackURL = 'https://rahimagha.ir/zarinpal/verify/' 
+    CallbackURL = 'https://rahimagha.ir/zarinpal/verify/'
 # client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 
 # we use this variable to edit order after the successful payment
 paid_order = None
-
 # we get the amount from request so we dont have it when we
 # back from payment port. So we keep amount and description
 # in the another variable
-global_amount = 0
+global_amount = []
+
 global_description = ''
 
 def send_request(request):
@@ -36,7 +36,8 @@ def send_request(request):
     amount = int(order.get_total_cost())  # Toman / Required
 
     # put the amount to global_amount for use in verify function
-    global_amount = amount
+    # global_amount = amount
+    global_amount.append(amount)
 
     paid_order = order
 
@@ -74,7 +75,7 @@ def send_request(request):
 
 
 def verify(request):
-    amount = global_amount
+    amount = global_amount[0]
     description = global_description
     t_status = request.GET.get('Status')
     t_authority = request.GET['Authority']
@@ -90,38 +91,39 @@ def verify(request):
         if len(req.json()['errors']) == 0:
             t_status = req.json()['data']['code']
             if t_status == 100:
+
                 # These modification should happen to paid order
                 request.session['order_paid'] = True
-                order = Orders.objects.get(order_id=request.session['order_id'])
+                order = Order.objects.get(id=request.session['order_id'])
                 order.paid = True
-                order.updated = datetime.now()
+                order.updated = datetime.datetime.now()
                 order.save()
 
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction success.\nRefID: ' +
                                            str(req.json()['data']['ref_id']),
                                'order': order})
-                # return HttpResponse('Transaction success.\nRefID: ' + str(
-                #     req.json()['data']['ref_id']))
+
             elif t_status == 101:
                 return render(request, 'zarinpal/success.html',
                               {'message': 'Transaction submitted : ' +
                                           str(req.json()['data']['message'])})
-                # return HttpResponse('Transaction submitted : ' + str(
-                #     req.json()['data']['message']))
+
             else:
                 return render(request,
                               'zarinpal/fail.html',
                               {'message': str (req.json()['data']['message'])})
-                # return HttpResponse('Transaction failed.\nStatus: ' +
-                #                     str(req.json()['data']['message']))
+
         else:
             e_code = req.json()['errors']['code']
             e_message = req.json()['errors']['message']
+
             return render(request,
                           'zarinpal/fail.html',
-                          {'message': f"Error code: {e_code}, Error Message: {e_message}"})
-            # return HttpResponse(f"Error code: {e_code}, Error Message: {e_message}")
+                          {'message': f"Error code: {e_code}, Error Message: {e_message}",
+                          'amount': req_data['amount'],
+                          'authority': req_data['authority'],
+                           })
     else:
         return render(request, 'zarinpal/fail.html',
                       {'message': 'Transaction failed or canceled by user'})
