@@ -39,7 +39,7 @@ def send_request(request):
 
     # put the amount to global_amount for use in verify function
     # global_amount = amount
-    global_amount[0] = amount
+    global_amount[0] = amount * 10
 
     paid_order = order
 
@@ -50,8 +50,8 @@ def send_request(request):
     description = "سفارش شماره {}".format(order.id)  # Required
     # put the description in global_description to use in verify function
     global_description = description
-    email = 'email@example.com'  # Optional
-    mobile = '09123456789'  # Optional
+    email = order.email  if order.email else ''  # Optional
+    mobile = order.phone if order.phone else ''  # Optional
 
     # send request to payment system
     req_data = {
