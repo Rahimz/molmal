@@ -56,6 +56,7 @@
 		<a href="{% url 'password_change' %}" class="btn btn-dark">{% trans 'Change  password' %}</a>
 
 		<div class="m-5">
+			<p class="text-danger h5 m-4">{% trans 'You have 24 hours to pay the order and after that the order will be remove.' %}</p>
 			<h2 class="bg-info rounded p-2">{% trans 'Your orders' %}</h2>
 			{% if orders %}
 			<table>
@@ -89,7 +90,7 @@
 			<p><b>{% trans 'Warning:' %}</b> {% trans 'If you remove your profile user, every action and data you have entered will be deleted permanently.' %}<br />
 				<b>{% trans 'THIS ACCTION IS NOT UNDOABLE!' %}</b>
 			</p>
-			<a class="btn btn-danger" href="#">{% trans 'Romove Account Completely!' %}</a>
+			<a class="btn btn-danger disabled" href="#">{% trans 'Romove Account Completely!' %}</a>
 		</div>
 		{% else %}
 		<div class="bg-warning rounded m-3 p-2">
