@@ -7,39 +7,48 @@
 
 {% block content %}
 <div class="container">
-    <h1>{% trans 'Checkout' %}</h1>
-    <div class="row">
-        <div class="col-md">
-            <form method="post" class="">
-                {{ form.as_p }}
-                <p><input type="submit" value="{% trans 'Place order' %}"></p>
-                {% csrf_token %}
-            </form>
-        </div>
-        <span class="text-muted p-1 ">{% trans 'Into payment port' %}</span>
-
-        <div class="col-md m-4">
-            <div class="order-info">
-                <h3>{% trans "Your order" %}</h3>
-                <ul>
-                    {% for item in cart %}
-                    <li>{{ item.product.name }} * {{ item.quantity }} :
-                        <span>T {{ item.total_price|floatformat:0 }}</span>
-                    </li>
-                    {% endfor %}
-                    {% if cart.coupon %}
-                        <li>
-                            {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
-                                "{{ code }}" ({{ discount }}% off)
-                            {% endblocktrans %}
-                            <span class="neg">- T {{ cart.get_discount|floatformat:0 }}</span>
-                        </li>
-                    {% endif %}
-                </ul>
-                <p>{% trans "Total" %}: T {{ cart.get_total_price_after_discount|floatformat:0 }}</p>
-            </div>
-
-        </div>
+  <h1>{% trans 'Checkout' %}</h1>
+  <div class="row">
+    <div class="col-md">
+      <form method="post" class="">
+        {{ form.as_p }}
+        <p><input type="submit" value="{% trans 'Place order' %}"></p>
+        {% csrf_token %}
+      </form>
     </div>
+    <span class="text-muted p-1 ">{% trans 'Into payment port' %}</span>
+
+    <div class="col-md m-4">
+      <div class="order-info">
+        <h3>{% trans "Your order" %}</h3>
+        <ul>
+          {% for item in cart %}
+          <li>{{ item.product.name }} * {{ item.quantity }} :
+            <span>T {{ item.total_price|floatformat:0 }}</span>
+          </li>
+          {% endfor %}
+          <br />
+          <li>
+            {% trans 'Shipping'%} :
+            {% if cart.get_total_price >= 400000 %}
+             {% trans 'Free' %}
+            {% else %}
+            T. 25000
+            {% endif %}
+            {% if cart.coupon %}
+          </li>
+          <li>
+            {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+            "{{ code }}" ({{ discount }}% off)
+            {% endblocktrans %}
+            <span class="neg">- T {{ cart.get_discount|floatformat:0 }}</span>
+          </li>
+          {% endif %}
+        </ul>
+        <p>{% trans "Total" %}: T {{ cart.get_total_price_after_discount|floatformat:0 }}</p>
+      </div>
+
+    </div>
+  </div>
 </div>
 {% endblock %}

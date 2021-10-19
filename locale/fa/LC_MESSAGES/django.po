@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 13:57+0330\n"
-"PO-Revision-Date: 2021-10-19 13:59+0326\n"
+"POT-Creation-Date: 2021-10-19 15:05+0330\n"
+"PO-Revision-Date: 2021-10-19 15:06+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -361,39 +361,53 @@ msgid "Subtotal"
 msgstr "مجموع"
 
 #: cart/templates/cart/detail.html:59
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "            <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+#| "          "
 msgid ""
 "\n"
-"            <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
-"          "
+"      <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+"      "
 msgstr ""
 "\n"
 " <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
-#: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:39
+#: cart/templates/cart/detail.html:69 cart/templates/cart/detail.html:74
+#: orders/templates/orders/order/create.html:32
+msgid "Shipping"
+msgstr "ارسال"
+
+#: cart/templates/cart/detail.html:78
+#: orders/templates/orders/order/create.html:34
+msgid "Free"
+msgstr "رایگان"
+
+#: cart/templates/cart/detail.html:87
+#: orders/templates/orders/order/create.html:48
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr "جمع"
 
-#: cart/templates/cart/detail.html:80
+#: cart/templates/cart/detail.html:98
 #: shop/templates/shop/product/detail.html:35
 msgid "People who bought this also bought"
 msgstr "کسانی که این کالا را خریده اند این‌ها را نیز خریداری کرده اند "
 
-#: cart/templates/cart/detail.html:93
+#: cart/templates/cart/detail.html:111
 msgid "Apply a coupon"
 msgstr "اعمال کد تخفیف"
 
-#: cart/templates/cart/detail.html:96
+#: cart/templates/cart/detail.html:114
 msgid "Apply"
 msgstr "ثبت"
 
-#: cart/templates/cart/detail.html:101
+#: cart/templates/cart/detail.html:119
 msgid "Continue shopping"
 msgstr "ادامه خرید"
 
-#: cart/templates/cart/detail.html:102
+#: cart/templates/cart/detail.html:120
 #: orders/templates/orders/order/create.html:5
 #: orders/templates/orders/order/create.html:10
 msgid "Checkout"
@@ -455,15 +469,19 @@ msgstr "ارجاع به درگاه پرداخت"
 msgid "Your order"
 msgstr "سفارش شما"
 
-#: orders/templates/orders/order/create.html:32
-#, python-format
+#: orders/templates/orders/order/create.html:41
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "            <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+#| "          "
 msgid ""
 "\n"
-"                                \"%(code)s\" (%(discount)s%% off)\n"
-"                            "
+"            \"%(code)s\" (%(discount)s%% off)\n"
+"            "
 msgstr ""
 "\n"
-"\"%(code)s\" (%(discount)s%% تخفیف)"
+" <td>\"%(code)s\" کوپن (%(discount)s%% تخفیف)</td>"
 
 #: orders/templates/orders/order/created.html:5
 #: orders/templates/orders/order/created.html:9
@@ -678,9 +696,6 @@ msgstr ""
 "پرداخت نکنید و با ما تماس بگیرید. "
 
 #: zarinpal/templates/zarinpal/fail.html:29
-#| msgid ""
-#| "Yor order is registerd and available in your dashboard. Please try to re-pay"
-#| " this order from your dashboard"
 msgid ""
 "Your order is registerd and available in your dashboard. Please try to re-"
 "pay this order from your dashboard"
@@ -713,6 +728,15 @@ msgstr "شماره سفارش"
 #: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "                                \"%(code)s\" (%(discount)s%% off)\n"
+#~ "                            "
+#~ msgstr ""
+#~ "\n"
+#~ "\"%(code)s\" (%(discount)s%% تخفیف)"
 
 #~ msgid "Choose your delivery time"
 #~ msgstr "لطفاً زمان ارسال سفارش را انتخاب کنید"

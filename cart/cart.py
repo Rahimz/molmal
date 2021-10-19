@@ -69,7 +69,11 @@ class Cart(object):
         return sum(item['quantity'] for item in self.cart.values())
 
     def get_total_price(self):
-        return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+        total = sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+        if total >= 400000:
+            return total
+        else:
+            return total + 25000
 
     def clear(self):
         # remove cart from session
@@ -85,7 +89,7 @@ class Cart(object):
             except Coupon.DoesNotExist:
                 pass
         return None
-    
+
     def get_discount(self):
         if self.coupon:
             return (self.coupon.discount / Decimal(100)) * self.get_total_price()
@@ -93,4 +97,3 @@ class Cart(object):
 
     def get_total_price_after_discount(self):
         return self.get_total_price() - self.get_discount()
-

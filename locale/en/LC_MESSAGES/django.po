@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 13:57+0330\n"
+"POT-Creation-Date: 2021-10-19 15:05+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,34 +351,44 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"            <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
-"          "
+"      <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+"      "
 msgstr ""
 
-#: cart/templates/cart/detail.html:69
-#: orders/templates/orders/order/create.html:39
+#: cart/templates/cart/detail.html:69 cart/templates/cart/detail.html:74
+#: orders/templates/orders/order/create.html:32
+msgid "Shipping"
+msgstr ""
+
+#: cart/templates/cart/detail.html:78
+#: orders/templates/orders/order/create.html:34
+msgid "Free"
+msgstr ""
+
+#: cart/templates/cart/detail.html:87
+#: orders/templates/orders/order/create.html:48
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr ""
 
-#: cart/templates/cart/detail.html:80
+#: cart/templates/cart/detail.html:98
 #: shop/templates/shop/product/detail.html:35
 msgid "People who bought this also bought"
 msgstr ""
 
-#: cart/templates/cart/detail.html:93
+#: cart/templates/cart/detail.html:111
 msgid "Apply a coupon"
 msgstr ""
 
-#: cart/templates/cart/detail.html:96
+#: cart/templates/cart/detail.html:114
 msgid "Apply"
 msgstr ""
 
-#: cart/templates/cart/detail.html:101
+#: cart/templates/cart/detail.html:119
 msgid "Continue shopping"
 msgstr ""
 
-#: cart/templates/cart/detail.html:102
+#: cart/templates/cart/detail.html:120
 #: orders/templates/orders/order/create.html:5
 #: orders/templates/orders/order/create.html:10
 msgid "Checkout"
@@ -440,12 +450,12 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:32
+#: orders/templates/orders/order/create.html:41
 #, python-format
 msgid ""
 "\n"
-"                                \"%(code)s\" (%(discount)s%% off)\n"
-"                            "
+"            \"%(code)s\" (%(discount)s%% off)\n"
+"            "
 msgstr ""
 
 #: orders/templates/orders/order/created.html:5
