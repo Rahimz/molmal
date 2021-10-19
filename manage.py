@@ -6,10 +6,11 @@ from django.conf import settings
 
 def main():
     """Run administrative tasks."""
-    if settings.DEBUG:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.base')
-    else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.pro')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings')
+    # if settings.DEBUG:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.base')
+    # else:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.pro')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
