@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-02 10:12+0330\n"
+"POT-Creation-Date: 2021-10-19 13:57+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid "Please add your profile details"
 msgstr ""
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:98
 msgid "Add profile"
 msgstr ""
 
@@ -88,44 +88,54 @@ msgid "Change  password"
 msgstr ""
 
 #: account/templates/account/dashboard.html:59
+#: zarinpal/templates/zarinpal/fail.html:30
+msgid ""
+"You have 24 hours to pay the order and after that the order will be remove."
+msgstr ""
+
+#: account/templates/account/dashboard.html:60
 msgid "Your orders"
 msgstr ""
 
-#: account/templates/account/dashboard.html:64
+#: account/templates/account/dashboard.html:65
 msgid "order No."
 msgstr ""
 
-#: account/templates/account/dashboard.html:65
+#: account/templates/account/dashboard.html:66
 msgid "Date"
 msgstr ""
 
-#: account/templates/account/dashboard.html:66
+#: account/templates/account/dashboard.html:67
 msgid "Paid"
 msgstr ""
 
-#: account/templates/account/dashboard.html:67
+#: account/templates/account/dashboard.html:68
 msgid "Delivered"
 msgstr ""
 
-#: account/templates/account/dashboard.html:89
+#: account/templates/account/dashboard.html:76
+msgid "Repay"
+msgstr ""
+
+#: account/templates/account/dashboard.html:90
 msgid "Warning:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:89
+#: account/templates/account/dashboard.html:90
 msgid ""
 "If you remove your profile user, every action and data you have entered will "
 "be deleted permanently."
 msgstr ""
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:91
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:92
+#: account/templates/account/dashboard.html:93
 msgid "Romove Account Completely!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:96
+#: account/templates/account/dashboard.html:97
 msgid "You have to complete your profile first:"
 msgstr ""
 
@@ -625,7 +635,7 @@ msgstr ""
 msgid "Search for products"
 msgstr ""
 
-#: tshop/settings.py:131 tshop/settings/base.py:140
+#: tshop/settings.py:140 tshop/settings/base.py:140
 msgid "Farsi"
 msgstr ""
 
@@ -639,16 +649,23 @@ msgstr ""
 
 #: zarinpal/templates/zarinpal/fail.html:22
 msgid ""
-"Yor order is registerd and available in your dashboard. Please try to re-pay "
-"this order from your dashboard"
+"If your payment was successful and you see this message, do not re pay and "
+"contact us!"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:23
-#: zarinpal/templates/zarinpal/success.html:22
+#: zarinpal/templates/zarinpal/fail.html:29
+msgid ""
+"Your order is registerd and available in your dashboard. Please try to re-"
+"pay this order from your dashboard"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:33
+#: zarinpal/templates/zarinpal/success.html:27
 msgid "Home"
 msgstr ""
 
-#: zarinpal/templates/zarinpal/fail.html:24
+#: zarinpal/templates/zarinpal/fail.html:34
+#: zarinpal/templates/zarinpal/success.html:28
 msgid "My orders"
 msgstr ""
 
@@ -664,10 +681,6 @@ msgstr ""
 msgid "Order No."
 msgstr ""
 
-#: zarinpal/templates/zarinpal/success.html:20
-msgid "Choose your delivery time"
-msgstr ""
-
-#: zarinpal/templates/zarinpal/success.html:21
+#: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr ""

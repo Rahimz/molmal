@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-02 10:12+0330\n"
-"PO-Revision-Date: 2021-10-02 10:12+0326\n"
+"POT-Creation-Date: 2021-10-19 13:57+0330\n"
+"PO-Revision-Date: 2021-10-19 13:59+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -46,7 +46,7 @@ msgid "Please add your profile details"
 msgstr "جزییات حساب کاربری خود را کامل کنید"
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:98
 msgid "Add profile"
 msgstr "اضافه کردن حساب کاربری"
 
@@ -88,30 +88,42 @@ msgid "Change  password"
 msgstr "تغییر گذرواژه"
 
 #: account/templates/account/dashboard.html:59
+#: zarinpal/templates/zarinpal/fail.html:30
+msgid ""
+"You have 24 hours to pay the order and after that the order will be remove."
+msgstr ""
+"شما ۲۴ ساعت فرصت دارید که سفارش پرداخت نشده را پرداخت کنید بعد از آن سفارش "
+"به صورت اتوماتیک حذف خواهد شد."
+
+#: account/templates/account/dashboard.html:60
 msgid "Your orders"
 msgstr "سفارش‌های شما"
 
-#: account/templates/account/dashboard.html:64
+#: account/templates/account/dashboard.html:65
 msgid "order No."
 msgstr "شماره سفارش"
 
-#: account/templates/account/dashboard.html:65
+#: account/templates/account/dashboard.html:66
 msgid "Date"
 msgstr "تاریخ"
 
-#: account/templates/account/dashboard.html:66
+#: account/templates/account/dashboard.html:67
 msgid "Paid"
 msgstr "پرداخت شده"
 
-#: account/templates/account/dashboard.html:67
+#: account/templates/account/dashboard.html:68
 msgid "Delivered"
 msgstr "ارسال شده"
 
-#: account/templates/account/dashboard.html:89
+#: account/templates/account/dashboard.html:76
+msgid "Repay"
+msgstr "پرداخت"
+
+#: account/templates/account/dashboard.html:90
 msgid "Warning:"
 msgstr "اخطار"
 
-#: account/templates/account/dashboard.html:89
+#: account/templates/account/dashboard.html:90
 msgid ""
 "If you remove your profile user, every action and data you have entered will"
 " be deleted permanently."
@@ -119,15 +131,15 @@ msgstr ""
 "اگر حساب کاربری خود را پاک کنید، هر اطلاعات و سابقه‌ای که داشته اید به طور "
 "دائم از این وبسایت حذف خواهد شد."
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:91
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr "این عملیات غیر قابل بازگشت است"
 
-#: account/templates/account/dashboard.html:92
+#: account/templates/account/dashboard.html:93
 msgid "Romove Account Completely!"
 msgstr "حذف کردن حساب کاربری به طور کامل!"
 
-#: account/templates/account/dashboard.html:96
+#: account/templates/account/dashboard.html:97
 msgid "You have to complete your profile first:"
 msgstr "شما باید در ابتدا حساب کاربری خود را کامل کنید:"
 
@@ -645,7 +657,7 @@ msgstr "جستجوی دوباره"
 msgid "Search for products"
 msgstr "جستجو برای محصول"
 
-#: tshop/settings.py:131 tshop/settings/base.py:140
+#: tshop/settings.py:140 tshop/settings/base.py:140
 msgid "Farsi"
 msgstr "فارسی"
 
@@ -659,18 +671,30 @@ msgstr "شماره سفارش"
 
 #: zarinpal/templates/zarinpal/fail.html:22
 msgid ""
-"Yor order is registerd and available in your dashboard. Please try to re-pay"
-" this order from your dashboard"
+"If your payment was successful and you see this message, do not re pay and "
+"contact us!"
 msgstr ""
-"سفارش شما ثبت شده و در داشبورد قابل مشاهده است. لطفا برای پرداخت مجدد از "
+"اگر پرداخت شما موفق بود اما این پیغام خطا را مشاهده کردید، سفارش را مجدداً "
+"پرداخت نکنید و با ما تماس بگیرید. "
+
+#: zarinpal/templates/zarinpal/fail.html:29
+#| msgid ""
+#| "Yor order is registerd and available in your dashboard. Please try to re-pay"
+#| " this order from your dashboard"
+msgid ""
+"Your order is registerd and available in your dashboard. Please try to re-"
+"pay this order from your dashboard"
+msgstr ""
+"سفارش شما ثبت شده و در داشبورد قابل مشاهده است. لطفاً برای پرداخت مجدد از "
 "طریق داشبورد اقدام کنید."
 
-#: zarinpal/templates/zarinpal/fail.html:23
-#: zarinpal/templates/zarinpal/success.html:22
+#: zarinpal/templates/zarinpal/fail.html:33
+#: zarinpal/templates/zarinpal/success.html:27
 msgid "Home"
 msgstr "خانه"
 
-#: zarinpal/templates/zarinpal/fail.html:24
+#: zarinpal/templates/zarinpal/fail.html:34
+#: zarinpal/templates/zarinpal/success.html:28
 msgid "My orders"
 msgstr "سفارش‌های من"
 
@@ -686,13 +710,12 @@ msgstr "پرداخت شما موفق بود!"
 msgid "Order No."
 msgstr "شماره سفارش"
 
-#: zarinpal/templates/zarinpal/success.html:20
-msgid "Choose your delivery time"
-msgstr "لطفاً زمان ارسال سفارش را انتخاب کنید"
-
-#: zarinpal/templates/zarinpal/success.html:21
+#: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#~ msgid "Choose your delivery time"
+#~ msgstr "لطفاً زمان ارسال سفارش را انتخاب کنید"
 
 #~ msgid "Please try again a few minutes later!"
 #~ msgstr "لطفاً چند دقیقه دیگر امتحان کنید!"
