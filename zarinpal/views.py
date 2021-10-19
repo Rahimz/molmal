@@ -35,11 +35,11 @@ def send_request(request):
     order_id = request.session.get('order_id')
     global_amount[1] = order_id
     order = get_object_or_404(Order, id=order_id)
-    amount = int(order.get_total_cost())  # Toman / Required
+    amount = int(order.get_total_cost()) * 10  # Toman / Required
 
     # put the amount to global_amount for use in verify function
     # global_amount = amount
-    global_amount[0] = amount * 10
+    global_amount[0] = amount
 
     paid_order = order
 
