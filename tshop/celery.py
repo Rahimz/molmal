@@ -4,10 +4,11 @@ from django.conf import settings
 
 
 # set the default Django settings module for the 'celery' program.
-if settings.DEBUG:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.base')
-else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.pro')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings')
+# if settings.DEBUG:
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.base')
+# else:
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tshop.settings.pro')
 
 app = Celery('tshop')
 
