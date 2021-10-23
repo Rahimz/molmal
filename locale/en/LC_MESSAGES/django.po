@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 15:05+0330\n"
+"POT-Creation-Date: 2021-10-23 15:24+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -572,6 +572,38 @@ msgstr ""
 
 #: shop/templates/shop/product/detail.html:27
 msgid "Add to cart"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:52
+msgid "Comments"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:56
+msgid "Your comment has been added."
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:58
+msgid "Add a new comment"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:62
+msgid "Add comment"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:70
+msgid "comment"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:78
+msgid "Written"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:78
+msgid "by"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:86
+msgid "There are no comments yet"
 msgstr ""
 
 #: shop/templates/shop/product/home.html:17

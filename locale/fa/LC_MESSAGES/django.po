@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 15:05+0330\n"
-"PO-Revision-Date: 2021-10-19 15:06+0326\n"
+"POT-Creation-Date: 2021-10-23 15:24+0330\n"
+"PO-Revision-Date: 2021-10-23 15:28+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -601,6 +601,39 @@ msgstr "یا اگر حالش رو ندارید میتونید به من زنگ �
 #: shop/templates/shop/product/detail.html:27
 msgid "Add to cart"
 msgstr "اضافه کردن به سبد خرید "
+
+#: shop/templates/shop/product/detail.html:52
+msgid "Comments"
+msgstr "نظرات"
+
+#: shop/templates/shop/product/detail.html:56
+msgid "Your comment has been added."
+msgstr "نظر شما ثبت شد."
+
+#: shop/templates/shop/product/detail.html:58
+msgid "Add a new comment"
+msgstr "نظر خود را اضافه کنید"
+
+#: shop/templates/shop/product/detail.html:62
+msgid "Add comment"
+msgstr "ثبت نظر"
+
+#: shop/templates/shop/product/detail.html:70
+msgid "comment"
+msgstr "نظر"
+
+#: shop/templates/shop/product/detail.html:78
+msgid "Written"
+msgstr "نوشته شده "
+
+#: shop/templates/shop/product/detail.html:78
+msgid "by"
+msgstr "توسط"
+
+#: shop/templates/shop/product/detail.html:86
+#| msgid "There are no results for your query."
+msgid "There are no comments yet"
+msgstr "هنوز نظری برای این محصول ثبت نشده است"
 
 #: shop/templates/shop/product/home.html:17
 #: shop/templates/shop/product/list.html:15
