@@ -3,7 +3,7 @@
 {% load static %}
 {% load humanize %}
 
-{% block title %}{% trans "Rahim Agha Store" %}{% endblock %}
+{% block title %}{% if query %}{{ query }} | {% endif %}{% trans "Rahim Agha Store" %}{% endblock %}
 
 
 {% block content %}
@@ -26,7 +26,7 @@
         <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}T {{ product.price|intcomma }}{% endif %}</h6>
         {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
         <p class="card-text">
-          {{ product.description }}
+          {{ product.description | truncatewords:15 }}
         </p>
       </div>
     </div>
