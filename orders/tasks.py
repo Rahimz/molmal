@@ -1,4 +1,4 @@
-from celery import shared_task 
+from celery import shared_task
 from django.core.mail import send_mail
 from .models import Order
 from shop.recommender import Recommender
@@ -13,11 +13,11 @@ def order_created(order_id):
     order = Order.objects.get(id=order_id)
     subject = f'Order nr. {order.id}'
     message = f'Dear {order.first_name},\n\n' \
-              f'You have successfullu placed an order.' \
+              f'You have successfully placed an order.' \
               f'Your order ID is {order.id}'
     mail_sent = send_mail(subject,
                           message,
-                          'admin@tshop.com',
+                          'admin@rahimagha.ir',
                           [order.email])
     # This part call the recommender and add bought product to redis db
     # when an order create
