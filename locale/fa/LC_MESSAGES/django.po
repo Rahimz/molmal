@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-23 15:24+0330\n"
-"PO-Revision-Date: 2021-10-23 15:28+0326\n"
+"POT-Creation-Date: 2021-10-23 19:02+0330\n"
+"PO-Revision-Date: 2021-10-23 19:18+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -544,7 +544,7 @@ msgstr "خطای ۵۰۰"
 msgid "500 Error: There is an error in our server!"
 msgstr "خطای ۵۰۰: مشکلی در سرور وجود دارد!"
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:82
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:83
 msgid "Admin"
 msgstr "مدیر"
 
@@ -552,25 +552,25 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:139
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:140
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:142
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:143
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
 " جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:149
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:150
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:161
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:162
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:162
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:163
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
@@ -582,19 +582,24 @@ msgstr "خروج"
 msgid "Login"
 msgstr "ورود"
 
-#: shop/templates/shop/base.html:92
+#: shop/templates/shop/base.html:51
+#| msgid "register here"
+msgid "Register"
+msgstr "ثبت نام"
+
+#: shop/templates/shop/base.html:93
 msgid "item"
 msgstr "مورد"
 
-#: shop/templates/shop/base.html:103
+#: shop/templates/shop/base.html:104
 msgid "Your cart is empty."
-msgstr "سبد خرید شما خالی است"
+msgstr "هنوز که چیزی نخریدی!"
 
-#: shop/templates/shop/base.html:127
+#: shop/templates/shop/base.html:128
 msgid "For a new order you could go to"
 msgstr "برای سفارش فعلاً باید از طریق اینستاگرام به من پیغام بدهید"
 
-#: shop/templates/shop/base.html:128
+#: shop/templates/shop/base.html:129
 msgid "Or if you prefer phon you could call me at"
 msgstr "یا اگر حالش رو ندارید میتونید به من زنگ بزنید "
 
@@ -631,7 +636,6 @@ msgid "by"
 msgstr "توسط"
 
 #: shop/templates/shop/product/detail.html:86
-#| msgid "There are no results for your query."
 msgid "There are no comments yet"
 msgstr "هنوز نظری برای این محصول ثبت نشده است"
 
