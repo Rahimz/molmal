@@ -6,47 +6,86 @@
 {% endblock %}
 {% block content %}
 <div class="container">
-    <div class="row mt-4 text-center">
-        <div class="col-md-6">
-            <img src="{% if product.image %}{{ product.image.url }}
+  <div class="row mt-4 text-center">
+    <div class="col-md-6">
+      <img src="{% if product.image %}{{ product.image.url }}
             {% else %}
             {% static 'img/no_image.png' %}{% endif %}" width="100%" height="auto">
-        </div>
-        <div class="col-md-6 text-center">
-            <h1>{{ product.name }}</h1>
-            <h2>
-                <a href="{{ product.category.get_absolute_url }}">
-                    {{ product.category }}
-                </a>
-            </h2>
-            <p class="price">T {{ product.price }}</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <h1>{{ product.name }}</h1>
+      <h2>
+        <a href="{{ product.category.get_absolute_url }}">
+          {{ product.category }}
+        </a>
+      </h2>
+      <p class="price">T {{ product.price }}</p>
 
-            <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                {{ cart_product_form}}
-                {% csrf_token %}
-                <input type="submit" value="{% trans 'Add to cart' %}">
-            </form>
+      <form action="{% url 'cart:cart_add' product.id %}" method="post">
+        {{ cart_product_form}}
+        {% csrf_token %}
+        <input type="submit" value="{% trans 'Add to cart' %}">
+      </form>
 
-            <p class="mt-2">{% if product.description %}{{ product.description|linebreaks }}{% endif %}</p>
-        </div>
-    </div> <!-- / end of row-->
-    <div class="row mt-3">
-        {% if recommended_products %}
-        <h3>{% trans "People who bought this also bought" %}</h3>
-        <div class="recommendations ">
+      <p class="mt-2">{% if product.description %}{{ product.description|linebreaks }}{% endif %}</p>
+    </div>
+  </div> <!-- / end of row-->
+  <div class="row mt-3">
+    {% if recommended_products %}
+    <h3>{% trans "People who bought this also bought" %}</h3>
+    <div class="recommendations ">
 
-            {% for p in recommended_products %}
-            <div class="item col-md-3">
-                <a href="{{ p.get_absolute_url }}">
-                    <img src="{% if p.image %}{{ p.image.url }}
+      {% for p in recommended_products %}
+      <div class="item col-md-3">
+        <a href="{{ p.get_absolute_url }}">
+          <img src="{% if p.image %}{{ p.image.url }}
                 {% else %}{% static 'img/no_image.png' %}{% endif %}">
-                </a>
-                <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-    </div> <!-- / end of row-->
+        </a>
+        <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div> <!-- / end of row-->
+
+  <div class="row mt-4 text-center">
+    <h2 class="">{% trans 'Comments' %}</h2>
+    {% if request.user.is_authenticated %}
+
+    {% if new_comment %}
+      <h3 class="bg-success m-5">{% trans 'Your comment has been added.' %}</h3>
+      {% else %}
+      <h2>{% trans 'Add a new comment' %}</h2>
+      <form method="post">
+        {{ comment_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="{% trans 'Add comment' %}"></p>
+      </form>
+      {% endif %}
+
+    {% endif %}
+
+    {% with comments.count as total_comments %}
+    <h3>
+      {{ total_comments }} {% trans 'comment' %}
+    </h3>
+    {% endwith %}
+    <hr />
+
+    {% for comment in comments %}
+    <div class="comment">
+      <p class="info">
+        {% trans 'Written' %} {{ forloop.counter }} {% trans 'by' %} {{ comment.name }}
+        <br />
+        {{ comment.created }}
+      </p>
+      {{ comment.body|linebreaks }}
+    </div>
+    <hr />
+    {% empty %}
+    <p>{% trans 'There are no comments yet' %}.</p>
+    {% endfor %}
+  </div> <!-- / end of row-->
 </div>
 
 {% endblock %}

@@ -1,14 +1,15 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.postgres.search import SearchVector
 from django.db.models import Q
 
-from .models import Category, Product, Slider
+from .models import Category, Product, Slider, Comment
 from pages.models import Page
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
-from .forms import SearchForm
+from .forms import SearchForm, CommentForm
+
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
@@ -62,6 +63,35 @@ def product_detail(request, id, slug):
                                 available=True)
     cart_product_form = CartAddProductForm()
 
+    # list of active comments
+    comments = product.comments.filter(active=True)
+
+    new_comment = None
+
+    if request.method == 'POST':
+        # Check wether user is logined or not
+        if not request.user.is_authenticated:
+            return redirect('login')
+
+        # A comment was posted
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            # Create comment object
+            new_comment = comment_form.save(commit=False)
+
+            #Assign the current product to the comments
+            new_comment.product = product
+
+            #Assign the current user to the comments
+            new_comment.user = request.user
+
+            # Save the comment
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    # Recommender engine
     r = Recommender()
     recommended_products = r.suggest_products_for([product], 4)
 
@@ -73,7 +103,10 @@ def product_detail(request, id, slug):
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'recommended_products': recommended_products,
-                   'pages': pages})
+                   'pages': pages,
+                   'comments': comments,
+                   'new_comment': new_comment,
+                   'comment_form': comment_form })
 
 
 def product_search(request):

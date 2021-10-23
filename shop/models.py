@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.conf import settings
 
 
 class Category(models.Model):
@@ -72,3 +73,24 @@ class Slider(models.Model):
     url = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to='sliders/')
     active = models.BooleanField(default=True)
+
+
+class Comment(models.Model):
+    product = models.ForeignKey(Product,
+                                on_delete=models.CASCADE,
+                                related_name='comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE,
+                             blank=True, null=True)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default= False)
+
+    class Meta:
+        ordering = ('created',)
+
+    def __str__(self):
+        return 'Comment by {} on {}'.format(self.name, self.product)

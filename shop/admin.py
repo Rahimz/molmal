@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Slider
+from .models import Category, Product, Slider, Comment
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -14,6 +14,14 @@ class ProductAdmin(admin.ModelAdmin):
     list_editable = ['price', 'available', 'stock', 'slug']
     prepopulated_fields = {'slug': ('name',), 'image_alt': ('name',)}
     ordering = ['name']
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('user', 'name', 'product', 'active')
+    list_filter = ('active', 'user', 'product' )
+    search_fields = ('product', 'user', 'name')
+
 
 @admin.register(Slider)
 class SliderAdmin(admin.ModelAdmin):
