@@ -19,29 +19,49 @@
 
   </div>
   <div class="row m-3">
-    <a class="btn btn-outline-success p-3" href="{% url 'shop:product_list' %}"><h2>{% trans "Lets see what do you have" %}</h2></a>
+    <a class="btn btn-outline-success p-3" href="{% url 'shop:product_list' %}">
+      <h2>{% trans "Lets see what do you have" %}</h2>
+    </a>
+  </div>
+  <!-- List of categories -->
+  <div class="row text-center m-3 d-flex justify-content-center">
+    {% for category in categories %}
+    <div class="col-md-3 ">
+      <a href="{{ category.get_absolute_url }}">
+
+        <h3 class="border rounded p-2 ">
+          {% if category.image %}
+          <img src="{{ category.image.url }}" alt="{{ category }}" height="40px" width="auto">
+          {% endif %}
+          {{ category }}
+        </h3>
+      </a>
+    </div>
+    {% endfor %}
   </div>
   <div class="row m-4">
-    <h2 class="text-center">{% trans 'What is the newest products?' %}</h2>
+    <h2 class="border border-success rounded text-center p-3">{% trans 'What is the newest products?' %}</h2>
   </div>
+
+
 
   <div class="row">
     {# {% cache 600 products_list products %} #}
     {% for product in products %}
     <div class="col-md-4 p-2">
       <a href="{{ product.get_absolute_url }}">
-      <div class="card col-md-12 text-center">
-      <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top p-4" alt="{{ product.image_alt }}">
-      <div class="card-body m-3 p-3">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}T {{ product.price|intcomma }}{% endif %}</h6>
-        {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
-        <p class="card-text">
-          {{ product.description | truncatewords:15 }}
-        </p>
-      </div>
+        <div class="card col-md-12 text-center">
+          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top p-4" alt="{{ product.image_alt }}">
+          <div class="card-body m-3 p-3">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}{{ product.price|intcomma }} {% trans 'Toman' %}{% endif %}</h6>
+            {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
+            <p class="card-text">
+              {{ product.description | truncatewords:15 }}
+            </p>
+          </div>
 
-    </div>
+        </div>
       </a>
     </div>
     {% endfor %}

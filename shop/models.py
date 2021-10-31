@@ -9,6 +9,9 @@ class Category(models.Model):
     slug = models.SlugField(max_length=500,
                             unique=True,
                             allow_unicode=True)
+    image = models.ImageField(upload_to='categories/images',
+                              null=True,
+                              blank=True)
 
     class Meta:
         ordering = ('name',)

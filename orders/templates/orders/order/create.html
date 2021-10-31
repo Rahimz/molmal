@@ -24,7 +24,7 @@
         <ul>
           {% for item in cart %}
           <li>{{ item.product.name }} * {{ item.quantity }} :
-            <span>T {{ item.total_price|floatformat:0 }}</span>
+            <span>{{ item.total_price|floatformat:0 }} {% trans 'Toman' %} </span>
           </li>
           {% endfor %}
           <br />
@@ -33,7 +33,7 @@
             {% if cart.get_total_price >= 400000 %}
              {% trans 'Free' %}
             {% else %}
-            T. 25000
+            25000 {% trans 'Toman' %}
             {% endif %}
             {% if cart.coupon %}
           </li>
@@ -41,11 +41,11 @@
             {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
             "{{ code }}" ({{ discount }}% off)
             {% endblocktrans %}
-            <span class="neg">- T {{ cart.get_discount|floatformat:0 }}</span>
+            <span class="neg">- {{ cart.get_discount|floatformat:0 }} {% trans 'Toman' %} </span>
           </li>
           {% endif %}
         </ul>
-        <p>{% trans "Total" %}: T {{ cart.get_total_price_after_discount|floatformat:0 }}</p>
+        <p>{% trans "Total" %}: {{ cart.get_total_price_after_discount|floatformat:0 }} {% trans 'Toman' %} </p>
       </div>
 
     </div>

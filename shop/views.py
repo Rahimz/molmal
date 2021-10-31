@@ -14,9 +14,13 @@ from .forms import SearchForm, CommentForm
 def home(request):
     sliders = Slider.objects.filter(active=True)
 
-    products = Product.objects.filter(available=True)[:10]
+    products = Product.objects.filter(available=True)[:12]
+
     # Queryset for Pages
     pages = Page.objects.all().filter(active=True)
+
+    # list of categories
+    categories = Category.objects.all()
 
     form = SearchForm()
     return render(request,
@@ -24,7 +28,8 @@ def home(request):
                   {'sliders': sliders,
                    'products': products,
                    'pages': pages,
-                   'form': form})
+                   'form': form,
+                   'categories': categories})
 
 
 @staff_member_required

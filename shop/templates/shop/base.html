@@ -88,12 +88,12 @@
           {% if total_items > 0 %}
           <img src="{% static 'img/cart25.png'%}" />
           <a href="{% url 'cart:cart_detail'%}">
-            {{ total_items }} {% trans 'item' %}, T {{ cart.get_total_price }}
+            {{ total_items }} {% trans 'item' %}, {{ cart.get_total_price }} {% trans 'Toman' %}
             {% comment %}
             {% blocktrans with total=cart.get_total_price count items=total_items %}
-            {{ total_items }} item, T {{ cart.get_total_price }}
+            {{ total_items }} item, {{ cart.get_total_price }} {% trans 'Toman' %}
             {% plural %}
-            {{ items }} items, T {{ total }}
+            {{ items }} items, {{ total }} {% trans 'Toman' %} 
             {% endblocktrans %}
             {% endcomment %}
           </a>

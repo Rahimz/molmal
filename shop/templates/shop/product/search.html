@@ -23,7 +23,7 @@
       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top" alt="{{ product.image_alt }}">
       <div class="card-body m-3">
         <h5 class="card-title">{{ product.name }}</h5>
-        <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}T {{ product.price|intcomma }}{% endif %}</h6>
+        <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}{{ product.price|intcomma }} {% trans 'Toman' %}{% endif %}</h6>
         {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
         <p class="card-text">
           {{ product.description | truncatewords:15 }}

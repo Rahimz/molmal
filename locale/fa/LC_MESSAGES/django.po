@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-23 19:02+0330\n"
-"PO-Revision-Date: 2021-10-23 19:18+0326\n"
+"POT-Creation-Date: 2021-10-31 09:56+0330\n"
+"PO-Revision-Date: 2021-10-31 09:56+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -356,6 +356,24 @@ msgstr "قیمت"
 msgid "Update"
 msgstr "به روز رسانی"
 
+#: cart/templates/cart/detail.html:47 cart/templates/cart/detail.html:48
+#: cart/templates/cart/detail.html:56 cart/templates/cart/detail.html:64
+#: cart/templates/cart/detail.html:90
+#: orders/templates/orders/order/create.html:27
+#: orders/templates/orders/order/create.html:36
+#: orders/templates/orders/order/create.html:44
+#: orders/templates/orders/order/create.html:48
+#: orders/templates/orders/order/pdf.html:35
+#: orders/templates/orders/order/pdf.html:37
+#: orders/templates/orders/order/pdf.html:42 shop/templates/shop/base.html:93
+#: shop/templates/shop/product/detail.html:22
+#: shop/templates/shop/product/home.html:37
+#: shop/templates/shop/product/list.html:47
+#: shop/templates/shop/product/search.html:26
+#: shop/templates/shop/product/temp_home.html:33
+msgid "Toman"
+msgstr "تومن"
+
 #: cart/templates/cart/detail.html:54
 msgid "Subtotal"
 msgstr "مجموع"
@@ -583,7 +601,6 @@ msgid "Login"
 msgstr "ورود"
 
 #: shop/templates/shop/base.html:51
-#| msgid "register here"
 msgid "Register"
 msgstr "ثبت نام"
 
