@@ -5,7 +5,7 @@ from django.contrib.postgres.search import SearchVector
 from django.db.models import Q
 
 from .models import Category, Product, Slider, Comment
-from pages.models import Page
+from pages.models import Page as FooterPage
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
 from .forms import SearchForm, CommentForm
@@ -18,7 +18,7 @@ def home(request):
     products = Product.objects.filter(available=True)[:12]
 
     # Queryset for Pages
-    pages = Page.objects.all().filter(active=True)
+    footer_pages = FooterPage.objects.all().filter(active=True)
 
     # list of categories
     categories = Category.objects.all()
@@ -28,7 +28,7 @@ def home(request):
                   'shop/product/home.html',
                   {'sliders': sliders,
                    'products': products,
-                   'pages': pages,
+                   'footer_pages': footer_pages,
                    'form': form,
                    'categories': categories})
 
@@ -64,11 +64,11 @@ def product_list(requset, category_slug=None):
 
 
     # Queryset for Pages
-    pages = Page.objects.all().filter(active=True)
+    footer_pages = FooterPage.objects.all().filter(active=True)
 
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = products.filter(category=category)
+        products = object_list.filter(category=category)
 
     form = SearchForm()
     return render(requset,
@@ -77,7 +77,7 @@ def product_list(requset, category_slug=None):
                    'categories': categories,
                    'products': products,
                    'form':form,
-                   'pages': pages,
+                   'footer_pages': footer_pages,
                    'page': page,
                    })
 
@@ -121,14 +121,14 @@ def product_detail(request, id, slug):
     recommended_products = r.suggest_products_for([product], 4)
 
     # Queryset for Pages
-    pages = Page.objects.all().filter(active=True)
+    footer_pages = FooterPage.objects.all().filter(active=True)
 
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'recommended_products': recommended_products,
-                   'pages': pages,
+                   'footer_pages': footer_pages,
                    'comments': comments,
                    'new_comment': new_comment,
                    'comment_form': comment_form })

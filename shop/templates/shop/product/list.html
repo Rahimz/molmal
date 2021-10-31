@@ -55,16 +55,16 @@
       </div>
     </div>
   </div>
-
+  {% if not category %}
   <div class="row text-center m-4 ">
     {% include "shop/product/pagination.html" with page=products %}
   </div>
-
+  {% endif %}
 {% endblock %}
 
 {% block footer-pages %}
   <ul class="list-unstyled">
-    {% for page in pages %}
+    {% for page in footer_pages %}
     <li>
       <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
     </li>
