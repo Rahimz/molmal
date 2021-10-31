@@ -454,3 +454,9 @@ ul.messages li a.close {
   margin-right: auto;
   text-align: center;
 }
+
+/* Pagination */
+.pagination {
+    margin:40px 0;
+    font-weight:bold;
+}

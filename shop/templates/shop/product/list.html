@@ -5,7 +5,7 @@
 
 
 {% block title %}
-  {% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}
+{% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -21,52 +21,53 @@
     <div class="col-md-2 ">
       <h3 class="mt-3">{% trans "Categories" %}</h3>
 
-      <p {% if not category %}class="border rounded p-3"{% endif %}>
+      <p {% if not category %}class="border rounded p-3" {% endif %}>
         <a href="{% url 'shop:product_list' %}">{% trans 'All' %}</a>
       </p>
       {% for c in categories %}
-      <p %} %}class="border rounded p-3" c.slug category.slug == endifif {% {%>
+      <p %} %}class="border rounded p-3" c.slug category.slug==endifif {% {%>
           <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
       </p>
-      {% endfor %}
+      {% endfor %} </div>
+      <div class="col-md-10 product-list">
+        <h1 class="m-3">{% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}</h1>
 
-
-    </div>
-    <div class="col-md-10 product-list">
-      <h1 class="m-3">{% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}</h1>
-
-      <!--     All products in the list -->
-      <div class="row">
-      {% for product in products %}
-        <div class="col-md-4 p-2">
-      <a href="{{ product.get_absolute_url }}">
-      <div class="card col-md-12 text-center">
-      <img alt="{{ product.image_alt }}" class="card-img-top p-4" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
-      <div class="card-body m-3 p-3">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}{{ product.price|intcomma }}{% trans 'Toman' %}{% endif %}</h6>
-        {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
-        <p class="card-text">
-          {{ product.description | truncatewords:15 }}
-        </p>
+        <!--     All products in the list -->
+        <div class="row">
+          {% for product in products %}
+          <div class="col-md-4 p-2">
+            <a href="{{ product.get_absolute_url }}">
+              <div class="card col-md-12 text-center">
+                <img alt="{{ product.image_alt }}" class="card-img-top p-4" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+                <div class="card-body m-3 p-3">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <h6 class="cart-subtitle text-muted">{% if product.stock == 0 %}<span class="unavailable">{% trans 'unavailable' %}</span>{% else %}{{ product.price|intcomma }}{% trans 'Toman' %}{% endif %}</h6>
+                  {% if product.weight %}<p>{{ product.weight }} {{ product.weight_measure }}</p>{% endif %}
+                  <p class="card-text">
+                    {{ product.description | truncatewords:15 }}
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
       </div>
-
-    </div>
-      </a>
-    </div>
-      {% endfor %}
-    </div>
     </div>
   </div>
-</div>
+
+  <div class="row text-center m-4 ">
+    {% include "shop/product/pagination.html" with page=products %}
+  </div>
+
 {% endblock %}
 
 {% block footer-pages %}
-<ul class="list-unstyled">
-  {% for page in pages %}
-  <li>
-    <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+  <ul class="list-unstyled">
+    {% for page in pages %}
+    <li>
+      <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 {% endblock%}

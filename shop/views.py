@@ -10,6 +10,7 @@ from cart.forms import CartAddProductForm
 from .recommender import Recommender
 from .forms import SearchForm, CommentForm
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
@@ -45,9 +46,26 @@ def price_view(request,):
 def product_list(requset, category_slug=None):
     category = None
     categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
+    # products = Product.objects.filter(available=True)
+    products = None
+
+    # Pagination
+    object_list = Product.objects.filter(available=True)
+    paginator = Paginator(object_list, 9) # 9 products in each page
+    page = requset.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer deliver the first page
+        products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        products = paginator.page(paginator.num_pages)
+
+
     # Queryset for Pages
     pages = Page.objects.all().filter(active=True)
+
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)
@@ -59,7 +77,9 @@ def product_list(requset, category_slug=None):
                    'categories': categories,
                    'products': products,
                    'form':form,
-                   'pages': pages})
+                   'pages': pages,
+                   'page': page,
+                   })
 
 def product_detail(request, id, slug):
     product = get_object_or_404(Product,
