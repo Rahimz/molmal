@@ -1,17 +1,15 @@
 /* @import url(http://fonts.googleapis.com/css?family=Ubuntu); */
-
 /* Colors */
 /* ["1a535c","4ecdc4","f7fff7","ff6b6b","ffe66d"] */
-
 /* @font-face {
   font-family: lalezar;
   src: url(../fonts/Lalezar-Regular.otf);
 } */
-
 @font-face {
   font-family: iransans;
   src: url(../fonts/IRANSansWeb.woff2);
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +18,6 @@ body {
 
 logo-img {
   border-radius: 50%;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,9 +33,11 @@ a {
 a:hover {
   color: #ff6b6b;
 }
+
 .telephone:hover {
   color: #4ecdc4;
 }
+
 a.button, input[type="submit"] {
   color: #fff;
   background: #1a535c;
@@ -68,7 +67,7 @@ table {
 }
 
 table th, table td {
-  text-align: left;
+  /* text-align: left; */
   font-size: 14px;
   padding: 10px;
   margin: 0;
@@ -106,7 +105,7 @@ td input[type="submit"] {
 }
 
 form p label, form p input {
-  float: left;
+  float: right;
   clear: both;
 }
 
@@ -125,7 +124,21 @@ form p input {
   color: #666;
   border-radius: 4px;
 }
+form p select {
+  margin-bottom: 30px;
+  padding: 10px 12px;
+  display: inline-block;
+}
+.form-select {
+  margin-bottom: 30px;
+  padding: 10px 12px;
+  display: inline-block;
+}
+.form-select::before {
+  content: : "";
+  display: block;
 
+}
 ul.errorlist {
   float: left;
   color: #ff0000;
@@ -143,6 +156,7 @@ ul.errorlist {
 .surprise-yellow {
   background-color: #ffe66d;
 }
+
 #header {
   padding: 10px 100px;
   font-size: 18px;
@@ -160,7 +174,6 @@ ul.errorlist {
   font-family: lalezar, sans-serif;
   color: #ff6b6b;
   font-size: 40px;
-
 }
 
 #subheader .cart {
@@ -210,7 +223,7 @@ ul.errorlist {
   overflow: hidden;
 }
 
-#footer{
+#footer {
   background: #4ecdc4;
   color: #1a535c;
 }
@@ -257,8 +270,8 @@ ul.errorlist {
 }
 
 .order-info {
-  float: right;
-  width: 300px;
+  /* float: right; */
+  width: 400px;
   background: #efefef;
   padding: 10px 20px;
   color: #333;
@@ -281,7 +294,7 @@ ul.errorlist {
 }
 
 .order-info span {
-  float: right;
+  /* float: right; */
 }
 
 .neg {
@@ -365,8 +378,120 @@ form div.field {
   width: 100%;
   height: auto;
 }
+
 .owl-image {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.unavailable {
+  color: #ff6b6b;
+  weight: bolder;
+  font-size: 1.2rem;
+}
+
+/* table alignment for price list  */
+.td-center {
+  text-align: center;
+}
+
+/* messages */
+ul.messages {
+  margin: 10px 100px;
+  padding: 0;
+  list-style-type:
+    none;
+  text-align: center;
+}
+
+ul.messages li.success,
+ul.messages li.warning,
+ul.messages li.error,
+ul.messages li.info {
+  margin: 0;
+  padding: 14px 20px;
+  list-style: none;
+  color: #fff;
+}
+
+ul.messages li.success {
+  background: #81ce81;
+}
+
+ul.messages li.success a {
+  color: #0ac33e;
+}
+
+ul.messages li.error {
+  background: #a30029;
+  color: #e9828e;
+}
+
+ul.messages li.error a {
+  color: #e9828e;
+}
+
+ul.messages li.info {
+  background: #faffae;
+  color: #696b4e;
+}
+
+ul.messages li.info a {
+  color: #1586de;
+}
+
+ul.messages li.warning {
+  background: #de9404;
+}
+
+ul.messages li.warning a {
+  color: #f49000;
+}
+
+ul.messages li a.close {
+  margin: 0;
+  float: right;
+  opacity: 1;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.login-form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.reset-password-form {
+  display: block;
+  /* clear: both; */
+  text-align: center;
+}
+.reset-password-form p label, .reset-password-form  p input {
+  float: right;
+  clear: both;
+}
+.reset-password-form ul {
+  float: right;
+}
+.reset-password-form span {
+  color: red !important;
+  display: none;
+  float: right;
+  font-size: .8rem;
+  padding: 5px;
+}
+.reset-password-form span::before {
+  content: "";
+  display: block;
+
+
+}
+
+/* Pagination */
+.pagination {
+    margin:40px 0;
+    font-weight:bold;
 }
