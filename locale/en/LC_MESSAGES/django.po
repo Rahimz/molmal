@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 10:16+0330\n"
+"POT-Creation-Date: 2021-11-02 12:35+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,6 +166,10 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
+#: account/templates/account/register.html:5
+msgid "User registeration"
+msgstr ""
+
 #: account/templates/account/register.html:10
 msgid "Create an account"
 msgstr ""
@@ -232,6 +236,10 @@ msgstr ""
 msgid "Your password has been successfully changed."
 msgstr ""
 
+#: account/templates/registration/password_change_form.html:5
+msgid "Password change form"
+msgstr ""
+
 #: account/templates/registration/password_change_form.html:12
 msgid "Change your password"
 msgstr ""
@@ -240,7 +248,7 @@ msgstr ""
 msgid "Use the form below to change your password."
 msgstr ""
 
-#: account/templates/registration/password_change_form.html:17
+#: account/templates/registration/password_change_form.html:18
 msgid "Change"
 msgstr ""
 
@@ -256,6 +264,10 @@ msgstr ""
 msgid "log in now"
 msgstr ""
 
+#: account/templates/registration/password_reset_confirm.html:5
+msgid "Set new passwoerd"
+msgstr ""
+
 #: account/templates/registration/password_reset_confirm.html:12
 #: account/templates/registration/password_reset_done.html:12
 msgid "Reset your password"
@@ -265,14 +277,18 @@ msgstr ""
 msgid "Please enter your new password twice"
 msgstr ""
 
-#: account/templates/registration/password_reset_confirm.html:18
+#: account/templates/registration/password_reset_confirm.html:20
 msgid "Change my password"
 msgstr ""
 
-#: account/templates/registration/password_reset_confirm.html:20
+#: account/templates/registration/password_reset_confirm.html:24
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
+msgstr ""
+
+#: account/templates/registration/password_reset_done.html:5
+msgid "Password reset"
 msgstr ""
 
 #: account/templates/registration/password_reset_done.html:13
@@ -314,6 +330,10 @@ msgstr ""
 #: zarinpal/templates/zarinpal/fail.html:5
 #: zarinpal/templates/zarinpal/success.html:5
 msgid "Rahim Agha Store"
+msgstr ""
+
+#: account/templates/registration/password_reset_form.html:5
+msgid "Password reset form"
 msgstr ""
 
 #: account/templates/registration/password_reset_form.html:13

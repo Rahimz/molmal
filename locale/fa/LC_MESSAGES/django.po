@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 10:16+0330\n"
-"PO-Revision-Date: 2021-11-02 11:23+0326\n"
+"POT-Creation-Date: 2021-11-02 12:35+0330\n"
+"PO-Revision-Date: 2021-11-02 12:36+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -173,6 +173,10 @@ msgstr "به کمک فرم زیر حساب کاربری خود را اصلاح �
 msgid "Save changes"
 msgstr "ذخیره تغییرات"
 
+#: account/templates/account/register.html:5
+msgid "User registeration"
+msgstr "ساخت حساب کاربری"
+
 #: account/templates/account/register.html:10
 msgid "Create an account"
 msgstr "ساخت یک حساب کاربری جدید"
@@ -239,6 +243,12 @@ msgstr "تغییر گذرواژه"
 msgid "Your password has been successfully changed."
 msgstr "گذرواژه تون عوض شد."
 
+#: account/templates/registration/password_change_form.html:5
+#, fuzzy
+#| msgid "Password changed"
+msgid "Password change form"
+msgstr "تغییر گذرواژه"
+
 #: account/templates/registration/password_change_form.html:12
 msgid "Change your password"
 msgstr "گذرواژه را تغییر بده"
@@ -247,7 +257,7 @@ msgstr "گذرواژه را تغییر بده"
 msgid "Use the form below to change your password."
 msgstr "از این فرم زیر برای تغییر گذرواژه استفاده کن."
 
-#: account/templates/registration/password_change_form.html:17
+#: account/templates/registration/password_change_form.html:18
 msgid "Change"
 msgstr "تغییر بده"
 
@@ -263,6 +273,12 @@ msgstr "گذرواژه عوض شد. حالا می‌تونی"
 msgid "log in now"
 msgstr "دوباره وارد بشی"
 
+#: account/templates/registration/password_reset_confirm.html:5
+#, fuzzy
+#| msgid "Repeat password"
+msgid "Set new passwoerd"
+msgstr "تکرار گذرواژه"
+
 #: account/templates/registration/password_reset_confirm.html:12
 #: account/templates/registration/password_reset_done.html:12
 msgid "Reset your password"
@@ -272,17 +288,23 @@ msgstr "تغییر گذرواژه"
 msgid "Please enter your new password twice"
 msgstr "لطفاً گذرواژه جدید را دوبار بزن"
 
-#: account/templates/registration/password_reset_confirm.html:18
+#: account/templates/registration/password_reset_confirm.html:20
 msgid "Change my password"
 msgstr "گذرواژه من را تغییر بده"
 
-#: account/templates/registration/password_reset_confirm.html:20
+#: account/templates/registration/password_reset_confirm.html:24
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
 "لینک تغییر گذرواژه نامعتبره. شاید به خاطر اینکه یکبار ازش استفاده شده. لطفاً"
 " دوباره درخواست یک لینک جدید بده."
+
+#: account/templates/registration/password_reset_done.html:5
+#, fuzzy
+#| msgid "Password set"
+msgid "Password reset"
+msgstr "گذرواژه عوض شد"
 
 #: account/templates/registration/password_reset_done.html:13
 msgid "We've emailed you instructions for setting your password."
@@ -327,6 +349,12 @@ msgstr "اگر برای تغییر گذرواژه درخواست ندادی، ن
 #: zarinpal/templates/zarinpal/success.html:5
 msgid "Rahim Agha Store"
 msgstr "دکان رحیم آقا"
+
+#: account/templates/registration/password_reset_form.html:5
+#, fuzzy
+#| msgid "Password set"
+msgid "Password reset form"
+msgstr "گذرواژه عوض شد"
 
 #: account/templates/registration/password_reset_form.html:13
 msgid "Enter your e-mail address to obtain a new password."
