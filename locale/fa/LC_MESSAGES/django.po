@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 12:35+0330\n"
-"PO-Revision-Date: 2021-11-02 12:36+0326\n"
+"POT-Creation-Date: 2021-11-02 12:51+0330\n"
+"PO-Revision-Date: 2021-11-02 12:53+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -244,10 +244,9 @@ msgid "Your password has been successfully changed."
 msgstr "گذرواژه تون عوض شد."
 
 #: account/templates/registration/password_change_form.html:5
-#, fuzzy
 #| msgid "Password changed"
 msgid "Password change form"
-msgstr "تغییر گذرواژه"
+msgstr "فرم تغییر گذرواژه"
 
 #: account/templates/registration/password_change_form.html:12
 msgid "Change your password"
@@ -274,10 +273,9 @@ msgid "log in now"
 msgstr "دوباره وارد بشی"
 
 #: account/templates/registration/password_reset_confirm.html:5
-#, fuzzy
 #| msgid "Repeat password"
 msgid "Set new passwoerd"
-msgstr "تکرار گذرواژه"
+msgstr "ثبت گذرواژه جدید"
 
 #: account/templates/registration/password_reset_confirm.html:12
 #: account/templates/registration/password_reset_done.html:12
@@ -301,10 +299,9 @@ msgstr ""
 " دوباره درخواست یک لینک جدید بده."
 
 #: account/templates/registration/password_reset_done.html:5
-#, fuzzy
 #| msgid "Password set"
 msgid "Password reset"
-msgstr "گذرواژه عوض شد"
+msgstr "تغییرگذرواژه"
 
 #: account/templates/registration/password_reset_done.html:13
 msgid "We've emailed you instructions for setting your password."
@@ -342,7 +339,7 @@ msgstr "اگر برای تغییر گذرواژه درخواست ندادی، ن
 #: account/templates/registration/password_reset_email.html:15
 #: orders/templates/orders/order/user_order_detail.html:5
 #: shop/templates/404.html:5 shop/templates/500.html:5
-#: shop/templates/shop/product/home.html:8
+#: shop/templates/shop/base.html:11 shop/templates/shop/product/home.html:8
 #: shop/templates/shop/product/search.html:6
 #: shop/templates/shop/product/temp_home.html:8
 #: zarinpal/templates/zarinpal/fail.html:5
@@ -351,10 +348,9 @@ msgid "Rahim Agha Store"
 msgstr "دکان رحیم آقا"
 
 #: account/templates/registration/password_reset_form.html:5
-#, fuzzy
 #| msgid "Password set"
 msgid "Password reset form"
-msgstr "گذرواژه عوض شد"
+msgstr "فرم تغییر گذرواژه"
 
 #: account/templates/registration/password_reset_form.html:13
 msgid "Enter your e-mail address to obtain a new password."
@@ -416,7 +412,7 @@ msgstr "به روز رسانی"
 #: orders/templates/orders/order/pdf.html:42
 #: orders/templates/orders/order/user_order_detail.html:74
 #: orders/templates/orders/order/user_order_detail.html:81
-#: shop/templates/shop/base.html:109
+#: shop/templates/shop/base.html:114
 #: shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
 #: shop/templates/shop/product/list.html:44
@@ -659,7 +655,7 @@ msgstr "خطای ۵۰۰"
 msgid "500 Error: There is an error in our server!"
 msgstr "خطای ۵۰۰: مشکلی در سرور وجود دارد!"
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:99
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:104
 msgid "Admin"
 msgstr "مدیر"
 
@@ -667,53 +663,64 @@ msgstr "مدیر"
 msgid "For order contact in social medias"
 msgstr "برای سفارش تماس بگیرید"
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:156
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:161
 msgid "Online shop footer"
 msgstr "دکان رحیم آقا"
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:159
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:164
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 "این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
 " جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:166
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:171
 msgid "Important links"
 msgstr "لینک‌های مهم"
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:178
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:183
 msgid "Copyright"
 msgstr "حقوق مولف"
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:179
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:184
 msgid "Rahim Agha and Khanevadeh"
 msgstr "رحیم آقا و خانواده"
 
-#: shop/templates/shop/base.html:63
+#: shop/templates/shop/base.html:12
+msgid "Rahim Agha sotre is a local reatil online shop"
+msgstr ""
+"دکان رحیم آقا یک فروشگاه گوجک برای خرید خوراکی‌های خوشمزه از گوشه و کنار "
+"کشور است که به تدریج جمع شده و در این مجموعه کنار هم قرار گرفته است."
+
+#: shop/templates/shop/base.html:14
+#| msgid "Rahim Agha Store"
+msgid "Rahim Agha Store logo"
+msgstr "لوگو دکان رحیم آقا"
+
+#: shop/templates/shop/base.html:68
 msgid "Logout"
 msgstr "خروج"
 
-#: shop/templates/shop/base.html:66
+#: shop/templates/shop/base.html:71
 msgid "Login"
 msgstr "ورود"
 
-#: shop/templates/shop/base.html:67
+#: shop/templates/shop/base.html:72
 msgid "Register"
 msgstr "ثبت نام"
 
-#: shop/templates/shop/base.html:109
+#: shop/templates/shop/base.html:114
 msgid "item"
 msgstr "مورد"
 
-#: shop/templates/shop/base.html:120
+#: shop/templates/shop/base.html:125
 msgid "Your cart is empty."
 msgstr "هنوز که چیزی نخریدی!"
 
-#: shop/templates/shop/base.html:144
+#: shop/templates/shop/base.html:149
 msgid "For a new order you could go to"
 msgstr "برای سفارش فعلاً باید از طریق اینستاگرام به من پیغام بدهید"
 
-#: shop/templates/shop/base.html:145
+#: shop/templates/shop/base.html:150
 msgid "Or if you prefer phon you could call me at"
 msgstr "یا اگر حالش رو ندارید میتونید به من زنگ بزنید "
 
