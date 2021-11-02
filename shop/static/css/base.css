@@ -476,6 +476,19 @@ ul.messages li a.close {
 .reset-password-form ul {
   float: right;
 }
+.reset-password-form span {
+  color: red !important;
+  display: none;
+  float: right;
+  font-size: .8rem;
+  padding: 5px;
+}
+.reset-password-form span::before {
+  content: "";
+  display: block;
+
+
+}
 
 /* Pagination */
 .pagination {
