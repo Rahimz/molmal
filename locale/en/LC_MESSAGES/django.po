@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 07:58+0330\n"
+"POT-Creation-Date: 2021-11-02 08:19+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -346,10 +346,10 @@ msgstr ""
 #: cart/templates/cart/detail.html:47 cart/templates/cart/detail.html:48
 #: cart/templates/cart/detail.html:56 cart/templates/cart/detail.html:64
 #: cart/templates/cart/detail.html:90
-#: orders/templates/orders/order/create.html:27
-#: orders/templates/orders/order/create.html:36
-#: orders/templates/orders/order/create.html:44
-#: orders/templates/orders/order/create.html:48
+#: orders/templates/orders/order/create.html:28
+#: orders/templates/orders/order/create.html:37
+#: orders/templates/orders/order/create.html:45
+#: orders/templates/orders/order/create.html:49
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
 #: orders/templates/orders/order/pdf.html:42 shop/templates/shop/base.html:109
@@ -374,17 +374,17 @@ msgid ""
 msgstr ""
 
 #: cart/templates/cart/detail.html:69 cart/templates/cart/detail.html:74
-#: orders/templates/orders/order/create.html:32
+#: orders/templates/orders/order/create.html:33
 msgid "Shipping"
 msgstr ""
 
 #: cart/templates/cart/detail.html:78
-#: orders/templates/orders/order/create.html:34
+#: orders/templates/orders/order/create.html:35
 msgid "Free"
 msgstr ""
 
 #: cart/templates/cart/detail.html:87
-#: orders/templates/orders/order/create.html:48
+#: orders/templates/orders/order/create.html:49
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr ""
@@ -460,6 +460,10 @@ msgstr ""
 msgid "city"
 msgstr ""
 
+#: orders/models.py:38
+msgid "Delivery container"
+msgstr ""
+
 #: orders/templates/orders/order/create.html:15
 msgid "Place order"
 msgstr ""
@@ -468,11 +472,11 @@ msgstr ""
 msgid "Into payment port"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:23
+#: orders/templates/orders/order/create.html:24
 msgid "Your order"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:41
+#: orders/templates/orders/order/create.html:42
 #, python-format
 msgid ""
 "\n"

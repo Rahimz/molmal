@@ -35,6 +35,7 @@ class Order(models.Model):
     delivered = models.BooleanField(default=False)
     delivery_container = models.ForeignKey(DeliveryContainer,
                                            on_delete=models.CASCADE,
+                                           verbose_name=_('Delivery container'),
                                            null=True, blank=True)
 
     coupon = models.ForeignKey(Coupon,
