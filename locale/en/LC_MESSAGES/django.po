@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:17+0330\n"
+"POT-Creation-Date: 2021-11-02 09:44+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgid "Please add your profile details"
 msgstr ""
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:98
+#: account/templates/account/dashboard.html:105
 msgid "Add profile"
 msgstr ""
 
@@ -62,83 +62,93 @@ msgstr ""
 msgid "Your profile details:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:32
+#: account/templates/account/dashboard.html:33
 msgid "First name:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:36
+#: account/templates/account/dashboard.html:37
 msgid "Last name:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:40
+#: account/templates/account/dashboard.html:41
 msgid "Email:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:44
+#: account/templates/account/dashboard.html:45
 msgid "Gender:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:48
+#: account/templates/account/dashboard.html:49
 msgid "Date of birth:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:55
+#: account/templates/account/dashboard.html:57
 msgid "Edit profile"
 msgstr ""
 
-#: account/templates/account/dashboard.html:56
+#: account/templates/account/dashboard.html:58
 msgid "Change  password"
 msgstr ""
 
-#: account/templates/account/dashboard.html:59
+#: account/templates/account/dashboard.html:62
 #: zarinpal/templates/zarinpal/fail.html:30
 msgid ""
 "You have 24 hours to pay the order and after that the order will be remove."
 msgstr ""
 
-#: account/templates/account/dashboard.html:60
-msgid "Your orders"
+#: account/templates/account/dashboard.html:63
+msgid ""
+"If you have unsuccessfull payment you will see those orders in this list, "
+"you can ignore them and they will be remove automatiaclly."
 msgstr ""
 
-#: account/templates/account/dashboard.html:65
-msgid "order No."
-msgstr ""
-
-#: account/templates/account/dashboard.html:66
-msgid "Date"
+#: account/templates/account/dashboard.html:64
+msgid "If you click on orders number you can see your order details."
 msgstr ""
 
 #: account/templates/account/dashboard.html:67
+msgid "Your orders"
+msgstr ""
+
+#: account/templates/account/dashboard.html:72
+msgid "order No."
+msgstr ""
+
+#: account/templates/account/dashboard.html:73
+msgid "Date"
+msgstr ""
+
+#: account/templates/account/dashboard.html:74
 msgid "Paid"
 msgstr ""
 
-#: account/templates/account/dashboard.html:68
+#: account/templates/account/dashboard.html:75
 msgid "Delivered"
 msgstr ""
 
-#: account/templates/account/dashboard.html:76
+#: account/templates/account/dashboard.html:83
 msgid "Repay"
 msgstr ""
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:97
 msgid "Warning:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:97
 msgid ""
 "If you remove your profile user, every action and data you have entered will "
 "be deleted permanently."
 msgstr ""
 
-#: account/templates/account/dashboard.html:91
+#: account/templates/account/dashboard.html:98
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:93
+#: account/templates/account/dashboard.html:100
 msgid "Romove Account Completely!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:104
 msgid "You have to complete your profile first:"
 msgstr ""
 

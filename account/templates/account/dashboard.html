@@ -26,38 +26,45 @@
 		{% endif %}
 
 		<p class="my-3">{% trans 'Your profile details:' %}</p>
-		<table class="table">
-			<tbody>
-				<tr>
-					<td>{% trans 'First name:' %}</td>
-					<td><b>{{ request.user.first_name }}</b></td>
-				</tr>
-				<tr>
-					<td>{% trans 'Last name:' %}</td>
-					<td><b>{{ request.user.last_name }}</b></td>
-				</tr>
-				<tr>
-					<td>{% trans 'Email:' %}</td>
-					<td><b>{{ request.user.email }}</b></td>
-				</tr>
-				<tr>
-					<td>{% trans 'Gender:' %}</td>
-					<td><b>{{ profile.gender }}</b></td>
-				</tr>
-				<tr>
-					<td>{% trans 'Date of birth:' %}</td>
-					<td><b>{{ profile.date_of_birth }}</b></td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="d-flex justify-content-center">
+			<table class="table table-stripped" style="width:50%;">
+				<tbody>
+					<tr>
+						<td>{% trans 'First name:' %}</td>
+						<td><b>{{ request.user.first_name }}</b></td>
+					</tr>
+					<tr>
+						<td>{% trans 'Last name:' %}</td>
+						<td><b>{{ request.user.last_name }}</b></td>
+					</tr>
+					<tr>
+						<td>{% trans 'Email:' %}</td>
+						<td><b>{{ request.user.email }}</b></td>
+					</tr>
+					<tr>
+						<td>{% trans 'Gender:' %}</td>
+						<td><b>{{ profile.gender }}</b></td>
+					</tr>
+					<tr>
+						<td>{% trans 'Date of birth:' %}</td>
+						<td><b>{{ profile.date_of_birth }}</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 
 		<a class="btn btn-dark" href="{% url 'edit' %}">{% trans 'Edit profile' %}<i class="fa fa-edit icon-large"></i></a>
 		<a href="{% url 'password_change' %}" class="btn btn-dark">{% trans 'Change  password' %}</a>
 
 		<div class="m-5">
-			<p class="text-danger h5 m-4">{% trans 'You have 24 hours to pay the order and after that the order will be remove.' %}</p>
-			<h2 class="bg-info rounded p-2">{% trans 'Your orders' %}</h2>
+			<ul>
+				<li class="text-danger h5 m-4">{% trans 'You have 24 hours to pay the order and after that the order will be remove.' %}</li>
+				<li class="fw-6 m-3">{% trans 'If you have unsuccessfull payment you will see those orders in this list, you can ignore them and they will be remove automatiaclly.' %}</li>
+				<li class="fw-6 m-3">{% trans 'If you click on orders number you can see your order details.' %}</li>
+
+			</ul>
+			<h2 class="bg-secondary rounded p-2 text-light">{% trans 'Your orders' %}</h2>
 			{% if orders %}
 			<table>
 				<thead>
@@ -71,7 +78,7 @@
 				<tbody>
 					{% for order in orders %}
 					<tr>
-						<td><a href="{{ order.get_absolute_url }}">{{ order.id }}</a></td>
+						<td class="fs-5 text-decoration-underline"><a href="{{ order.get_absolute_url }}">{{ order.id }}</a></td>
 						<td>{{ order.created.date }}</td>
 						<td>{% if order.paid %}&#10004{%else %}&#10008<a class="btn btn-outline-success m-3" href="{% url 'orders:order_repay' order.id %}">{% trans 'Repay' %}</a>{% endif %}</td>
 						<td>{% if order.delivered %}&#10004{%else %}&#10008{% endif %}</td>

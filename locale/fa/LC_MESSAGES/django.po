@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:17+0330\n"
-"PO-Revision-Date: 2021-11-02 09:19+0326\n"
+"POT-Creation-Date: 2021-11-02 09:44+0330\n"
+"PO-Revision-Date: 2021-11-02 09:46+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -45,12 +45,11 @@ msgid "Please add your profile details"
 msgstr "جزییات حساب کاربری خود را کامل کنید"
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:98
+#: account/templates/account/dashboard.html:105
 msgid "Add profile"
 msgstr "اضافه کردن حساب کاربری"
 
 #: account/templates/account/dashboard.html:14
-#| msgid "Add profile"
 msgid "Profile"
 msgstr "حساب کاربری"
 
@@ -63,71 +62,83 @@ msgstr "خوش آمدی"
 msgid "Your profile details:"
 msgstr "جزییات حساب کاربری شما"
 
-#: account/templates/account/dashboard.html:32
+#: account/templates/account/dashboard.html:33
 msgid "First name:"
 msgstr "نام"
 
-#: account/templates/account/dashboard.html:36
+#: account/templates/account/dashboard.html:37
 msgid "Last name:"
 msgstr "نام خانوادگی"
 
-#: account/templates/account/dashboard.html:40
+#: account/templates/account/dashboard.html:41
 msgid "Email:"
 msgstr "ایمیل"
 
-#: account/templates/account/dashboard.html:44
+#: account/templates/account/dashboard.html:45
 msgid "Gender:"
 msgstr "جنسیت"
 
-#: account/templates/account/dashboard.html:48
+#: account/templates/account/dashboard.html:49
 msgid "Date of birth:"
 msgstr "تاریح تولد"
 
-#: account/templates/account/dashboard.html:55
+#: account/templates/account/dashboard.html:57
 msgid "Edit profile"
 msgstr "اصلاح حساب کاربری"
 
-#: account/templates/account/dashboard.html:56
+#: account/templates/account/dashboard.html:58
 msgid "Change  password"
 msgstr "تغییر گذرواژه"
 
-#: account/templates/account/dashboard.html:59
+#: account/templates/account/dashboard.html:62
 #: zarinpal/templates/zarinpal/fail.html:30
 msgid ""
 "You have 24 hours to pay the order and after that the order will be remove."
 msgstr ""
-"شما ۲۴ ساعت فرصت دارید که سفارش پرداخت نشده را پرداخت کنید بعدش سفارش به "
-"صورت اتوماتیک حذف خواهد شد."
+" ۲۴ ساعت فرصت هست که سفارش پرداخت نشده را پرداخت کنی بعدش سفارش به صورت "
+"خودکار حذف میشه."
 
-#: account/templates/account/dashboard.html:60
+#: account/templates/account/dashboard.html:63
+msgid ""
+"If you have unsuccessfull payment you will see those orders in this list, "
+"you can ignore them and they will be remove automatiaclly."
+msgstr ""
+"اگر پرداخت ناموفق داشته باشی احتمالاً اونها رو اینجا می‌بینی، اگر کاری بهشون"
+" نداشته باشی به صورت خودکار حذف میشن."
+
+#: account/templates/account/dashboard.html:64
+msgid "If you click on orders number you can see your order details."
+msgstr "اگر بر روی شماره سفارش کلیک کنی میتونی جزییاتش رو ببینی."
+
+#: account/templates/account/dashboard.html:67
 msgid "Your orders"
 msgstr "سفارش‌های شما"
 
-#: account/templates/account/dashboard.html:65
+#: account/templates/account/dashboard.html:72
 msgid "order No."
 msgstr "شماره سفارش"
 
-#: account/templates/account/dashboard.html:66
+#: account/templates/account/dashboard.html:73
 msgid "Date"
 msgstr "تاریخ"
 
-#: account/templates/account/dashboard.html:67
+#: account/templates/account/dashboard.html:74
 msgid "Paid"
 msgstr "پرداخت شده"
 
-#: account/templates/account/dashboard.html:68
+#: account/templates/account/dashboard.html:75
 msgid "Delivered"
 msgstr "ارسال شده"
 
-#: account/templates/account/dashboard.html:76
+#: account/templates/account/dashboard.html:83
 msgid "Repay"
 msgstr "پرداخت"
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:97
 msgid "Warning:"
 msgstr "اخطار"
 
-#: account/templates/account/dashboard.html:90
+#: account/templates/account/dashboard.html:97
 msgid ""
 "If you remove your profile user, every action and data you have entered will"
 " be deleted permanently."
@@ -135,15 +146,15 @@ msgstr ""
 "اگر حساب کاربری خود را پاک کنید، هر اطلاعات و سابقه‌ای که داشته اید به طور "
 "دائم از این وبسایت حذف خواهد شد."
 
-#: account/templates/account/dashboard.html:91
+#: account/templates/account/dashboard.html:98
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr "این عملیات غیر قابل بازگشت است"
 
-#: account/templates/account/dashboard.html:93
+#: account/templates/account/dashboard.html:100
 msgid "Romove Account Completely!"
 msgstr "حذف کردن حساب کاربری به طور کامل!"
 
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:104
 msgid "You have to complete your profile first:"
 msgstr "شما باید در ابتدا حساب کاربری خود را کامل کنید:"
 
