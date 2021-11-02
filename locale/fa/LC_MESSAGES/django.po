@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:44+0330\n"
-"PO-Revision-Date: 2021-11-02 09:46+0326\n"
+"POT-Creation-Date: 2021-11-02 10:03+0330\n"
+"PO-Revision-Date: 2021-11-02 10:04+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -123,10 +123,12 @@ msgid "Date"
 msgstr "تاریخ"
 
 #: account/templates/account/dashboard.html:74
+#: orders/templates/orders/order/user_order_detail.html:41
 msgid "Paid"
 msgstr "پرداخت شده"
 
 #: account/templates/account/dashboard.html:75
+#: orders/templates/orders/order/user_order_detail.html:46
 msgid "Delivered"
 msgstr "ارسال شده"
 
@@ -336,6 +338,7 @@ msgstr "ارسال ایمیل"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
+#: orders/templates/orders/order/user_order_detail.html:58
 msgid "Quantity"
 msgstr "مقدار"
 
@@ -349,6 +352,7 @@ msgstr "تصویر"
 
 #: cart/templates/cart/detail.html:15
 #: orders/templates/orders/order/pdf.html:25
+#: orders/templates/orders/order/user_order_detail.html:56
 #: shop/templates/shop/product/price_list.html:21
 msgid "Product"
 msgstr "محصول"
@@ -363,6 +367,7 @@ msgstr "قیمت واحد"
 
 #: cart/templates/cart/detail.html:19
 #: orders/templates/orders/order/pdf.html:26
+#: orders/templates/orders/order/user_order_detail.html:57
 #: shop/templates/shop/product/price_list.html:22
 msgid "Price"
 msgstr "قیمت"
@@ -380,7 +385,10 @@ msgstr "به روز رسانی"
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
-#: orders/templates/orders/order/pdf.html:42 shop/templates/shop/base.html:109
+#: orders/templates/orders/order/pdf.html:42
+#: orders/templates/orders/order/user_order_detail.html:66
+#: orders/templates/orders/order/user_order_detail.html:73
+#: shop/templates/shop/base.html:109
 #: shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
 #: shop/templates/shop/product/list.html:44
@@ -420,6 +428,8 @@ msgstr "رایگان"
 #: cart/templates/cart/detail.html:87
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
+#: orders/templates/orders/order/user_order_detail.html:59
+#: orders/templates/orders/order/user_order_detail.html:72
 msgid "Total"
 msgstr "جمع"
 
@@ -548,6 +558,7 @@ msgid "Bill to"
 msgstr "صادر شده برای"
 
 #: orders/templates/orders/order/pdf.html:21
+#: orders/templates/orders/order/user_order_detail.html:52
 msgid "Items bought"
 msgstr "کالاهای خریداری شده"
 
@@ -556,14 +567,61 @@ msgid "Cost"
 msgstr "هزینه"
 
 #: orders/templates/orders/order/pdf.html:48
+#: orders/templates/orders/order/user_order_detail.html:41
 msgid "Pending payment"
 msgstr "پرداخت نشده"
 
 #: orders/templates/orders/order/user_order_detail.html:5
-#: zarinpal/templates/zarinpal/fail.html:5
-#: zarinpal/templates/zarinpal/fail.html:10
-msgid "Failed payment"
-msgstr "پرداخت ناموفق"
+#| msgid "Order No"
+msgid "Order detail"
+msgstr "جزییات سفارش"
+
+#: orders/templates/orders/order/user_order_detail.html:8
+#| msgid "Order No"
+msgid "Order number"
+msgstr "شماره سفارش"
+
+#: orders/templates/orders/order/user_order_detail.html:11
+#| msgid "Your order"
+msgid "Print order"
+msgstr "چاپ سفارش"
+
+#: orders/templates/orders/order/user_order_detail.html:17
+#| msgid "Order No"
+msgid "Order created date"
+msgstr "تاریخ ثبت سفارش"
+
+#: orders/templates/orders/order/user_order_detail.html:21
+msgid "Customer"
+msgstr "خریدار"
+
+#: orders/templates/orders/order/user_order_detail.html:25
+#| msgid "Email:"
+msgid "Email"
+msgstr "ایمیل"
+
+#: orders/templates/orders/order/user_order_detail.html:29
+#| msgid "address"
+msgid "Address"
+msgstr "آدرس"
+
+#: orders/templates/orders/order/user_order_detail.html:36
+msgid "Total amount"
+msgstr "مبلغ کل"
+
+#: orders/templates/orders/order/user_order_detail.html:40
+#| msgid "Pending payment"
+msgid "Payment status"
+msgstr "وضعیت پرداخت"
+
+#: orders/templates/orders/order/user_order_detail.html:45
+#| msgid "Shipping"
+msgid "Shipping status"
+msgstr "وضعیت ارسال"
+
+#: orders/templates/orders/order/user_order_detail.html:46
+msgid "Pending delivery"
+msgstr "ارسال نشده"
 
 #: shop/templates/404.html:10
 msgid "404 Error"
@@ -780,6 +838,11 @@ msgstr "جستجو برای محصول"
 msgid "Farsi"
 msgstr "فارسی"
 
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/fail.html:10
+msgid "Failed payment"
+msgstr "پرداخت ناموفق"
+
 #: zarinpal/templates/zarinpal/fail.html:15
 msgid "Your payment is failed!"
 msgstr "پرداخت شما انجام نشد!"
@@ -829,6 +892,9 @@ msgstr "شماره سفارش"
 #: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#~ msgid "Created"
+#~ msgstr "تاریخ ثبت"
 
 #, python-format
 #~ msgid ""

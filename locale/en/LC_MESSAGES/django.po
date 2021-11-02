@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:44+0330\n"
+"POT-Creation-Date: 2021-11-02 10:03+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,10 +119,12 @@ msgid "Date"
 msgstr ""
 
 #: account/templates/account/dashboard.html:74
+#: orders/templates/orders/order/user_order_detail.html:41
 msgid "Paid"
 msgstr ""
 
 #: account/templates/account/dashboard.html:75
+#: orders/templates/orders/order/user_order_detail.html:46
 msgid "Delivered"
 msgstr ""
 
@@ -323,6 +325,7 @@ msgstr ""
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
+#: orders/templates/orders/order/user_order_detail.html:58
 msgid "Quantity"
 msgstr ""
 
@@ -335,6 +338,7 @@ msgid "Image"
 msgstr ""
 
 #: cart/templates/cart/detail.html:15 orders/templates/orders/order/pdf.html:25
+#: orders/templates/orders/order/user_order_detail.html:56
 #: shop/templates/shop/product/price_list.html:21
 msgid "Product"
 msgstr ""
@@ -348,6 +352,7 @@ msgid "Unit price"
 msgstr ""
 
 #: cart/templates/cart/detail.html:19 orders/templates/orders/order/pdf.html:26
+#: orders/templates/orders/order/user_order_detail.html:57
 #: shop/templates/shop/product/price_list.html:22
 msgid "Price"
 msgstr ""
@@ -365,8 +370,10 @@ msgstr ""
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
-#: orders/templates/orders/order/pdf.html:42 shop/templates/shop/base.html:109
-#: shop/templates/shop/product/detail.html:22
+#: orders/templates/orders/order/pdf.html:42
+#: orders/templates/orders/order/user_order_detail.html:66
+#: orders/templates/orders/order/user_order_detail.html:73
+#: shop/templates/shop/base.html:109 shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
 #: shop/templates/shop/product/list.html:44
 #: shop/templates/shop/product/search.html:26
@@ -399,6 +406,8 @@ msgstr ""
 #: cart/templates/cart/detail.html:87
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
+#: orders/templates/orders/order/user_order_detail.html:59
+#: orders/templates/orders/order/user_order_detail.html:72
 msgid "Total"
 msgstr ""
 
@@ -520,6 +529,7 @@ msgid "Bill to"
 msgstr ""
 
 #: orders/templates/orders/order/pdf.html:21
+#: orders/templates/orders/order/user_order_detail.html:52
 msgid "Items bought"
 msgstr ""
 
@@ -528,13 +538,52 @@ msgid "Cost"
 msgstr ""
 
 #: orders/templates/orders/order/pdf.html:48
+#: orders/templates/orders/order/user_order_detail.html:41
 msgid "Pending payment"
 msgstr ""
 
 #: orders/templates/orders/order/user_order_detail.html:5
-#: zarinpal/templates/zarinpal/fail.html:5
-#: zarinpal/templates/zarinpal/fail.html:10
-msgid "Failed payment"
+msgid "Order detail"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:8
+msgid "Order number"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:11
+msgid "Print order"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:17
+msgid "Order created date"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:21
+msgid "Customer"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:25
+msgid "Email"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:29
+msgid "Address"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:36
+msgid "Total amount"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:40
+msgid "Payment status"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:45
+msgid "Shipping status"
+msgstr ""
+
+#: orders/templates/orders/order/user_order_detail.html:46
+msgid "Pending delivery"
 msgstr ""
 
 #: shop/templates/404.html:10
@@ -746,6 +795,11 @@ msgstr ""
 
 #: tshop/settings.py:140 tshop/settings/base.py:140
 msgid "Farsi"
+msgstr ""
+
+#: zarinpal/templates/zarinpal/fail.html:5
+#: zarinpal/templates/zarinpal/fail.html:10
+msgid "Failed payment"
 msgstr ""
 
 #: zarinpal/templates/zarinpal/fail.html:15
