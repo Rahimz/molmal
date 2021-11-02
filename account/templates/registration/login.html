@@ -21,7 +21,7 @@
 		{% else %}
 		<p>{% trans 'Please, use the following form to log-in.' %}
 
-			{% trans "If you don't have an account" %} <a href="{% url "register" %}">{% trans 'register here' %}</a></p>
+			{% trans "If you don't have an account" %} <a class="text-warning" href="{% url "register" %}">{% trans 'register here' %}</a></p>
 		{% endif %}
 	</div>
 </div><!--/end of row -->
@@ -34,7 +34,7 @@
 				<input type="hidden" name="next" value="{{ next }}" />
 				<p><input type="submit" value="{% trans 'Log-in' %}"></p>
 			</form>
-			<p><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
+			<p><a href="{% url "password_reset" %}">{% trans 'Forgotten your password?' %}</a></p>
 		</div>
 
 </div>

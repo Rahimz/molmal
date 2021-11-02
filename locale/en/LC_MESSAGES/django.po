@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 10:03+0330\n"
+"POT-Creation-Date: 2021-11-02 10:16+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,12 +119,12 @@ msgid "Date"
 msgstr ""
 
 #: account/templates/account/dashboard.html:74
-#: orders/templates/orders/order/user_order_detail.html:41
+#: orders/templates/orders/order/user_order_detail.html:49
 msgid "Paid"
 msgstr ""
 
 #: account/templates/account/dashboard.html:75
-#: orders/templates/orders/order/user_order_detail.html:46
+#: orders/templates/orders/order/user_order_detail.html:53
 msgid "Delivered"
 msgstr ""
 
@@ -219,6 +219,11 @@ msgstr ""
 msgid "register here"
 msgstr ""
 
+#: account/templates/registration/login.html:37
+#: account/templates/registration/password_reset_form.html:12
+msgid "Forgotten your password?"
+msgstr ""
+
 #: account/templates/registration/password_change_done.html:12
 msgid "Password changed"
 msgstr ""
@@ -311,10 +316,6 @@ msgstr ""
 msgid "Rahim Agha Store"
 msgstr ""
 
-#: account/templates/registration/password_reset_form.html:12
-msgid "Forgotten your password?"
-msgstr ""
-
 #: account/templates/registration/password_reset_form.html:13
 msgid "Enter your e-mail address to obtain a new password."
 msgstr ""
@@ -325,7 +326,7 @@ msgstr ""
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
-#: orders/templates/orders/order/user_order_detail.html:58
+#: orders/templates/orders/order/user_order_detail.html:66
 msgid "Quantity"
 msgstr ""
 
@@ -338,7 +339,7 @@ msgid "Image"
 msgstr ""
 
 #: cart/templates/cart/detail.html:15 orders/templates/orders/order/pdf.html:25
-#: orders/templates/orders/order/user_order_detail.html:56
+#: orders/templates/orders/order/user_order_detail.html:64
 #: shop/templates/shop/product/price_list.html:21
 msgid "Product"
 msgstr ""
@@ -352,7 +353,7 @@ msgid "Unit price"
 msgstr ""
 
 #: cart/templates/cart/detail.html:19 orders/templates/orders/order/pdf.html:26
-#: orders/templates/orders/order/user_order_detail.html:57
+#: orders/templates/orders/order/user_order_detail.html:65
 #: shop/templates/shop/product/price_list.html:22
 msgid "Price"
 msgstr ""
@@ -371,8 +372,8 @@ msgstr ""
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
 #: orders/templates/orders/order/pdf.html:42
-#: orders/templates/orders/order/user_order_detail.html:66
-#: orders/templates/orders/order/user_order_detail.html:73
+#: orders/templates/orders/order/user_order_detail.html:74
+#: orders/templates/orders/order/user_order_detail.html:81
 #: shop/templates/shop/base.html:109 shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
 #: shop/templates/shop/product/list.html:44
@@ -406,8 +407,8 @@ msgstr ""
 #: cart/templates/cart/detail.html:87
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
-#: orders/templates/orders/order/user_order_detail.html:59
-#: orders/templates/orders/order/user_order_detail.html:72
+#: orders/templates/orders/order/user_order_detail.html:67
+#: orders/templates/orders/order/user_order_detail.html:80
 msgid "Total"
 msgstr ""
 
@@ -529,7 +530,7 @@ msgid "Bill to"
 msgstr ""
 
 #: orders/templates/orders/order/pdf.html:21
-#: orders/templates/orders/order/user_order_detail.html:52
+#: orders/templates/orders/order/user_order_detail.html:60
 msgid "Items bought"
 msgstr ""
 
@@ -538,7 +539,7 @@ msgid "Cost"
 msgstr ""
 
 #: orders/templates/orders/order/pdf.html:48
-#: orders/templates/orders/order/user_order_detail.html:41
+#: orders/templates/orders/order/user_order_detail.html:49
 msgid "Pending payment"
 msgstr ""
 
@@ -546,43 +547,39 @@ msgstr ""
 msgid "Order detail"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:8
+#: orders/templates/orders/order/user_order_detail.html:13
 msgid "Order number"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:11
-msgid "Print order"
-msgstr ""
-
-#: orders/templates/orders/order/user_order_detail.html:17
+#: orders/templates/orders/order/user_order_detail.html:25
 msgid "Order created date"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:21
+#: orders/templates/orders/order/user_order_detail.html:29
 msgid "Customer"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:25
+#: orders/templates/orders/order/user_order_detail.html:33
 msgid "Email"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:29
+#: orders/templates/orders/order/user_order_detail.html:37
 msgid "Address"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:36
+#: orders/templates/orders/order/user_order_detail.html:44
 msgid "Total amount"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:40
+#: orders/templates/orders/order/user_order_detail.html:48
 msgid "Payment status"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:45
+#: orders/templates/orders/order/user_order_detail.html:52
 msgid "Shipping status"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:46
+#: orders/templates/orders/order/user_order_detail.html:53
 msgid "Pending delivery"
 msgstr ""
 

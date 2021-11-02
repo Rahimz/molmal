@@ -464,6 +464,18 @@ ul.messages li a.close {
   margin-right: auto;
   text-align: center;
 }
+.reset-password-form {
+  display: block;
+  /* clear: both; */
+  text-align: center;
+}
+.reset-password-form p label, .reset-password-form  p input {
+  float: right;
+  clear: both;
+}
+.reset-password-form ul {
+  float: right;
+}
 
 /* Pagination */
 .pagination {

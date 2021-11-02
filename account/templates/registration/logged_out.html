@@ -7,11 +7,11 @@
 {% block dash_active%}active{% endblock %}
 
 {% block content %}
-<div class="row">
+<div class="row m-5">
 	<div class="col-md  text-center">
 		<h1>{% trans 'Logged out' %}</h1>
 		<p>{% trans 'You have been successfully logged out. You can' %}
-			<a href="{% url 'login' %}">{% trans 'log-in again' %}</a>.
+			<a class="text-warning" href="{% url 'login' %}">{% trans 'log-in again' %}</a>.
 		</p>
 	</div>
 </div> <!--/end of row -->

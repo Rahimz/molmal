@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 10:03+0330\n"
-"PO-Revision-Date: 2021-11-02 10:04+0326\n"
+"POT-Creation-Date: 2021-11-02 10:16+0330\n"
+"PO-Revision-Date: 2021-11-02 11:23+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -29,7 +29,7 @@ msgstr "تکرار گذرواژه"
 
 #: account/forms.py:26
 msgid "Passwords don't match."
-msgstr "گذرواژه ها مطابقت ندارند"
+msgstr "گذرواژه ها شبیه هم نیست"
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/edit.html:5
@@ -123,12 +123,12 @@ msgid "Date"
 msgstr "تاریخ"
 
 #: account/templates/account/dashboard.html:74
-#: orders/templates/orders/order/user_order_detail.html:41
+#: orders/templates/orders/order/user_order_detail.html:49
 msgid "Paid"
 msgstr "پرداخت شده"
 
 #: account/templates/account/dashboard.html:75
-#: orders/templates/orders/order/user_order_detail.html:46
+#: orders/templates/orders/order/user_order_detail.html:53
 msgid "Delivered"
 msgstr "ارسال شده"
 
@@ -212,8 +212,7 @@ msgstr "ورود"
 
 #: account/templates/registration/login.html:17
 msgid "Your username and password didn't match.Please try again."
-msgstr ""
-"نام کاربری و گذرواژه شما با هم مطابقت ندارد. لطفاً دوباره امتحان کنید."
+msgstr "نام کاربری و گذرواژه تون با هم جور نیست. لطفاً یکبار دیگه امتحان کن."
 
 #: account/templates/registration/login.html:22
 msgid "Please, use the following form to log-in."
@@ -227,21 +226,26 @@ msgstr "اگر حساب کاربری ندارید"
 msgid "register here"
 msgstr "اینجا ثبت نام کنید"
 
+#: account/templates/registration/login.html:37
+#: account/templates/registration/password_reset_form.html:12
+msgid "Forgotten your password?"
+msgstr "گذرواژه یادت رفته؟"
+
 #: account/templates/registration/password_change_done.html:12
 msgid "Password changed"
 msgstr "تغییر گذرواژه"
 
 #: account/templates/registration/password_change_done.html:13
 msgid "Your password has been successfully changed."
-msgstr "گذرواژه شما با موفقیت تغییر کرد."
+msgstr "گذرواژه تون عوض شد."
 
 #: account/templates/registration/password_change_form.html:12
 msgid "Change your password"
-msgstr "گذرواژه خود را تغییر دهید"
+msgstr "گذرواژه را تغییر بده"
 
 #: account/templates/registration/password_change_form.html:13
 msgid "Use the form below to change your password."
-msgstr "از فرم زیر برای تغییر گذرواژه خود استفاده کنید."
+msgstr "از این فرم زیر برای تغییر گذرواژه استفاده کن."
 
 #: account/templates/registration/password_change_form.html:17
 msgid "Change"
@@ -249,15 +253,15 @@ msgstr "تغییر بده"
 
 #: account/templates/registration/password_reset_complete.html:12
 msgid "Password set"
-msgstr "گذرواژه تغییر کرد"
+msgstr "گذرواژه عوض شد"
 
 #: account/templates/registration/password_reset_complete.html:13
 msgid "Your password has been set. You can "
-msgstr "گذرواژه شما تغییر کرد. حالا می‌توانید"
+msgstr "گذرواژه عوض شد. حالا می‌تونی"
 
 #: account/templates/registration/password_reset_complete.html:13
 msgid "log in now"
-msgstr "دوباره وارد شوید"
+msgstr "دوباره وارد بشی"
 
 #: account/templates/registration/password_reset_confirm.html:12
 #: account/templates/registration/password_reset_done.html:12
@@ -266,7 +270,7 @@ msgstr "تغییر گذرواژه"
 
 #: account/templates/registration/password_reset_confirm.html:14
 msgid "Please enter your new password twice"
-msgstr "لطفاً گذرواژه جدید را دوبار وارد کنید"
+msgstr "لطفاً گذرواژه جدید را دوبار بزن"
 
 #: account/templates/registration/password_reset_confirm.html:18
 msgid "Change my password"
@@ -277,20 +281,20 @@ msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
-"لینک تغییر گذرواژه نامعتبر است. شاید به خاطر اینکه یکبار از آن استفاده شده "
-"است. لطفاً درخواست یک لینک جدید بدهید."
+"لینک تغییر گذرواژه نامعتبره. شاید به خاطر اینکه یکبار ازش استفاده شده. لطفاً"
+" دوباره درخواست یک لینک جدید بده."
 
 #: account/templates/registration/password_reset_done.html:13
 msgid "We've emailed you instructions for setting your password."
-msgstr "برای شما نحوه تغییر گذرواژه را ایمیل کرده‌ایم."
+msgstr " نحوه تغییر گذرواژه را برات ایمیل کردم."
 
 #: account/templates/registration/password_reset_done.html:14
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with."
 msgstr ""
-"اگر ایمیلی دریافت نکرده‌اید، لطفاً مطمئن شوید که آدرس ایمیل را درست تایپ "
-"کرده اید و پوشه اسپم را نیز چک کنید."
+"اگر ایمیلی دریافت نکردی، لطفاً مطمئن بشو که آدرس ایمیل را درست تایپ کردی و "
+"پوشه اسپم را هم لطفاً چک کن."
 
 #: account/templates/registration/password_reset_email.html:3
 msgid "Pasword reset request in Rahimagha store"
@@ -298,20 +302,20 @@ msgstr "درخواست بازیابی گذرواژه در دکان رحیم آق
 
 #: account/templates/registration/password_reset_email.html:5
 msgid "Someone asked for password reset for email"
-msgstr "درخواست تغییر گذرواژه برای کاربر با این ایمیل درخواست شده است: "
+msgstr "درخواست تغییر گذرواژه برای کاربر با این ایمیل درخواست شده: "
 
 #: account/templates/registration/password_reset_email.html:7
 msgid "Follow the link below"
-msgstr "لینک زیر را دنبال کنید"
+msgstr "لینک زیر را بزن"
 
 #: account/templates/registration/password_reset_email.html:10
 msgid "Your username, in case you've forgotten"
-msgstr "نام کاربری شما، شاید فراموش کرده باشید: "
+msgstr "نام کاربری، شاید فراموش کرده باشی: "
 
 #: account/templates/registration/password_reset_email.html:13
 msgid ""
 "If you do not ask for password reset, do nothing and ignore this email."
-msgstr "اگر برای تغییر گذرواژه درخواست نداده‌اید، نیاز نیست کاری انجام دهید."
+msgstr "اگر برای تغییر گذرواژه درخواست ندادی، نیاز نیست کاری انجام بدی."
 
 #: account/templates/registration/password_reset_email.html:15
 #: orders/templates/orders/order/user_order_detail.html:5
@@ -324,13 +328,9 @@ msgstr "اگر برای تغییر گذرواژه درخواست نداده‌ا
 msgid "Rahim Agha Store"
 msgstr "دکان رحیم آقا"
 
-#: account/templates/registration/password_reset_form.html:12
-msgid "Forgotten your password?"
-msgstr "گذرواژه خود را فراموش کرده‌اید؟"
-
 #: account/templates/registration/password_reset_form.html:13
 msgid "Enter your e-mail address to obtain a new password."
-msgstr "ایمیل خود را وارد کنید تا گذرواژه جدیدی بگیرید."
+msgstr "ایمیلت را وارد کن تا گذرواژه جدیدی بگیری."
 
 #: account/templates/registration/password_reset_form.html:16
 msgid "Send e-mail"
@@ -338,7 +338,7 @@ msgstr "ارسال ایمیل"
 
 #: cart/forms.py:12 cart/templates/cart/detail.html:16
 #: orders/templates/orders/order/pdf.html:27
-#: orders/templates/orders/order/user_order_detail.html:58
+#: orders/templates/orders/order/user_order_detail.html:66
 msgid "Quantity"
 msgstr "مقدار"
 
@@ -352,7 +352,7 @@ msgstr "تصویر"
 
 #: cart/templates/cart/detail.html:15
 #: orders/templates/orders/order/pdf.html:25
-#: orders/templates/orders/order/user_order_detail.html:56
+#: orders/templates/orders/order/user_order_detail.html:64
 #: shop/templates/shop/product/price_list.html:21
 msgid "Product"
 msgstr "محصول"
@@ -367,7 +367,7 @@ msgstr "قیمت واحد"
 
 #: cart/templates/cart/detail.html:19
 #: orders/templates/orders/order/pdf.html:26
-#: orders/templates/orders/order/user_order_detail.html:57
+#: orders/templates/orders/order/user_order_detail.html:65
 #: shop/templates/shop/product/price_list.html:22
 msgid "Price"
 msgstr "قیمت"
@@ -386,8 +386,8 @@ msgstr "به روز رسانی"
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
 #: orders/templates/orders/order/pdf.html:42
-#: orders/templates/orders/order/user_order_detail.html:66
-#: orders/templates/orders/order/user_order_detail.html:73
+#: orders/templates/orders/order/user_order_detail.html:74
+#: orders/templates/orders/order/user_order_detail.html:81
 #: shop/templates/shop/base.html:109
 #: shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
@@ -428,8 +428,8 @@ msgstr "رایگان"
 #: cart/templates/cart/detail.html:87
 #: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
-#: orders/templates/orders/order/user_order_detail.html:59
-#: orders/templates/orders/order/user_order_detail.html:72
+#: orders/templates/orders/order/user_order_detail.html:67
+#: orders/templates/orders/order/user_order_detail.html:80
 msgid "Total"
 msgstr "جمع"
 
@@ -558,7 +558,7 @@ msgid "Bill to"
 msgstr "صادر شده برای"
 
 #: orders/templates/orders/order/pdf.html:21
-#: orders/templates/orders/order/user_order_detail.html:52
+#: orders/templates/orders/order/user_order_detail.html:60
 msgid "Items bought"
 msgstr "کالاهای خریداری شده"
 
@@ -567,59 +567,47 @@ msgid "Cost"
 msgstr "هزینه"
 
 #: orders/templates/orders/order/pdf.html:48
-#: orders/templates/orders/order/user_order_detail.html:41
+#: orders/templates/orders/order/user_order_detail.html:49
 msgid "Pending payment"
 msgstr "پرداخت نشده"
 
 #: orders/templates/orders/order/user_order_detail.html:5
-#| msgid "Order No"
 msgid "Order detail"
 msgstr "جزییات سفارش"
 
-#: orders/templates/orders/order/user_order_detail.html:8
-#| msgid "Order No"
+#: orders/templates/orders/order/user_order_detail.html:13
 msgid "Order number"
 msgstr "شماره سفارش"
 
-#: orders/templates/orders/order/user_order_detail.html:11
-#| msgid "Your order"
-msgid "Print order"
-msgstr "چاپ سفارش"
-
-#: orders/templates/orders/order/user_order_detail.html:17
-#| msgid "Order No"
+#: orders/templates/orders/order/user_order_detail.html:25
 msgid "Order created date"
 msgstr "تاریخ ثبت سفارش"
 
-#: orders/templates/orders/order/user_order_detail.html:21
+#: orders/templates/orders/order/user_order_detail.html:29
 msgid "Customer"
 msgstr "خریدار"
 
-#: orders/templates/orders/order/user_order_detail.html:25
-#| msgid "Email:"
+#: orders/templates/orders/order/user_order_detail.html:33
 msgid "Email"
 msgstr "ایمیل"
 
-#: orders/templates/orders/order/user_order_detail.html:29
-#| msgid "address"
+#: orders/templates/orders/order/user_order_detail.html:37
 msgid "Address"
 msgstr "آدرس"
 
-#: orders/templates/orders/order/user_order_detail.html:36
+#: orders/templates/orders/order/user_order_detail.html:44
 msgid "Total amount"
 msgstr "مبلغ کل"
 
-#: orders/templates/orders/order/user_order_detail.html:40
-#| msgid "Pending payment"
+#: orders/templates/orders/order/user_order_detail.html:48
 msgid "Payment status"
 msgstr "وضعیت پرداخت"
 
-#: orders/templates/orders/order/user_order_detail.html:45
-#| msgid "Shipping"
+#: orders/templates/orders/order/user_order_detail.html:52
 msgid "Shipping status"
 msgstr "وضعیت ارسال"
 
-#: orders/templates/orders/order/user_order_detail.html:46
+#: orders/templates/orders/order/user_order_detail.html:53
 msgid "Pending delivery"
 msgstr "ارسال نشده"
 
@@ -892,6 +880,9 @@ msgstr "شماره سفارش"
 #: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#~ msgid "Print order"
+#~ msgstr "چاپ سفارش"
 
 #~ msgid "Created"
 #~ msgstr "تاریخ ثبت"
