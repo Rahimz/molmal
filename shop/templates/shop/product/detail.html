@@ -50,21 +50,6 @@
 
   <div class="row mt-4 text-center">
     <h2 class="">{% trans 'Comments' %}</h2>
-    {% if request.user.is_authenticated %}
-
-    {% if new_comment %}
-      <h3 class="bg-success m-5">{% trans 'Your comment has been added.' %}</h3>
-      {% else %}
-      <h2>{% trans 'Add a new comment' %}</h2>
-      <form method="post">
-        {{ comment_form.as_p }}
-        {% csrf_token %}
-        <p><input type="submit" value="{% trans 'Add comment' %}"></p>
-      </form>
-      {% endif %}
-
-    {% endif %}
-
     {% with comments.count as total_comments %}
     <h3>
       {{ total_comments }} {% trans 'comment' %}
@@ -75,16 +60,38 @@
     {% for comment in comments %}
     <div class="comment">
       <p class="info">
-        {% trans 'Written' %} {{ forloop.counter }} {% trans 'by' %} {{ comment.name }}
+        {% trans 'Written' %} {% trans 'by' %} {{ comment.name }}
         <br />
         {{ comment.created }}
       </p>
-      {{ comment.body|linebreaks }}
+      <p class="">{{ comment.body|linebreaks }}</p>
     </div>
     <hr />
     {% empty %}
     <p>{% trans 'There are no comments yet' %}.</p>
     {% endfor %}
+
+
+    {% if request.user.is_authenticated %}
+
+    {% if new_comment %}
+    <h3 class="bg-success m-5">{% trans 'Your comment has been added.' %}</h3>
+    {% else %}
+    <h2>{% trans 'Add a new comment' %}</h2>
+
+    <div class="d-flex justify-content-center">
+      <form method="post" class="comment-form">
+        {{ comment_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="{% trans 'Add comment' %}"></p>
+      </form>
+    </div>
+    
+    {% endif %}
+
+    {% endif %}
+
+
   </div> <!-- / end of row-->
 </div>
 

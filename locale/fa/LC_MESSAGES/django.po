@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:29+0000\n"
-"PO-Revision-Date: 2021-11-02 12:53+0326\n"
+"POT-Creation-Date: 2021-11-02 13:20+0330\n"
+"PO-Revision-Date: 2021-11-02 13:20+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -103,8 +103,8 @@ msgid ""
 "If you have unsuccessfull payment you will see those orders in this list, "
 "you can ignore them and they will be remove automatiaclly."
 msgstr ""
-"اگر پرداخت ناموفق داشته باشی احتمالاً اونها رو اینجا می‌بینی، اگر کاری بهشون "
-"نداشته باشی به صورت خودکار حذف میشن."
+"اگر پرداخت ناموفق داشته باشی احتمالاً اونها رو اینجا می‌بینی، اگر کاری بهشون"
+" نداشته باشی به صورت خودکار حذف میشن."
 
 #: account/templates/account/dashboard.html:64
 msgid "If you click on orders number you can see your order details."
@@ -142,8 +142,8 @@ msgstr "اخطار"
 
 #: account/templates/account/dashboard.html:97
 msgid ""
-"If you remove your profile user, every action and data you have entered will "
-"be deleted permanently."
+"If you remove your profile user, every action and data you have entered will"
+" be deleted permanently."
 msgstr ""
 "اگر حساب کاربری خود را پاک کنید، هر اطلاعات و سابقه‌ای که داشته اید به طور "
 "دائم از این وبسایت حذف خواهد شد."
@@ -160,7 +160,8 @@ msgstr "حذف کردن حساب کاربری به طور کامل!"
 msgid "You have to complete your profile first:"
 msgstr "شما باید در ابتدا حساب کاربری خود را کامل کنید:"
 
-#: account/templates/account/edit.html:5 account/templates/account/edit.html:13
+#: account/templates/account/edit.html:5
+#: account/templates/account/edit.html:13
 msgid "Edit your account"
 msgstr "اصلاح حساب کاربری"
 
@@ -292,8 +293,8 @@ msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
-"لینک تغییر گذرواژه نامعتبره. شاید به خاطر اینکه یکبار ازش استفاده شده. لطفاً "
-"دوباره درخواست یک لینک جدید بده."
+"لینک تغییر گذرواژه نامعتبره. شاید به خاطر اینکه یکبار ازش استفاده شده. لطفاً"
+" دوباره درخواست یک لینک جدید بده."
 
 #: account/templates/registration/password_reset_done.html:5
 msgid "Password reset"
@@ -328,7 +329,8 @@ msgid "Your username, in case you've forgotten"
 msgstr "نام کاربری، شاید فراموش کرده باشی: "
 
 #: account/templates/registration/password_reset_email.html:13
-msgid "If you do not ask for password reset, do nothing and ignore this email."
+msgid ""
+"If you do not ask for password reset, do nothing and ignore this email."
 msgstr "اگر برای تغییر گذرواژه درخواست ندادی، نیاز نیست کاری انجام بدی."
 
 #: account/templates/registration/password_reset_email.html:15
@@ -368,7 +370,8 @@ msgstr "سبد خرید شما"
 msgid "Image"
 msgstr "تصویر"
 
-#: cart/templates/cart/detail.html:15 orders/templates/orders/order/pdf.html:25
+#: cart/templates/cart/detail.html:15
+#: orders/templates/orders/order/pdf.html:25
 #: orders/templates/orders/order/user_order_detail.html:64
 #: shop/templates/shop/product/price_list.html:21
 msgid "Product"
@@ -382,7 +385,8 @@ msgstr "حذف"
 msgid "Unit price"
 msgstr "قیمت واحد"
 
-#: cart/templates/cart/detail.html:19 orders/templates/orders/order/pdf.html:26
+#: cart/templates/cart/detail.html:19
+#: orders/templates/orders/order/pdf.html:26
 #: orders/templates/orders/order/user_order_detail.html:65
 #: shop/templates/shop/product/price_list.html:22
 msgid "Price"
@@ -404,7 +408,8 @@ msgstr "به روز رسانی"
 #: orders/templates/orders/order/pdf.html:42
 #: orders/templates/orders/order/user_order_detail.html:74
 #: orders/templates/orders/order/user_order_detail.html:81
-#: shop/templates/shop/base.html:114 shop/templates/shop/product/detail.html:22
+#: shop/templates/shop/base.html:114
+#: shop/templates/shop/product/detail.html:22
 #: shop/templates/shop/product/home.html:57
 #: shop/templates/shop/product/list.html:44
 #: shop/templates/shop/product/search.html:26
@@ -558,8 +563,7 @@ msgstr "‍سپاس از شما"
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
 "\n"
@@ -603,7 +607,7 @@ msgstr "تاریخ ثبت سفارش"
 msgid "Customer"
 msgstr "خریدار"
 
-#: orders/templates/orders/order/user_order_detail.html:33
+#: orders/templates/orders/order/user_order_detail.html:33 shop/models.py:90
 msgid "Email"
 msgstr "ایمیل"
 
@@ -626,6 +630,15 @@ msgstr "وضعیت ارسال"
 #: orders/templates/orders/order/user_order_detail.html:53
 msgid "Pending delivery"
 msgstr "ارسال نشده"
+
+#: shop/models.py:89
+msgid "Name"
+msgstr "نام"
+
+#: shop/models.py:91
+#| msgid "Comments"
+msgid "Comment"
+msgstr "نظر"
 
 #: shop/templates/404.html:10
 msgid "404 Error"
@@ -662,8 +675,8 @@ msgstr "دکان رحیم آقا"
 #: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:164
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
-"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه "
-"جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
+"این دکان رحیم آقا است و شما می‌توانید یکسری خرده ریز باحال که هر کدام یک قصه"
+" جالب دارند بخرید از دمنوش های خاص گرفته تا گردوی فشم و مربای خونگی "
 
 #: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:171
 msgid "Important links"
@@ -680,8 +693,8 @@ msgstr "رحیم آقا و خانواده"
 #: shop/templates/shop/base.html:12
 msgid "Rahim Agha sotre is a local reatil online shop"
 msgstr ""
-"دکان رحیم آقا یک فروشگاه گوجک برای خرید خوراکی‌های خوشمزه از گوشه و کنار کشور "
-"است که به تدریج جمع شده و در این مجموعه کنار هم قرار گرفته است."
+"دکان رحیم آقا یک فروشگاه گوجک برای خرید خوراکی‌های خوشمزه از گوشه و کنار "
+"کشور است که به تدریج جمع شده و در این مجموعه کنار هم قرار گرفته است."
 
 #: shop/templates/shop/base.html:14
 msgid "Rahim Agha Store logo"
@@ -723,33 +736,33 @@ msgstr "اضافه کردن به سبد خرید "
 msgid "Comments"
 msgstr "نظرات"
 
-#: shop/templates/shop/product/detail.html:56
-msgid "Your comment has been added."
-msgstr "نظر شما ثبت شد."
-
-#: shop/templates/shop/product/detail.html:58
-msgid "Add a new comment"
-msgstr "نظر خود را اضافه کنید"
-
-#: shop/templates/shop/product/detail.html:62
-msgid "Add comment"
-msgstr "ثبت نظر"
-
-#: shop/templates/shop/product/detail.html:70
+#: shop/templates/shop/product/detail.html:55
 msgid "comment"
 msgstr "نظر"
 
-#: shop/templates/shop/product/detail.html:78
+#: shop/templates/shop/product/detail.html:63
 msgid "Written"
 msgstr "نوشته شده "
 
-#: shop/templates/shop/product/detail.html:78
+#: shop/templates/shop/product/detail.html:63
 msgid "by"
 msgstr "توسط"
 
-#: shop/templates/shop/product/detail.html:86
+#: shop/templates/shop/product/detail.html:71
 msgid "There are no comments yet"
 msgstr "هنوز نظری برای این محصول ثبت نشده است"
+
+#: shop/templates/shop/product/detail.html:78
+msgid "Your comment has been added."
+msgstr "نظر شما ثبت شد."
+
+#: shop/templates/shop/product/detail.html:80
+msgid "Add a new comment"
+msgstr "نظر خود را اضافه کنید"
+
+#: shop/templates/shop/product/detail.html:86
+msgid "Add comment"
+msgstr "ثبت نظر"
 
 #: shop/templates/shop/product/home.html:17
 #: shop/templates/shop/product/list.html:15

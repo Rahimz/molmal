@@ -486,8 +486,10 @@ ul.messages li a.close {
 .reset-password-form span::before {
   content: "";
   display: block;
-
-
+}
+.comment-form p label, .comment-form  p input {
+  /* float: right; */
+  clear: both;
 }
 
 /* Pagination */

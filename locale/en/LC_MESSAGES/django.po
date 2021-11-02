@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:29+0000\n"
+"POT-Creation-Date: 2021-11-02 13:20+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -579,7 +579,7 @@ msgstr ""
 msgid "Customer"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:33
+#: orders/templates/orders/order/user_order_detail.html:33 shop/models.py:90
 msgid "Email"
 msgstr ""
 
@@ -601,6 +601,14 @@ msgstr ""
 
 #: orders/templates/orders/order/user_order_detail.html:53
 msgid "Pending delivery"
+msgstr ""
+
+#: shop/models.py:89
+msgid "Name"
+msgstr ""
+
+#: shop/models.py:91
+msgid "Comment"
 msgstr ""
 
 #: shop/templates/404.html:10
@@ -695,32 +703,32 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: shop/templates/shop/product/detail.html:56
-msgid "Your comment has been added."
-msgstr ""
-
-#: shop/templates/shop/product/detail.html:58
-msgid "Add a new comment"
-msgstr ""
-
-#: shop/templates/shop/product/detail.html:62
-msgid "Add comment"
-msgstr ""
-
-#: shop/templates/shop/product/detail.html:70
+#: shop/templates/shop/product/detail.html:55
 msgid "comment"
 msgstr ""
 
-#: shop/templates/shop/product/detail.html:78
+#: shop/templates/shop/product/detail.html:63
 msgid "Written"
 msgstr ""
 
-#: shop/templates/shop/product/detail.html:78
+#: shop/templates/shop/product/detail.html:63
 msgid "by"
 msgstr ""
 
-#: shop/templates/shop/product/detail.html:86
+#: shop/templates/shop/product/detail.html:71
 msgid "There are no comments yet"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:78
+msgid "Your comment has been added."
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:80
+msgid "Add a new comment"
+msgstr ""
+
+#: shop/templates/shop/product/detail.html:86
+msgid "Add comment"
 msgstr ""
 
 #: shop/templates/shop/product/home.html:17
