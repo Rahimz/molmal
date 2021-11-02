@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 13:20+0330\n"
+"POT-Creation-Date: 2021-11-02 13:33+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -720,7 +720,7 @@ msgid "There are no comments yet"
 msgstr ""
 
 #: shop/templates/shop/product/detail.html:78
-msgid "Your comment has been added."
+msgid "Your comment has been added. After admin approval it will be published."
 msgstr ""
 
 #: shop/templates/shop/product/detail.html:80

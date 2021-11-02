@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 13:20+0330\n"
-"PO-Revision-Date: 2021-11-02 13:20+0326\n"
+"POT-Creation-Date: 2021-11-02 13:33+0330\n"
+"PO-Revision-Date: 2021-11-02 13:35+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -636,7 +636,6 @@ msgid "Name"
 msgstr "نام"
 
 #: shop/models.py:91
-#| msgid "Comments"
 msgid "Comment"
 msgstr "نظر"
 
@@ -753,8 +752,9 @@ msgid "There are no comments yet"
 msgstr "هنوز نظری برای این محصول ثبت نشده است"
 
 #: shop/templates/shop/product/detail.html:78
-msgid "Your comment has been added."
-msgstr "نظر شما ثبت شد."
+msgid ""
+"Your comment has been added. After admin approval it will be published."
+msgstr "متشکرم نظرت رو ثبت کردیم. این نظر بعد از تایید مدیر سایت منتشر میشه."
 
 #: shop/templates/shop/product/detail.html:80
 msgid "Add a new comment"
@@ -919,6 +919,9 @@ msgstr "شماره سفارش"
 #: zarinpal/templates/zarinpal/success.html:26
 msgid "We will contact you to send your order"
 msgstr "برای ارسال سفارش شما، با شما تماس خواهیم گرفت."
+
+#~ msgid "Your comment has been added."
+#~ msgstr "نظر شما ثبت شد."
 
 #~ msgid "Print order"
 #~ msgstr "چاپ سفارش"

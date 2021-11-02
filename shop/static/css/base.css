@@ -491,6 +491,16 @@ ul.messages li a.close {
   /* float: right; */
   clear: both;
 }
+.comment-form p textarea {
+  /* background-color: red; */
+
+}
+.comment-body {
+  background-color: #efefef;
+  padding: 10px;
+  border-radius: 2px;
+
+}
 
 /* Pagination */
 .pagination {

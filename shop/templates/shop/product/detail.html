@@ -62,9 +62,9 @@
       <p class="info">
         {% trans 'Written' %} {% trans 'by' %} {{ comment.name }}
         <br />
-        {{ comment.created }}
+        <span class="text-muted">{{ comment.created }}</span>
       </p>
-      <p class="">{{ comment.body|linebreaks }}</p>
+      <p class="comment-body">{{ comment.body | linebreaksbr }}</p>
     </div>
     <hr />
     {% empty %}
@@ -75,7 +75,7 @@
     {% if request.user.is_authenticated %}
 
     {% if new_comment %}
-    <h3 class="bg-success m-5">{% trans 'Your comment has been added.' %}</h3>
+    <h3 class="bg-success m-5">{% trans 'Your comment has been added. After admin approval it will be published.' %}</h3>
     {% else %}
     <h2>{% trans 'Add a new comment' %}</h2>
 
@@ -86,7 +86,7 @@
         <p><input type="submit" value="{% trans 'Add comment' %}"></p>
       </form>
     </div>
-    
+
     {% endif %}
 
     {% endif %}
