@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 08:19+0330\n"
+"POT-Creation-Date: 2021-11-02 09:17+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,8 +32,7 @@ msgid "Passwords don't match."
 msgstr ""
 
 #: account/templates/account/create_profile.html:13
-#: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5 shop/templates/shop/base.html:64
+#: account/templates/account/edit.html:5
 msgid "Dashboard"
 msgstr ""
 
@@ -48,6 +47,10 @@ msgstr ""
 #: account/templates/account/create_profile.html:21
 #: account/templates/account/dashboard.html:98
 msgid "Add profile"
+msgstr ""
+
+#: account/templates/account/dashboard.html:14
+msgid "Profile"
 msgstr ""
 
 #: account/templates/account/dashboard.html:16
@@ -346,10 +349,10 @@ msgstr ""
 #: cart/templates/cart/detail.html:47 cart/templates/cart/detail.html:48
 #: cart/templates/cart/detail.html:56 cart/templates/cart/detail.html:64
 #: cart/templates/cart/detail.html:90
-#: orders/templates/orders/order/create.html:28
-#: orders/templates/orders/order/create.html:37
-#: orders/templates/orders/order/create.html:45
-#: orders/templates/orders/order/create.html:49
+#: orders/templates/orders/order/create.html:17
+#: orders/templates/orders/order/create.html:26
+#: orders/templates/orders/order/create.html:34
+#: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:35
 #: orders/templates/orders/order/pdf.html:37
 #: orders/templates/orders/order/pdf.html:42 shop/templates/shop/base.html:109
@@ -374,17 +377,17 @@ msgid ""
 msgstr ""
 
 #: cart/templates/cart/detail.html:69 cart/templates/cart/detail.html:74
-#: orders/templates/orders/order/create.html:33
+#: orders/templates/orders/order/create.html:22
 msgid "Shipping"
 msgstr ""
 
 #: cart/templates/cart/detail.html:78
-#: orders/templates/orders/order/create.html:35
+#: orders/templates/orders/order/create.html:24
 msgid "Free"
 msgstr ""
 
 #: cart/templates/cart/detail.html:87
-#: orders/templates/orders/order/create.html:49
+#: orders/templates/orders/order/create.html:38
 #: orders/templates/orders/order/pdf.html:41
 msgid "Total"
 msgstr ""
@@ -464,24 +467,24 @@ msgstr ""
 msgid "Delivery container"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:15
-msgid "Place order"
-msgstr ""
-
-#: orders/templates/orders/order/create.html:19
-msgid "Into payment port"
-msgstr ""
-
-#: orders/templates/orders/order/create.html:24
+#: orders/templates/orders/order/create.html:13
 msgid "Your order"
 msgstr ""
 
-#: orders/templates/orders/order/create.html:42
+#: orders/templates/orders/order/create.html:31
 #, python-format
 msgid ""
 "\n"
-"            \"%(code)s\" (%(discount)s%% off)\n"
-"            "
+"          \"%(code)s\" (%(discount)s%% off)\n"
+"          "
+msgstr ""
+
+#: orders/templates/orders/order/create.html:46
+msgid "Place order"
+msgstr ""
+
+#: orders/templates/orders/order/create.html:51
+msgid "Into payment port"
 msgstr ""
 
 #: orders/templates/orders/order/created.html:5

@@ -9,11 +9,11 @@
 {% block dash_active%}active{% endblock %}
 
 {% block content %}
-<div class="row">
+<div class="row m-3">
 	<div class="col-md  text-center">
-		<h1>{% trans 'Dashboard' %}</h1>
+		<h1>{% trans 'Profile' %}</h1>
 
-		<p class="lead">{% trans 'Welcome' %}&nbsp;<b>{{ request.user }}</b>!</p>
+		<p class="lead"><b>{{ request.user }}</b> {% trans 'Welcome' %}&nbsp;!</p>
 		{% if profile %}
 		{% if profile.photo  %}
 		<img src="{{ profile.photo.url }}" width="200px" height="auto" class="user-avatar" alt="user avatar" />
