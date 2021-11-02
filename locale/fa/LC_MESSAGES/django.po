@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-31 15:05+0330\n"
-"PO-Revision-Date: 2021-10-31 15:06+0326\n"
+"POT-Creation-Date: 2021-11-02 07:58+0330\n"
+"PO-Revision-Date: 2021-11-02 07:59+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -459,6 +459,10 @@ msgstr "نام"
 msgid "last name"
 msgstr "نام خانوادگی"
 
+#: orders/models.py:23
+msgid "Phone"
+msgstr "تلفن"
+
 #: orders/models.py:25
 msgid "e-mail"
 msgstr "ایمیل"
@@ -692,7 +696,6 @@ msgid "All"
 msgstr "همه"
 
 #: shop/templates/shop/product/pagination.html:5
-#| msgid "first name"
 msgid "first"
 msgstr "اولی"
 
@@ -713,7 +716,6 @@ msgid "Next"
 msgstr "بعدی"
 
 #: shop/templates/shop/product/pagination.html:13
-#| msgid "last name"
 msgid "last"
 msgstr "آخری"
 

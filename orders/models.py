@@ -20,7 +20,7 @@ class Order(models.Model):
                                   max_length=50, blank=True, null=True)
     last_name = models.CharField(_('last name'),
                                  max_length=50)
-    phone = models.CharField(max_length=12, blank=True, null=True)
+    phone = models.CharField(_('Phone'),max_length=12, blank=True, null=True)
     fa_date = jmodels.jDateField(null=True, blank=True)
     email = models.EmailField(_('e-mail'), blank=True, null=True)
     address = models.CharField(
