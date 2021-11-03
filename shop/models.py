@@ -47,6 +47,7 @@ class Product(models.Model):
                                          blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=0)
+    purchase_price = models.DecimalField(max_digits=10, decimal_places=0, null=True, blank=True)
     stock = models.IntegerField(default=0)
     weight = models.FloatField(default=0,
                                  null=True, blank=True)
