@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 13:33+0330\n"
+"POT-Creation-Date: 2021-11-03 16:56+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -465,6 +465,10 @@ msgstr ""
 
 #: coupons/forms.py:6
 msgid "Coupon"
+msgstr ""
+
+#: delivery/models.py:24
+msgid "Hour"
 msgstr ""
 
 #: delivery/templates/delivery/delivery_select.html:5

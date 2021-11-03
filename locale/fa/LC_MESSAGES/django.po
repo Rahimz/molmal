@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 13:33+0330\n"
-"PO-Revision-Date: 2021-11-02 13:35+0326\n"
+"POT-Creation-Date: 2021-11-03 16:56+0330\n"
+"PO-Revision-Date: 2021-11-03 16:56+0326\n"
 "Last-Translator: b'dfgh shd <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -487,6 +487,10 @@ msgstr "محصول به تعداد مورد نظر شما در انبار موج
 #: coupons/forms.py:6
 msgid "Coupon"
 msgstr "کوپن"
+
+#: delivery/models.py:24
+msgid "Hour"
+msgstr "ساعت"
 
 #: delivery/templates/delivery/delivery_select.html:5
 msgid "Delivery selection"
