@@ -5,7 +5,6 @@ from django.contrib.postgres.search import SearchVector
 from django.db.models import Q
 
 from .models import Category, Product, Slider, Comment
-from pages.models import Page as FooterPage
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
 from .forms import SearchForm, CommentForm
@@ -24,8 +23,6 @@ def home(request):
         products = Product.objects.filter(available=True)[:12]
         cache.set('all_products', products)
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
 
     # list of categories
     # categories = Category.objects.all()
@@ -41,7 +38,6 @@ def home(request):
                   'shop/product/home.html',
                   {'sliders': sliders,
                    'products': products,
-                   'footer_pages': footer_pages,
                    'form': form,
                    'categories': categories})
 
@@ -90,9 +86,6 @@ def product_list(requset, category_slug=None):
         products = paginator.page(paginator.num_pages)
 
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
-
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(category=category)
@@ -104,7 +97,6 @@ def product_list(requset, category_slug=None):
                    'categories': categories,
                    'products': products,
                    'form':form,
-                   'footer_pages': footer_pages,
                    'page': page,
                    })
 
@@ -147,15 +139,11 @@ def product_detail(request, id, slug):
     r = Recommender()
     recommended_products = r.suggest_products_for([product], 4)
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
-
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'recommended_products': recommended_products,
-                   'footer_pages': footer_pages,
                    'comments': comments,
                    'new_comment': new_comment,
                    'comment_form': comment_form })
@@ -165,9 +153,6 @@ def product_search(request):
     form = SearchForm()
     query = None
     results = []
-
-    # Queryset for Pages
-    pages = Page.objects.all().filter(active=True)
 
     if 'query' in request.GET:
         form = SearchForm(request.GET)
@@ -181,4 +166,4 @@ def product_search(request):
                   {'form': form,
                    'query': query,
                    'results': results,
-                   'pages': pages})
+                   })

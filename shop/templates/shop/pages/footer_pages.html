@@ -1,0 +1,7 @@
+<ul class="list-unstyled">
+  {% for page in footer_pages %}
+  <li>
+    <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
