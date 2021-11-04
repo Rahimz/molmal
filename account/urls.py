@@ -17,4 +17,6 @@ urlpatterns = [
     path('edit/', views.edit, name='edit'),
     path('add-profile/', views.create, name='add'),
 
+    path('address/<int:pk>/', views.address_detail, name='address_detail'),
+
 ]

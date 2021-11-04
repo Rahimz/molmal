@@ -1,3 +1,4 @@
+from django.shortcuts import reverse
 from django.db import models
 from django.conf import settings
 import datetime
@@ -42,3 +43,7 @@ class Address(models.Model):
 
     def __str__(self):
         return self.address[:30]
+
+    def get_absolute_url(self):
+        return reverse('address_detail',
+                       args=[self.id])

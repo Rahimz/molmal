@@ -1,0 +1,33 @@
+{% extends "shop/base.html" %}
+
+{% load i18n %}
+
+{% load static %}
+
+{% block title %}{% trans 'Address' %}{% endblock %}
+
+{% block content %}
+<div class="row m-3">
+	<div class="col-md  text-center">
+		<h1>{% trans 'Address' %}</h1>
+	</div>
+</div>
+<div class="row m-3">
+	<div class="col-md-6  text-center">
+		<p>{% if address.first_name %}{{ address.first_name }}{% else %}--{% endif %}</p>
+		<p>{{ address.last_name }}</p>
+		<p>{{ address.phone }}</p>
+		<p>{{ address.address }}</p>
+		<p>{{ address.postal_code }}</p>
+		<p>{{ address.city }}</p>
+	</div>
+	<div class="col-md-6  text-center">
+		<form action="." method="post" >
+			{{ address_form.as_p }}
+			{% csrf_token %}
+			<p><input type="submit" value="{% trans 'Edit address' %}"></p>
+		</form>
+	</div>
+</div>
+<!--/end of row -->
+{% endblock %}

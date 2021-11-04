@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import Profile, Address
 from django.utils.translation import gettext_lazy as _
 
 
@@ -37,3 +37,8 @@ class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('gender', 'date_of_birth', 'photo')
+
+class AddressForm(forms.ModelForm):
+	class Meta:
+		model = Address
+		fields = ['first_name', 'last_name', 'phone', 'address', 'postal_code', 'city', 'fav_address']

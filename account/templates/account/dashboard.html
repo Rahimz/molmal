@@ -61,15 +61,31 @@
 <div class="row m-3">
 	<div class="col-md  text-center">
 		<h2 class="bg-secondary rounded p-2 text-light">{% trans 'Your addresses' %}</h2>
-		{% for address in addresses %}
-		<ul>
-			<li>
-			{{ address.city }} - {{ address.address }} - {{ address.postal_code }}
-			</li>
-		</ul>
-		{% empty %}
-		{% trans 'You have not add any address yet!' %}
-		{% endfor %}
+
+		<div class="d-flex justify-content-center">
+			<table class="table table-stripped" style="width:50%;">
+				<thead>
+					<tr>
+						<td>{% trans 'Address' %}</td>
+						<td>{% trans 'Active address' %}</td>
+					</tr>
+				</thead>
+				<tbody>
+					{% for address in addresses %}
+					<tr>
+						<td class="fw-6"><a href="{{ address.get_absolute_url }}">
+							{{ address.city }} - {{ address.address }} - {{ address.postal_code }}
+						</a> </td>
+						<td class="fs-5">{% if address.fav_address %}&#10004{% endif %}</td>
+					</tr>
+					{% empty %}
+					{% trans 'You have not add any address yet!' %}
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+
 	</div>
 </div>
 <div class="row m-3">

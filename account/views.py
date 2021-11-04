@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditForm
+from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditForm, AddressForm
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Address
 from django.contrib import messages
@@ -117,3 +117,33 @@ def create(request):
                 'account/create_profile.html',
                 {'user_form': user_form,
                  'profile_form': profile_form})
+
+@login_required
+def address_detail(request, pk):
+    address = get_object_or_404(Address, pk=pk)
+    if request.method == 'POST':
+        address_form = AddressForm(instance=address,
+                                data=request.POST)
+
+        if address_form.is_valid():
+
+            cd = address_form.cleaned_data['address']
+
+            if address.fav_address:
+                addresses = Address.objects.filter(user=request.user).exclude(pk=address.pk)
+                for addry in addresses:
+                    addry.fav_address = False
+                    addry.save()
+            address_form.save()
+            # https://docs.djangoproject.com/en/2.0/ref/contrib/messages/
+            messages.success(request,
+                            'Address updated successfully')
+        else:
+            messages.error(request, 'Error updating your address')
+    else:
+        address_form = AddressForm(instance=address)
+
+    return render(request,
+                  'account/address_detail.html',
+                  {'address': address,
+                  'address_form': address_form})
