@@ -98,11 +98,4 @@
 {% endblock %}
 
 {% block footer-pages %}
-<ul class="list-unstyled">
-  {% for page in pages %}
-  <li>
-    <a href="{{ page.get_absolute_url }}" class="text-white">{{ page.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
 {% endblock%}

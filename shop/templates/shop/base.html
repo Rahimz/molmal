@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load static %}
+{% load static_pages %}
 <!DOCTYPE html>
 <html dir="rtl">
 
@@ -166,6 +167,7 @@
         <!--Grid column-->
         <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase">{% trans 'Important links'%}</h5>
+          {% footer_pages %}
           {% block footer-pages %}
           {% endblock %}
         </div>

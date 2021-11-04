@@ -5,30 +5,39 @@ from django.contrib.postgres.search import SearchVector
 from django.db.models import Q
 
 from .models import Category, Product, Slider, Comment
-from pages.models import Page as FooterPage
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
 from .forms import SearchForm, CommentForm
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.cache import cache
+
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
 
-    products = Product.objects.filter(available=True)[:12]
+    # products = Product.objects.filter(available=True)[:12]
+    # Use chach to decrease the sql queries
+    products = cache.get('all_products')
+    if not products:
+        products = Product.objects.filter(available=True)[:12]
+        cache.set('all_products', products)
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
 
     # list of categories
-    categories = Category.objects.all()
+    # categories = Category.objects.all()
+
+    #  use cache to reduce queries
+    categories = cache.get('all_categories')
+    if not categories:
+        categories = Category.objects.all()
+        cache.set('all_categories', categories)
 
     form = SearchForm()
     return render(request,
                   'shop/product/home.html',
                   {'sliders': sliders,
                    'products': products,
-                   'footer_pages': footer_pages,
                    'form': form,
                    'categories': categories})
 
@@ -45,12 +54,26 @@ def price_view(request,):
 
 def product_list(requset, category_slug=None):
     category = None
-    categories = Category.objects.all()
+    # categories = Category.objects.all() # replaced by cached Queryset
+
+    #  use cache to reduce queries
+    categories = cache.get('all_categories')
+    if not categories:
+        categories = Category.objects.all()
+        cache.set('all_categories', categories)
+
     # products = Product.objects.filter(available=True)
     products = None
 
     # Pagination
     object_list = Product.objects.filter(available=True)
+
+    # Use chach to decrease the sql queries
+    object_list = cache.get('all_object_list')
+    if not object_list:
+        object_list = Product.objects.filter(available=True)[:12]
+        cache.set('all_object_list', object_list)
+
     paginator = Paginator(object_list, 9) # 9 products in each page
     page = requset.GET.get('page')
     try:
@@ -63,12 +86,9 @@ def product_list(requset, category_slug=None):
         products = paginator.page(paginator.num_pages)
 
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
-
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = object_list.filter(category=category)
+        products = Product.objects.filter(category=category)
 
     form = SearchForm()
     return render(requset,
@@ -77,7 +97,6 @@ def product_list(requset, category_slug=None):
                    'categories': categories,
                    'products': products,
                    'form':form,
-                   'footer_pages': footer_pages,
                    'page': page,
                    })
 
@@ -120,15 +139,11 @@ def product_detail(request, id, slug):
     r = Recommender()
     recommended_products = r.suggest_products_for([product], 4)
 
-    # Queryset for Pages
-    footer_pages = FooterPage.objects.all().filter(active=True)
-
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'recommended_products': recommended_products,
-                   'footer_pages': footer_pages,
                    'comments': comments,
                    'new_comment': new_comment,
                    'comment_form': comment_form })
@@ -138,9 +153,6 @@ def product_search(request):
     form = SearchForm()
     query = None
     results = []
-
-    # Queryset for Pages
-    pages = Page.objects.all().filter(active=True)
 
     if 'query' in request.GET:
         form = SearchForm(request.GET)
@@ -154,4 +166,4 @@ def product_search(request):
                   {'form': form,
                    'query': query,
                    'results': results,
-                   'pages': pages})
+                   })
