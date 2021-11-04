@@ -1,0 +1,25 @@
+{% extends "shop/base.html" %}
+
+{% load i18n %}
+
+{% load static %}
+
+{% block title %}{% trans 'Address' %}{% endblock %}
+
+{% block content %}
+<div class="row m-3">
+	<div class="col-md  text-center">
+		<h1>{% trans 'New address' %}</h1>
+	</div>
+</div>
+<div class="row m-3">
+	<div class="d-flex justify-content-center">
+		<form action="{% url 'dashboard'%}/#address-section" method="post" >
+			{{ address_form.as_p }}
+			{% csrf_token %}
+			<p><input type="submit" value="{% trans 'Add address' %}"></p>
+		</form>
+	</div>
+</div>
+<!--/end of row -->
+{% endblock %}

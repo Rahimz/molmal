@@ -147,3 +147,29 @@ def address_detail(request, pk):
                   'account/address_detail.html',
                   {'address': address,
                   'address_form': address_form})
+
+@login_required
+def add_address(request):
+    if request.method == 'POST':
+        address_form = AddressForm(data=request.POST)
+        if address_form.is_valid():
+            new_address = address_form.save(commit=False)
+
+            new_address.user = request.user
+
+            new_address.save()
+            if new_address.fav_address:
+                addresses = Address.objects.filter(user=request.user).exclude(pk=new_address.pk)
+                for addry in addresses:
+                    addry.fav_address = False
+                    addry.save()
+            messages.success(request,
+                            'Address added successfully')
+        else:
+            messages.error(request,
+                            'Address is not added')
+    else:
+        address_form = AddressForm()
+    return render(request,
+                  'account/add_address.html',
+                  {'address_form': address_form})

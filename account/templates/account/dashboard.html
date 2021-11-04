@@ -60,7 +60,7 @@
 </div>
 <div class="row m-3">
 	<div class="col-md  text-center">
-		<h2 class="bg-secondary rounded p-2 text-light">{% trans 'Your addresses' %}</h2>
+		<h2 class="bg-secondary rounded p-2 text-light" id="address-section">{% trans 'Your addresses' %}</h2>
 
 		<div class="d-flex justify-content-center">
 			<table class="table table-stripped" style="width:50%;">
@@ -84,6 +84,7 @@
 				</tbody>
 			</table>
 		</div>
+		<a class="btn btn-outline-success m-3" href="{% url 'add_address' %}">{% trans 'Add a new address' %}</a>
 
 
 	</div>
