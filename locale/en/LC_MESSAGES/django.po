@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 16:56+0330\n"
+"POT-Creation-Date: 2021-11-04 22:25+0330\n"
 "PO-Revision-Date: 2021-02-12 11:03+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,76 @@ msgstr ""
 msgid "Passwords don't match."
 msgstr ""
 
+#: account/models.py:34
+msgid "Favorite address"
+msgstr ""
+
+#: account/models.py:35 orders/models.py:19
+msgid "first name"
+msgstr ""
+
+#: account/models.py:37 orders/models.py:21
+msgid "last name"
+msgstr ""
+
+#: account/models.py:39 account/templates/account/address_detail.html:21
+#: orders/models.py:23
+msgid "Phone"
+msgstr ""
+
+#: account/models.py:40 orders/models.py:27
+msgid "address"
+msgstr ""
+
+#: account/models.py:41 orders/models.py:29
+msgid "postal code"
+msgstr ""
+
+#: account/models.py:42 orders/models.py:30
+msgid "city"
+msgstr ""
+
+#: account/templates/account/add_address.html:7
+#: account/templates/account/address_detail.html:7
+#: account/templates/account/address_detail.html:14
+#: account/templates/account/address_detail.html:22
+#: account/templates/account/dashboard.html:69
+#: orders/templates/orders/order/user_order_detail.html:37
+msgid "Address"
+msgstr ""
+
+#: account/templates/account/add_address.html:12
+msgid "New address"
+msgstr ""
+
+#: account/templates/account/add_address.html:20
+msgid "Add address"
+msgstr ""
+
+#: account/templates/account/address_detail.html:19
+msgid "First name"
+msgstr ""
+
+#: account/templates/account/address_detail.html:20
+msgid "Last name"
+msgstr ""
+
+#: account/templates/account/address_detail.html:23
+msgid "Postal code"
+msgstr ""
+
+#: account/templates/account/address_detail.html:24
+msgid "City"
+msgstr ""
+
+#: account/templates/account/address_detail.html:26
+msgid "Remove this address"
+msgstr ""
+
+#: account/templates/account/address_detail.html:33
+msgid "Edit address"
+msgstr ""
+
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/edit.html:5
 msgid "Dashboard"
@@ -45,7 +115,7 @@ msgid "Please add your profile details"
 msgstr ""
 
 #: account/templates/account/create_profile.html:21
-#: account/templates/account/dashboard.html:105
+#: account/templates/account/dashboard.html:139
 msgid "Add profile"
 msgstr ""
 
@@ -90,67 +160,83 @@ msgstr ""
 msgid "Change  password"
 msgstr ""
 
-#: account/templates/account/dashboard.html:62
+#: account/templates/account/dashboard.html:63
+msgid "Your addresses"
+msgstr ""
+
+#: account/templates/account/dashboard.html:70
+msgid "Active address"
+msgstr ""
+
+#: account/templates/account/dashboard.html:82
+msgid "You have not add any address yet!"
+msgstr ""
+
+#: account/templates/account/dashboard.html:87
+msgid "Add a new address"
+msgstr ""
+
+#: account/templates/account/dashboard.html:96
 #: zarinpal/templates/zarinpal/fail.html:30
 msgid ""
 "You have 24 hours to pay the order and after that the order will be remove."
 msgstr ""
 
-#: account/templates/account/dashboard.html:63
+#: account/templates/account/dashboard.html:97
 msgid ""
 "If you have unsuccessfull payment you will see those orders in this list, "
 "you can ignore them and they will be remove automatiaclly."
 msgstr ""
 
-#: account/templates/account/dashboard.html:64
+#: account/templates/account/dashboard.html:98
 msgid "If you click on orders number you can see your order details."
 msgstr ""
 
-#: account/templates/account/dashboard.html:67
+#: account/templates/account/dashboard.html:101
 msgid "Your orders"
 msgstr ""
 
-#: account/templates/account/dashboard.html:72
+#: account/templates/account/dashboard.html:106
 msgid "order No."
 msgstr ""
 
-#: account/templates/account/dashboard.html:73
+#: account/templates/account/dashboard.html:107
 msgid "Date"
 msgstr ""
 
-#: account/templates/account/dashboard.html:74
+#: account/templates/account/dashboard.html:108
 #: orders/templates/orders/order/user_order_detail.html:49
 msgid "Paid"
 msgstr ""
 
-#: account/templates/account/dashboard.html:75
+#: account/templates/account/dashboard.html:109
 #: orders/templates/orders/order/user_order_detail.html:53
 msgid "Delivered"
 msgstr ""
 
-#: account/templates/account/dashboard.html:83
+#: account/templates/account/dashboard.html:117
 msgid "Repay"
 msgstr ""
 
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:131
 msgid "Warning:"
 msgstr ""
 
-#: account/templates/account/dashboard.html:97
+#: account/templates/account/dashboard.html:131
 msgid ""
 "If you remove your profile user, every action and data you have entered will "
 "be deleted permanently."
 msgstr ""
 
-#: account/templates/account/dashboard.html:98
+#: account/templates/account/dashboard.html:132
 msgid "THIS ACCTION IS NOT UNDOABLE!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:100
+#: account/templates/account/dashboard.html:134
 msgid "Romove Account Completely!"
 msgstr ""
 
-#: account/templates/account/dashboard.html:104
+#: account/templates/account/dashboard.html:138
 msgid "You have to complete your profile first:"
 msgstr ""
 
@@ -324,7 +410,7 @@ msgstr ""
 #: account/templates/registration/password_reset_email.html:15
 #: orders/templates/orders/order/user_order_detail.html:5
 #: shop/templates/404.html:5 shop/templates/500.html:5
-#: shop/templates/shop/base.html:11 shop/templates/shop/product/home.html:8
+#: shop/templates/shop/base.html:12 shop/templates/shop/product/home.html:8
 #: shop/templates/shop/product/search.html:6
 #: shop/templates/shop/product/temp_home.html:8
 #: zarinpal/templates/zarinpal/fail.html:5
@@ -394,10 +480,8 @@ msgstr ""
 #: orders/templates/orders/order/pdf.html:42
 #: orders/templates/orders/order/user_order_detail.html:74
 #: orders/templates/orders/order/user_order_detail.html:81
-#: shop/templates/shop/base.html:114 shop/templates/shop/product/detail.html:22
-#: shop/templates/shop/product/home.html:57
-#: shop/templates/shop/product/list.html:44
-#: shop/templates/shop/product/search.html:26
+#: shop/templates/shop/base.html:115 shop/templates/shop/product/detail.html:22
+#: shop/templates/shop/product/product_card.html:11
 #: shop/templates/shop/product/temp_home.html:33
 msgid "Toman"
 msgstr ""
@@ -479,32 +563,8 @@ msgstr ""
 msgid "Delivery time options:"
 msgstr ""
 
-#: orders/models.py:19
-msgid "first name"
-msgstr ""
-
-#: orders/models.py:21
-msgid "last name"
-msgstr ""
-
-#: orders/models.py:23
-msgid "Phone"
-msgstr ""
-
 #: orders/models.py:25
 msgid "e-mail"
-msgstr ""
-
-#: orders/models.py:27
-msgid "address"
-msgstr ""
-
-#: orders/models.py:29
-msgid "postal code"
-msgstr ""
-
-#: orders/models.py:30
-msgid "city"
 msgstr ""
 
 #: orders/models.py:38
@@ -583,12 +643,8 @@ msgstr ""
 msgid "Customer"
 msgstr ""
 
-#: orders/templates/orders/order/user_order_detail.html:33 shop/models.py:90
+#: orders/templates/orders/order/user_order_detail.html:33 shop/models.py:91
 msgid "Email"
-msgstr ""
-
-#: orders/templates/orders/order/user_order_detail.html:37
-msgid "Address"
 msgstr ""
 
 #: orders/templates/orders/order/user_order_detail.html:44
@@ -607,11 +663,11 @@ msgstr ""
 msgid "Pending delivery"
 msgstr ""
 
-#: shop/models.py:89
+#: shop/models.py:90
 msgid "Name"
 msgstr ""
 
-#: shop/models.py:91
+#: shop/models.py:92
 msgid "Comment"
 msgstr ""
 
@@ -635,7 +691,7 @@ msgstr ""
 msgid "500 Error: There is an error in our server!"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:104
+#: shop/templates/shop/_temp_base.html:76 shop/templates/shop/base.html:105
 msgid "Admin"
 msgstr ""
 
@@ -643,59 +699,47 @@ msgstr ""
 msgid "For order contact in social medias"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:161
+#: shop/templates/shop/_temp_base.html:118 shop/templates/shop/base.html:162
 msgid "Online shop footer"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:164
+#: shop/templates/shop/_temp_base.html:121 shop/templates/shop/base.html:165
 msgid "This Rahim agha shop present every retail item that we said Baghali"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:171
+#: shop/templates/shop/_temp_base.html:128 shop/templates/shop/base.html:172
 msgid "Important links"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:183
+#: shop/templates/shop/_temp_base.html:140 shop/templates/shop/base.html:185
 msgid "Copyright"
 msgstr ""
 
-#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:184
+#: shop/templates/shop/_temp_base.html:141 shop/templates/shop/base.html:186
 msgid "Rahim Agha and Khanevadeh"
 msgstr ""
 
-#: shop/templates/shop/base.html:12
+#: shop/templates/shop/base.html:13
 msgid "Rahim Agha sotre is a local reatil online shop"
 msgstr ""
 
-#: shop/templates/shop/base.html:14
+#: shop/templates/shop/base.html:15
 msgid "Rahim Agha Store logo"
 msgstr ""
 
-#: shop/templates/shop/base.html:68
-msgid "Logout"
-msgstr ""
-
-#: shop/templates/shop/base.html:71
-msgid "Login"
-msgstr ""
-
-#: shop/templates/shop/base.html:72
-msgid "Register"
-msgstr ""
-
-#: shop/templates/shop/base.html:114
+#: shop/templates/shop/base.html:115
 msgid "item"
 msgstr ""
 
-#: shop/templates/shop/base.html:125
+#: shop/templates/shop/base.html:126
 msgid "Your cart is empty."
 msgstr ""
 
-#: shop/templates/shop/base.html:149
+#: shop/templates/shop/base.html:150
 msgid "For a new order you could go to"
 msgstr ""
 
-#: shop/templates/shop/base.html:150
+#: shop/templates/shop/base.html:151
 msgid "Or if you prefer phon you could call me at"
 msgstr ""
 
@@ -737,7 +781,7 @@ msgstr ""
 
 #: shop/templates/shop/product/home.html:17
 #: shop/templates/shop/product/list.html:15
-#: shop/templates/shop/product/search.html:48
+#: shop/templates/shop/product/search.html:39
 #: shop/templates/shop/product/temp_home.html:17
 msgid "Search"
 msgstr ""
@@ -748,13 +792,6 @@ msgstr ""
 
 #: shop/templates/shop/product/home.html:43
 msgid "What is the newest products?"
-msgstr ""
-
-#: shop/templates/shop/product/home.html:57
-#: shop/templates/shop/product/list.html:44
-#: shop/templates/shop/product/search.html:26
-#: shop/templates/shop/product/temp_home.html:33
-msgid "unavailable"
 msgstr ""
 
 #: shop/templates/shop/product/list.html:8
@@ -807,6 +844,11 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
+#: shop/templates/shop/product/product_card.html:11
+#: shop/templates/shop/product/temp_home.html:33
+msgid "unavailable"
+msgstr ""
+
 #: shop/templates/shop/product/search.html:14
 msgid "Products containing"
 msgstr ""
@@ -818,15 +860,15 @@ msgid ""
 "      Found %(total_results)s "
 msgstr ""
 
-#: shop/templates/shop/product/search.html:34
+#: shop/templates/shop/product/search.html:25
 msgid "There are no results for your query."
 msgstr ""
 
-#: shop/templates/shop/product/search.html:39
+#: shop/templates/shop/product/search.html:30
 msgid "Search again"
 msgstr ""
 
-#: shop/templates/shop/product/search.html:43
+#: shop/templates/shop/product/search.html:34
 msgid "Search for products"
 msgstr ""
 

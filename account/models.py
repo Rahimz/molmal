@@ -31,7 +31,7 @@ class Address(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                       on_delete=models.CASCADE,
                       related_name='address')
-    fav_address = models.BooleanField(default=False)
+    fav_address = models.BooleanField(_('Favorite address'),default=False)
     first_name = models.CharField(_('first name'),
                                   max_length=50, blank=True, null=True)
     last_name = models.CharField(_('last name'),
