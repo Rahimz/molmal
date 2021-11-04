@@ -7,27 +7,33 @@
 {% block title %}{% trans 'Address' %}{% endblock %}
 
 {% block content %}
+<div class="container">
+
 <div class="row m-3">
 	<div class="col-md  text-center">
 		<h1>{% trans 'Address' %}</h1>
 	</div>
 </div>
 <div class="row m-3">
-	<div class="col-md-6  text-center">
-		<p>{% if address.first_name %}{{ address.first_name }}{% else %}--{% endif %}</p>
-		<p>{{ address.last_name }}</p>
-		<p>{{ address.phone }}</p>
-		<p>{{ address.address }}</p>
-		<p>{{ address.postal_code }}</p>
-		<p>{{ address.city }}</p>
+	<div class="col-md-6  d-flex flex-column">
+		<p>{% trans 'First name' %}: {% if address.first_name %}{{ address.first_name }}{% else %}--{% endif %}</p>
+		<p>{% trans 'Last name' %}: {{ address.last_name }}</p>
+		<p>{% trans 'Phone' %}: {{ address.phone }}</p>
+		<p>{% trans 'Address' %}: {{ address.address }}</p>
+		<p>{% trans 'Postal code' %}: {{ address.postal_code }}</p>
+		<p>{% trans 'City' %}: {{ address.city }}</p>
+
+		<a class="btn btn-outline-warning m-3 disabled" href="#" >{% trans 'Remove this address' %}</a>
+
 	</div>
-	<div class="col-md-6  text-center">
+	<div class="col-md-6  d-flex justify-content-center">
 		<form action="." method="post" >
 			{{ address_form.as_p }}
 			{% csrf_token %}
 			<p><input type="submit" value="{% trans 'Edit address' %}"></p>
 		</form>
 	</div>
+</div>
 </div>
 <!--/end of row -->
 {% endblock %}

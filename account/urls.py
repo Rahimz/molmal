@@ -18,6 +18,7 @@ urlpatterns = [
     path('add-profile/', views.create, name='add'),
 
     path('address/<int:pk>/', views.address_detail, name='address_detail'),
+    # path('address/delete/<int:pk>/', views.address_delete, name='address_delete'),
     path('address/create/', views.add_address, name='add_address'),
 
 ]

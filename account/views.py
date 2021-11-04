@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditForm, AddressForm
 from django.contrib.auth.decorators import login_required
@@ -173,3 +173,9 @@ def add_address(request):
     return render(request,
                   'account/add_address.html',
                   {'address_form': address_form})
+
+
+# @login_required
+# def address_delete(request, pk) :
+#     address_to_delete = get_object_or_404(Address, pk=pk) #.delete()
+#     return reverse('/dashboard')
