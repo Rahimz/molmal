@@ -11,14 +11,12 @@ import datetime
 
 @login_required
 def dashboard(request):
-    try:
-        profile = get_object_or_404(Profile, user=request.user)
-    except:
-        profile = None
+    user = request.user
 
     # we grab all orders when each user request dashboard
     # then we updated all unpaid order and make them inactive
-    orders = Order.objects.filter(active=True)
+    # orders = Order.objects.filter(active=True)
+    orders = Order.objects.filter(user=request.user, active=True)
 
     # This function clean every order that
     # does not pay after 24 hours.
@@ -33,10 +31,10 @@ def dashboard(request):
             order.active = False
             order.save()
 
-    orders = Order.objects.filter(user=request.user, active=True)
+
     return render(request,
                 'account/dashboard.html',
-                {'profile': profile,
+                {'profile': user.profile,
                  'orders': orders})
 
 
