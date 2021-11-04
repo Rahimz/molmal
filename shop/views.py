@@ -11,17 +11,30 @@ from .recommender import Recommender
 from .forms import SearchForm, CommentForm
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.cache import cache
+
 
 def home(request):
     sliders = Slider.objects.filter(active=True)
 
-    products = Product.objects.filter(available=True)[:12]
+    # products = Product.objects.filter(available=True)[:12]
+    # Use chach to decrease the sql queries
+    products = cache.get('all_products')
+    if not products:
+        products = Product.objects.filter(available=True)[:12]
+        cache.set('all_products', products)
 
     # Queryset for Pages
     footer_pages = FooterPage.objects.all().filter(active=True)
 
     # list of categories
-    categories = Category.objects.all()
+    # categories = Category.objects.all()
+
+    #  use cache to reduce queries
+    categories = cache.get('all_categories')
+    if not categories:
+        categories = Category.objects.all()
+        cache.set('all_categories', categories)
 
     form = SearchForm()
     return render(request,
@@ -45,12 +58,26 @@ def price_view(request,):
 
 def product_list(requset, category_slug=None):
     category = None
-    categories = Category.objects.all()
+    # categories = Category.objects.all() # replaced by cached Queryset
+
+    #  use cache to reduce queries
+    categories = cache.get('all_categories')
+    if not categories:
+        categories = Category.objects.all()
+        cache.set('all_categories', categories)
+
     # products = Product.objects.filter(available=True)
     products = None
 
     # Pagination
     object_list = Product.objects.filter(available=True)
+
+    # Use chach to decrease the sql queries
+    object_list = cache.get('all_object_list')
+    if not object_list:
+        object_list = Product.objects.filter(available=True)[:12]
+        cache.set('all_object_list', object_list)
+
     paginator = Paginator(object_list, 9) # 9 products in each page
     page = requset.GET.get('page')
     try:
@@ -68,7 +95,7 @@ def product_list(requset, category_slug=None):
 
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = object_list.filter(category=category)
+        products = Product.objects.filter(category=category)
 
     form = SearchForm()
     return render(requset,
