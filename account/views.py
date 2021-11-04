@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm,  ProfileEditForm
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Address
 from django.contrib import messages
 from orders.models import Order, OrderItem
 import datetime
@@ -18,6 +18,7 @@ def dashboard(request):
     # orders = Order.objects.filter(active=True)
     orders = Order.objects.filter(user=request.user, active=True)
 
+    addresses = Address.objects.filter(user=user)
     # This function clean every order that
     # does not pay after 24 hours.
     # It dose not work in cron job and move to here
@@ -35,7 +36,8 @@ def dashboard(request):
     return render(request,
                 'account/dashboard.html',
                 {'profile': user.profile,
-                 'orders': orders})
+                 'orders': orders,
+                 'addresses': addresses})
 
 
 

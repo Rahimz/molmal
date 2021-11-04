@@ -56,7 +56,24 @@
 
 		<a class="btn btn-dark" href="{% url 'edit' %}">{% trans 'Edit profile' %}<i class="fa fa-edit icon-large"></i></a>
 		<a href="{% url 'password_change' %}" class="btn btn-dark">{% trans 'Change  password' %}</a>
-
+	</div>
+</div>
+<div class="row m-3">
+	<div class="col-md  text-center">
+		<h2 class="bg-secondary rounded p-2 text-light">{% trans 'Your addresses' %}</h2>
+		{% for address in addresses %}
+		<ul>
+			<li>
+			{{ address.city }} - {{ address.address }} - {{ address.postal_code }}
+			</li>
+		</ul>
+		{% empty %}
+		{% trans 'You have not add any address yet!' %}
+		{% endfor %}
+	</div>
+</div>
+<div class="row m-3">
+	<div class="col-md  text-center">
 		<div class="m-5">
 			<ul>
 				<li class="text-danger h5 m-4">{% trans 'You have 24 hours to pay the order and after that the order will be remove.' %}</li>
