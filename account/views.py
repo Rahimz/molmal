@@ -150,21 +150,28 @@ def address_detail(request, pk):
 
 @login_required
 def add_address(request):
+
     if request.method == 'POST':
         address_form = AddressForm(data=request.POST)
+
         if address_form.is_valid():
+            print('hi')
             new_address = address_form.save(commit=False)
 
             new_address.user = request.user
 
-            new_address.save()
             if new_address.fav_address:
+                print('hi')
                 addresses = Address.objects.filter(user=request.user).exclude(pk=new_address.pk)
                 for addry in addresses:
                     addry.fav_address = False
                     addry.save()
+
+            new_address.save()
+
             messages.success(request,
                             'Address added successfully')
+            return redirect('/account/dashboard/#address-section')
         else:
             messages.error(request,
                             'Address is not added')

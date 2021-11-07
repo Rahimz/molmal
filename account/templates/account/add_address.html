@@ -14,7 +14,7 @@
 </div>
 <div class="row m-3">
 	<div class="d-flex justify-content-center">
-		<form action="{% url 'dashboard'%}/#address-section" method="post" >
+		<form action="." method="post" >
 			{{ address_form.as_p }}
 			{% csrf_token %}
 			<p><input type="submit" value="{% trans 'Add address' %}"></p>
