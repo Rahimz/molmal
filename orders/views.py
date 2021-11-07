@@ -15,6 +15,8 @@ import datetime
 
 from django.contrib.auth.decorators import login_required
 
+from account.models import Address
+
 
 @login_required
 def order_create(request):
@@ -45,7 +47,20 @@ def order_create(request):
             #               'orders/order/created.html',
             #               {'order': order})
     else:
-        form = OrderCreateForm()
+        try:
+            address = Address.objects.get(user=request.user, fav_address=True)
+            if address:
+                data_initial = {
+                'first_name' : address.first_name,
+                'last_name' : address.last_name,
+                'phone' : address.phone,
+                'address' : address.address,
+                'postal_code' : address.postal_code,
+                'city' : address.city}
+                form = OrderCreateForm(data_initial)
+        except:
+            form = OrderCreateForm()
+        # form = OrderCreateForm()
     return render(request,
                   'orders/order/create.html',
                   {'cart': cart, 'form': form})
