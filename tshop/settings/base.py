@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     # Third-party apps
     'rosetta',
     'debug_toolbar',
-    'memcache_status',
+    # 'memcache_status',
     'zarinpal',
     'django_crontab',
 ]
@@ -186,12 +186,12 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': '127.0.0.1:11211',
+#     }
+# }
 
 # Login redirect for account
 LOGIN_REDIRECT_URL = 'dashboard'

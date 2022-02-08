@@ -18,20 +18,24 @@ def home(request):
 
     # products = Product.objects.filter(available=True)[:12]
     # Use chach to decrease the sql queries
-    products = cache.get('all_products')
-    if not products:
-        products = Product.objects.filter(available=True)[:12]
-        cache.set('all_products', products)
+    # products = cache.get('all_products')
+    # if not products:
+    #     products = Product.objects.filter(available=True)[:12]
+    #     cache.set('all_products', products)
 
+    products = Product.objects.filter(available=True)[:12]
 
     # list of categories
     # categories = Category.objects.all()
 
     #  use cache to reduce queries
-    categories = cache.get('all_categories')
-    if not categories:
-        categories = Category.objects.all()
-        cache.set('all_categories', categories)
+    # categories = cache.get('all_categories')
+    # if not categories:
+    #     categories = Category.objects.all()
+    #     cache.set('all_categories', categories)
+
+    categories = Category.objects.all()
+
 
     form = SearchForm()
     return render(request,
@@ -57,10 +61,12 @@ def product_list(requset, category_slug=None):
     # categories = Category.objects.all() # replaced by cached Queryset
 
     #  use cache to reduce queries
-    categories = cache.get('all_categories')
-    if not categories:
-        categories = Category.objects.all()
-        cache.set('all_categories', categories)
+    # categories = cache.get('all_categories')
+    # if not categories:
+    #     categories = Category.objects.all()
+    #     cache.set('all_categories', categories)
+
+    categories = Category.objects.all()
 
     # products = Product.objects.filter(available=True)
     products = None
@@ -69,10 +75,12 @@ def product_list(requset, category_slug=None):
     object_list = Product.objects.filter(available=True)
 
     # Use chach to decrease the sql queries
-    object_list = cache.get('all_object_list')
-    if not object_list:
-        object_list = Product.objects.filter(available=True)[:12]
-        cache.set('all_object_list', object_list)
+    # object_list = cache.get('all_object_list')
+    # if not object_list:
+    #     object_list = Product.objects.filter(available=True)[:12]
+    #     cache.set('all_object_list', object_list)
+
+    object_list = Product.objects.filter(available=True)[:12]
 
     paginator = Paginator(object_list, 9) # 9 products in each page
     page = requset.GET.get('page')
